@@ -7,5 +7,9 @@
     { "source": "/paginas-web", "destination": "/paginas-web.dc.html" },
     { "source": "/contacto", "destination": "/contacto.dc.html" },
     { "source": "/aviso-de-privacidad", "destination": "/aviso-privacidad.dc.html" }
+  ],
+  "headers": [
+    { "source": "/assets/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }] }
   ]
 }
+
