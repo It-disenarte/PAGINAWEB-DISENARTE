@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Nosotros | 20 años de publicidad industrial | Diseñarte MX</title>
+<meta name="description" content="Agencia de publicidad e innovación digital en San Juan del Río desde hace más de 20 años. Proveedor destacado 1er lugar de Imbera México 2023 y 2024.">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/png" href="assets/favicon-dz.png">
+<link rel="apple-touch-icon" href="assets/favicon-dz.png">
+<meta name="theme-color" content="#0E0714">
+<link rel="canonical" href="https://www.disenartemx.com/nosotros">
+<meta property="og:title" content="Nosotros | 20 años de publicidad industrial | Diseñarte MX">
+<meta property="og:description" content="Agencia de publicidad e innovación digital en San Juan del Río desde hace más de 20 años. Proveedor destacado 1er lugar de Imbera México 2023 y 2024.">
+<meta property="og:image" content="https://www.disenartemx.com/assets/hero-poster.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.disenartemx.com/nosotros">
+<meta property="og:locale" content="es_MX">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+/* Tipografía corporativa: Creato Display para todo el texto, Walkway para eyebrows */
+@font-face{font-family:'Creato Display';src:url('assets/fonts/CreatoDisplay-Light.otf') format('opentype');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'Creato Display';src:url('assets/fonts/CreatoDisplay-Regular.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Creato Display';src:url('assets/fonts/CreatoDisplay-Medium.otf') format('opentype');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Creato Display';src:url('assets/fonts/CreatoDisplay-Bold.otf') format('opentype');font-weight:600 700;font-style:normal;font-display:swap}
+@font-face{font-family:'Creato Display';src:url('assets/fonts/CreatoDisplay-ExtraBold.otf') format('opentype');font-weight:800;font-style:normal;font-display:swap}
+@font-face{font-family:'Creato Display';src:url('assets/fonts/CreatoDisplay-Black.otf') format('opentype');font-weight:900;font-style:normal;font-display:swap}
+@font-face{font-family:'Walkway';src:url('assets/fonts/Walkway-Regular.ttf') format('truetype');font-weight:400 500;font-style:normal;font-display:swap}
+@font-face{font-family:'Walkway';src:url('assets/fonts/Walkway-Bold.ttf') format('truetype');font-weight:600 700;font-style:normal;font-display:swap}
+@font-face{font-family:'Walkway';src:url('assets/fonts/Walkway-Black.ttf') format('truetype');font-weight:800 900;font-style:normal;font-display:swap}
+:root{--tinta:#0E0714;--tinta-2:#1A0F24;--magenta:#A53692;--violeta:#7C07A6;--cian:#5CC6D0;--papel:#F2F1F3;--blanco:#FFFFFF;--gris:#96989A;--gris-texto:#55575A;--gradiente:linear-gradient(100deg,#7C07A6 0%,#A53692 45%,#5CC6D0 100%);--font-display:'Creato Display',sans-serif}
+body{margin:0;background:#F2F1F3;color:#0E0714;font-family:'Creato Display',sans-serif;-webkit-font-smoothing:antialiased}
+/* Chevrones: en anchos intermedios el padding lateral cede para que la lista respire */
+@media(max-width:1023px){[data-chevrones] > article > div{--chev-pr:24px;--chev-pl:44px}[data-chevrones] > article:first-child > div{--chev-pl:24px}}
+/* Cadena de chevrones: en móvil se apila en columna, sin solape ni muescas laterales */
+@media(max-width:767px){
+  [data-chevrones]{flex-direction:column;padding-top:40px}
+  [data-chevrones] > article{margin-left:0!important;margin-top:48px}
+  [data-chevrones] > article:first-child{margin-top:0}
+  [data-chevrones] > article > div{clip-path:none!important;padding-left:32px!important;padding-right:32px!important;border-radius:6px 28px 28px 28px}
+  [data-chevrones] > article > span{left:32px!important}
+}
+a{color:inherit}
+a:hover{color:#7C07A6}
+:focus-visible{outline:2px solid #7C07A6;outline-offset:3px}
+[data-card]{transition:transform 200ms cubic-bezier(.22,1,.36,1)}
+[data-card]:hover{transform:translateY(-6px)}
+@media(max-width:1023px){[data-desktop-nav]{display:none!important}}
+@media(min-width:1024px){[data-menu-btn]{display:none!important}}
+@media(prefers-reduced-motion:reduce){[data-card]:hover{transform:none}}
+
+/* ===== REVEALS DECLARATIVOS (CSS: sobreviven a los re-renders) ===== */
+@keyframes dzUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes dzLine{from{opacity:0;transform:translateY(105%)}to{opacity:1;transform:none}}
+[data-hero-line]{animation:dzLine 700ms cubic-bezier(.22,1,.36,1) 120ms both}
+h1>span:nth-child(2) [data-hero-line]{animation-delay:210ms}
+h1>span:nth-child(3) [data-hero-line]{animation-delay:300ms}
+h1>span:nth-child(4) [data-hero-line]{animation-delay:390ms}
+[data-hero-line]:not(h1 [data-hero-line]){animation-delay:480ms}
+p [data-hero-line]{animation-delay:120ms}
+[data-reveal]{animation:dzUp 600ms cubic-bezier(.22,1,.36,1) both}
+[data-reveal="1"]{animation-delay:80ms}
+[data-reveal="2"]{animation-delay:160ms}
+[data-reveal="3"]{animation-delay:240ms}
+[data-reveal="4"]{animation-delay:320ms}
+[data-reveal="5"]{animation-delay:400ms}
+[data-reveal="6"]{animation-delay:480ms}
+[data-reveal="7"],[data-reveal="8"],[data-reveal="9"],[data-reveal="10"]{animation-delay:560ms}
+@supports (animation-timeline:view()){
+  [data-reveal]{animation-timeline:view();animation-range:entry 0% entry 55%;animation-delay:0s;animation-fill-mode:both}
+}
+@media(prefers-reduced-motion:reduce){
+  [data-hero-line],[data-reveal]{animation:none!important;opacity:1!important;transform:none!important}
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","name":"Diseñarte México","url":"https://www.disenartemx.com/","telephone":"+524271004183"},
+{"@type":"WebSite","name":"Diseñarte México","url":"https://www.disenartemx.com/","inLanguage":"es-MX"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.disenartemx.com/"},{"@type":"ListItem","position":2,"name":"Nosotros","item":"https://www.disenartemx.com/nosotros"}]},
+{"@type":"LocalBusiness","name":"Diseñarte México","description":"Agencia de publicidad e innovación digital con más de 20 años de experiencia","url":"https://www.disenartemx.com/nosotros","telephone":"+524271004183","email":"ventas@disenartemx.com","address":{"@type":"PostalAddress","streetAddress":"Av. Lomas del Pedregoso #371, Col. Lomas de San Juan, Sección Campestre","addressLocality":"San Juan del Río","addressRegion":"Querétaro","addressCountry":"MX"},"sameAs":["https://www.instagram.com/disenarte.mexico/","https://www.facebook.com/Disenarte2mil"],"areaServed":"Querétaro"}
+]}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H2JJVE75F3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H2JJVE75F3');
+  gtag('config', 'AW-16751651845');
+</script>
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2039038839979376');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2039038839979376&ev=PageView&noscript=1" alt=""></noscript>
+</helmet>
+
+<a href="#contenido" style="position:absolute;left:-9999px;z-index:100;background:var(--magenta);color:#fff;padding:12px 24px;border-radius:999px;font:600 15px 'Creato Display',sans-serif" style-focus="left:24px;top:12px">Ir al contenido</a>
+
+<!-- ===== NAVBAR (Modo Taller) ===== -->
+<header data-navbar="taller" style="position:fixed;top:0;left:0;right:0;z-index:50;background:transparent">
+  <nav aria-label="Navegación principal" style="max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:32px;padding:0 clamp(24px,4vw,48px);height:96px">
+    <a href="/" aria-label="Diseñarte México, inicio" style="display:flex;align-items:baseline;gap:8px;text-decoration:none;color:var(--tinta)" style-hover="color:var(--tinta)">
+      <img src="assets/marca-color.png" alt="Diseñarte México, agencia de publicidad en San Juan del Río" width="82" height="76" style="display:block;width:auto;height:76px;object-fit:contain">
+    </a>
+    <div data-desktop-nav="" style="display:flex;align-items:center;gap:8px;margin-left:auto">
+      <a href="/" style="padding:12px 14px;font:500 15px 'Creato Display',sans-serif;text-decoration:none;color:var(--tinta)" style-hover="color:#7C07A6">Inicio</a>
+      <a href="/nosotros" aria-current="page" style="padding:12px 14px;font:600 15px 'Creato Display',sans-serif;text-decoration:none;color:var(--tinta);border-bottom:2px solid var(--magenta)">Nosotros</a>
+      <a href="/publicidad" style="padding:12px 14px;font:500 15px 'Creato Display',sans-serif;text-decoration:none;color:var(--tinta)" style-hover="color:#7C07A6">Publicidad</a>
+      <div data-dropdown="" style="position:relative">
+        <button data-dropdown-btn="" aria-expanded="false" aria-haspopup="true" style="display:flex;align-items:center;gap:6px;padding:12px 14px;font:500 15px 'Creato Display',sans-serif;background:none;border:none;color:var(--tinta);cursor:pointer" style-hover="color:#7C07A6">Innovación Digital
+          <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+        </button>
+        <div data-dropdown-panel="" style="position:absolute;top:100%;left:0;min-width:220px;background:#fff;box-shadow:0 12px 32px rgba(14,7,20,.18);border-radius:6px 20px 20px 20px;padding:8px;display:flex;flex-direction:column">
+          <a href="/paginas-web" style="padding:12px 16px;font:500 15px 'Creato Display',sans-serif;text-decoration:none;color:var(--tinta);border-radius:12px" style-hover="background:rgba(14,7,20,.05);color:#7C07A6">Páginas web</a>
+          <a href="/innovacion-digital#servicios" style="padding:12px 16px;font:500 15px 'Creato Display',sans-serif;text-decoration:none;color:var(--tinta);border-radius:12px" style-hover="background:rgba(14,7,20,.05);color:#7C07A6">Otros servicios</a>
+        </div>
+      </div>
+      <a href="/contacto" style="display:inline-flex;align-items:center;min-height:48px;background:var(--magenta);color:#fff;border-radius:999px;padding:0 28px;font:600 15px 'Creato Display',sans-serif;text-decoration:none;margin-left:12px;transition:background 200ms ease,transform 200ms ease" style-hover="background:#7C07A6;transform:translateY(-2px);color:#fff" style-active="transform:translateY(0)">Cotizar</a>
+    </div>
+    <button data-menu-btn="" aria-expanded="false" aria-label="Abrir menú" style="margin-left:auto;width:48px;height:48px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:none;border:none;cursor:pointer">
+      <span aria-hidden="true" style="display:block;width:22px;height:2px;background:var(--tinta)"></span>
+      <span aria-hidden="true" style="display:block;width:22px;height:2px;background:var(--tinta)"></span>
+    </button>
+  </nav>
+</header>
+
+<div data-menu="" style="display:flex;opacity:0;pointer-events:none;position:fixed;inset:0;z-index:49;background:var(--papel);flex-direction:column;justify-content:center;gap:8px;padding:96px 32px 48px">
+  <a href="/" style="font-family:var(--font-display);font-weight:700;font-size:30px;color:var(--tinta);text-decoration:none;padding:12px 0">Inicio</a>
+  <a href="/nosotros" style="font-family:var(--font-display);font-weight:700;font-size:30px;color:var(--magenta);text-decoration:none;padding:12px 0">Nosotros</a>
+  <a href="/publicidad" style="font-family:var(--font-display);font-weight:700;font-size:30px;color:var(--tinta);text-decoration:none;padding:12px 0">Publicidad</a>
+  <a href="/innovacion-digital" style="font-family:var(--font-display);font-weight:700;font-size:30px;color:var(--tinta);text-decoration:none;padding:12px 0">Innovación Digital</a>
+  <a href="/paginas-web" style="font-family:var(--font-display);font-weight:700;font-size:30px;color:var(--tinta);text-decoration:none;padding:12px 0">Páginas web</a>
+  <a href="/contacto" style="display:inline-flex;align-items:center;justify-content:center;min-height:52px;background:var(--magenta);color:#fff;border-radius:999px;padding:0 32px;font:600 17px 'Creato Display',sans-serif;text-decoration:none;margin-top:24px;align-self:flex-start">Cotizar</a>
+</div>
+
+<main id="contenido">
+<!-- ===== HERO ===== -->
+<section data-hero="" style="position:relative;background:var(--papel);overflow:hidden">
+  <div aria-hidden="true" style="position:absolute;top:0;right:0;width:45%;height:100%;background:var(--gradiente);opacity:.06;clip-path:polygon(30% 0,100% 0,100% 100%,0 100%)"></div>
+  <div style="position:relative;max-width:1240px;margin:0 auto;padding:clamp(140px,18vw,200px) clamp(24px,4vw,48px) clamp(72px,10vw,128px)">
+    <h1 style="font-family:var(--font-display);font-weight:700;font-size:clamp(34px,4.5vw,56px);line-height:1.05;letter-spacing:-.02em;margin:0 0 24px;max-width:860px;color:var(--tinta)">
+      <span style="display:block;overflow:hidden"><span data-hero-line="" style="display:block"><span style="color:var(--violeta)"><span data-count="20" data-prefix="+" style="font-variant-numeric:tabular-nums;font-size:2.6em;line-height:.8;display:inline-block;vertical-align:-.14em">+20</span> años</span></span></span>
+      <span style="display:block;overflow:hidden"><span data-hero-line="" style="display:block">nos respaldan</span></span>
+    </h1>
+    <div style="overflow:hidden"><p data-hero-line="" style="font:400 clamp(18px,1.6vw,20px)/1.6 'Creato Display',sans-serif;color:var(--gris-texto);margin:0;max-width:680px;text-wrap:pretty">Diseñarte México es una agencia de publicidad e innovación digital en San Juan del Río, Querétaro, con más de 20 años de experiencia brindando soluciones especializadas para el sector industrial.</p></div>
+  </div>
+  <div aria-hidden="true" style="height:clamp(48px,7vw,110px);position:relative;overflow:hidden">
+    <div style="position:absolute;inset:0;background:#fff;clip-path:polygon(0 100%,100% 0,100% 100%)"></div>
+  </div>
+</section>
+
+<!-- ===== QUÉ HACEMOS ===== -->
+<section style="background:#fff">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(72px,10vw,128px) clamp(24px,4vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:48px;align-items:center">
+    <div>
+      <h2 data-reveal="0" style="font-family:var(--font-display);font-weight:700;font-size:clamp(28px,3.4vw,40px);line-height:1.15;margin:0 0 24px;color:var(--tinta)">Qué hacemos</h2>
+      <p data-reveal="1" style="font:400 clamp(18px,1.6vw,20px)/1.65 'Creato Display',sans-serif;color:var(--gris-texto);margin:0 0 20px;text-wrap:pretty">Nos enfocamos en optimizar la comunicación visual de las empresas, desarrollando <strong style="font-weight:600;color:var(--tinta)">materiales gráficos</strong> y <strong style="font-weight:600;color:var(--tinta)">estrategias digitales</strong> que refuercen su identidad y presencia en el mercado.</p>
+      <p data-reveal="2" style="font:400 17px/1.65 'Creato Display',sans-serif;color:var(--gris-texto);margin:0;text-wrap:pretty">Nuestro equipo de expertos integra diseño gráfico de alta precisión, impresión especializada, marketing digital y soluciones publicitarias innovadoras que fortalecen la presencia y competitividad de las marcas en el sector industrial.</p>
+    </div>
+    <img data-reveal="1" src="assets/equipo-taller.png" alt="Equipo de Diseñarte México en su taller de producción en San Juan del Río" width="1374" height="1080" loading="lazy" style="width:100%;height:auto;aspect-ratio:1374/1080;object-fit:cover;border-radius:6px 28px 28px 28px;display:block">
+  </div>
+  <div aria-hidden="true" style="height:clamp(56px,9vw,130px);position:relative">
+    <div style="position:absolute;inset:0;background:var(--papel);clip-path:polygon(0 100%,100% 0,100% 100%)"></div>
+  </div>
+</section>
+
+
+<!-- ===== SOLUCIONES INTEGRALES (categorías del sitio actual) ===== -->
+<section style="background:#fff">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(48px,7vw,96px) clamp(24px,4vw,48px) clamp(72px,10vw,128px)">
+    <h2 data-reveal="0" style="font-family:var(--font-display);font-weight:700;font-size:clamp(26px,3vw,38px);line-height:1.3;letter-spacing:-.01em;margin:0 0 48px;max-width:820px;color:var(--tinta);text-wrap:pretty">En <span style="color:var(--violeta)">Diseñarte México</span>, ofrecemos <strong style="font-weight:900">soluciones integrales</strong> en comunicación visual y marketing digital, adaptadas a las necesidades del sector industrial y comercial.</h2>
+    <!-- Tarjetas-flecha encimadas: el degradado corporativo se atenúa de izquierda a derecha (--i por tarjeta) -->
+    <!-- Cadena de chevrones: violeta corporativo que se aclara de izquierda a derecha.
+         El icono va en un disco con aro blanco montado sobre el borde superior. -->
+    <div data-chevrones="" style="display:flex;align-items:stretch;padding-top:40px">
+      <sc-for list="{{ categorias }}" as="cat" hint-placeholder-count="4">
+        <article data-card="" data-reveal="{{ $index }}" style="flex:1 1 0;min-width:0;display:flex;margin-left:{{ cat.ml }};position:relative;z-index:{{ cat.z }}">
+          <!-- el chevrón lleva el clip-path; el disco vive fuera de él para no recortarse -->
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:14px;padding:64px var(--chev-pr,44px) 44px var(--chev-pl,{{ cat.pl }});overflow-wrap:anywhere;color:#fff;background:{{ cat.fondo }};clip-path:{{ cat.forma }}">
+            <h3 style="font:600 15px/1.35 'Walkway',sans-serif;letter-spacing:.06em;text-transform:uppercase;margin:0;color:#fff;text-wrap:balance">{{ cat.titulo }}</h3>
+            <ul style="margin:0;padding:0 0 0 20px;list-style:disc;display:flex;flex-direction:column;gap:6px;color:#fff">
+              <sc-for list="{{ cat.items }}" as="it" hint-placeholder-count="4">
+                <li style="font:400 16px/1.5 'Creato Display',sans-serif">{{ it }}</li>
+              </sc-for>
+            </ul>
+          </div>
+          <span aria-hidden="true" style="position:absolute;top:-40px;left:{{ cat.pl }};width:80px;height:80px;border-radius:999px;border:3px solid #fff;background:{{ cat.disco }};display:flex;align-items:center;justify-content:center">
+            <img src="{{ cat.img }}" alt="" width="40" height="40" loading="lazy" style="display:block;width:40px;height:40px;object-fit:contain;filter:brightness(0) invert(1)">
+          </span>
+        </article>
+      </sc-for>
+    </div>
+  </div>
+  <div aria-hidden="true" style="height:clamp(48px,7vw,110px);position:relative;overflow:hidden">
+    <div style="position:absolute;inset:0;background:var(--papel);clip-path:polygon(0 100%,100% 0,100% 100%)"></div>
+  </div>
+</section>
+
+
+
+<!-- ===== CITA DE CIERRE ===== -->
+<section data-cta-final="" style="position:relative;background:var(--papel);overflow:hidden">
+  <div aria-hidden="true" style="position:absolute;top:0;left:0;right:0;height:clamp(56px,9vw,130px)">
+    <div style="position:absolute;inset:0;background:var(--gradiente);opacity:.9;clip-path:polygon(0 0,100% 0,100% 28%,0 100%)"></div>
+    <div style="position:absolute;inset:0;background:var(--papel);clip-path:polygon(0 0,100% 0,100% 26%,0 72%)"></div>
+  </div>
+  <div style="position:relative;max-width:840px;margin:0 auto;padding:clamp(120px,14vw,180px) clamp(24px,4vw,48px) clamp(72px,10vw,128px);text-align:center">
+    <div data-reveal="0" style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center">
+    <a href="/publicidad" style="display:inline-flex;align-items:center;justify-content:center;min-height:52px;background:var(--magenta);color:#fff;text-decoration:none;border-radius:999px;padding:16px 32px;font:600 17px/1 'Creato Display',sans-serif">Conocer más sobre publicidad</a>
+    <a href="/innovacion-digital" style="display:inline-flex;align-items:center;justify-content:center;min-height:52px;border:1.5px solid var(--tinta);color:var(--tinta);text-decoration:none;border-radius:999px;padding:16px 32px;font:600 17px/1 'Creato Display',sans-serif">Conocer más sobre innovación digital</a>
+  </div>
+</section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer style="background:var(--papel);border-top:1px solid rgba(14,7,20,.10);color:var(--tinta)">
+  <div style="max-width:1240px;margin:0 auto;padding:64px clamp(24px,4vw,48px) 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <img src="assets/marca-color.png" alt="Diseñarte México, agencia de publicidad en San Juan del Río" width="150" height="139" style="display:block;width:150px;height:auto">
+      <p style="font:400 15px/1.6 'Creato Display',sans-serif;color:var(--gris);margin:0">Agencia de publicidad e innovación digital. San Juan del Río, Qro. Desde 2005.</p>
+    </div>
+    <nav aria-label="Publicidad" style="display:flex;flex-direction:column;gap:10px">
+      <span style="font:600 13px 'Walkway',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--violeta)">Publicidad</span>
+      <a href="/publicidad#catalogo" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Catálogo de servicios</a>
+      <a href="/publicidad#transformacion" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Antes y después</a>
+      <a href="/publicidad#pop" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Material POP</a>
+    </nav>
+    <nav aria-label="Innovación digital" style="display:flex;flex-direction:column;gap:10px">
+      <span style="font:600 13px 'Walkway',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--violeta)">Innovación digital</span>
+      <a href="/paginas-web" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Páginas web</a>
+      <a href="/paginas-web#paquetes" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Paquetes de renta</a>
+      <a href="/innovacion-digital#servicios" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Otros servicios</a>
+    </nav>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <span style="font:600 13px 'Walkway',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--violeta)">Contacto</span>
+      <a href="https://wa.me/524272110528" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">WhatsApp 427 211 05 28</a>
+      <a href="tel:+524271004183" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Tel. 427 100 41 83</a>
+      <a href="mailto:ventas@disenartemx.com" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">ventas@disenartemx.com</a>
+      <address style="font:400 15px/1.6 'Creato Display',sans-serif;color:var(--gris);font-style:normal;margin:8px 0 0">Av. Lomas del Pedregoso #371<br>Col. Lomas de San Juan, Sección Campestre<br>San Juan del Río, Querétaro</address>
+    </div>
+  </div>
+  <div style="max-width:1240px;margin:0 auto;padding:24px clamp(24px,4vw,48px);border-top:1px solid rgba(14,7,20,.10);display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center">
+    <span style="font:400 14px 'Creato Display',sans-serif;color:var(--gris)">© 2026 Diseñarte México®. Todos los derechos reservados.</span>
+    <div style="display:flex;gap:24px;align-items:center">
+      <a href="/aviso-de-privacidad" style="font:500 14px 'Creato Display',sans-serif;color:var(--gris)">Aviso de privacidad</a>
+      <nav aria-label="Redes sociales" style="display:flex;gap:8px;align-items:center">
+        <a href="https://www.instagram.com/disenarte.mexico/" aria-label="Diseñarte México en Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;color:var(--tinta)" style-hover="color:#7C07A6">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5"></rect><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"></circle><circle cx="17.2" cy="6.8" r="1" fill="currentColor"></circle></svg>
+        </a>
+        <a href="https://www.facebook.com/Disenarte2mil" aria-label="Diseñarte México en Facebook" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;color:var(--tinta)" style-hover="color:#7C07A6">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14.5 8.5h2.5M14.5 21V8.5a3 3 0 0 1 3-3M11 13h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+        </a>
+        <a href="https://www.youtube.com/@DiseñarteMéxico" aria-label="Diseñarte México en YouTube" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;color:var(--tinta)" style-hover="color:#7C07A6">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="4" stroke="currentColor" stroke-width="1.5"></rect><path d="M11 9.5l4 2.5-4 2.5v-5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path></svg>
+        </a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== FLOTANTE ===== -->
+<div data-fab="" style="position:fixed;right:24px;bottom:24px;z-index:55">
+  <a href="https://wa.me/524272110528?text=Hola%2C%20vengo%20de%20su%20p%C3%A1gina%20web%20y%20quiero%20cotizar" aria-label="Escribir por WhatsApp" style="display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:#25D366;color:#0E0714;box-shadow:0 12px 32px rgba(14,7,20,.18)">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><path d="M8.8 9.2c.3 2.7 3.2 5.6 5.9 5.9l1.2-1.2-1.9-1.3-1 .6a5.7 5.7 0 0 1-2.3-2.3l.6-1-1.3-1.9-1.2 1.2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path></svg>
+  </a>
+</div>
+<div id="chatbot-root" data-estado="pendiente"></div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    import('./assets/site.js').then((m) => m.initSite());
+  }
+  renderVals() {
+    const P = [
+      ['Un equipo, no un intermediario.', 'Profesionales que lideran tu proyecto de principio a fin.'],
+      ['Urgencias resueltas.', 'Tenemos capacidad de producción para proyectos de extrema urgencia.'],
+      ['Precio-calidad real.', 'Ni el más barato ni el más caro: el que sí entrega.'],
+      ['Contacto directo.', 'Hablas con tu agente de ventas, no con un buzón.'],
+      ['Aliado, no proveedor.', 'Nos quedamos en las cuentas por años, no por orden de compra.'],
+      ['Plazos cortos.', 'Y respuesta rápida cuando hay que resolver un detalle.'],
+      ['Diseño incluido.', 'Te llegan propuestas, no solo un presupuesto.'],
+      ['Atención al detalle.', 'En cada pieza que sale de producción.'],
+      ['Garantía por escrito.', 'En cada entrega.'],
+    ];
+    // Iconos oficiales del sitio actual. Al publicar, descargarlos a assets/ y
+    // cambiar ICONOS_BASE por './assets/'.
+    const ICONOS_BASE = 'https://www.disenartemx.com/images/assets/';
+    const CAT = [
+      ['Diseño gráfico', ['Identidad corporativa', 'Branding', 'Material publicitario'], 'diseno.webp'],
+      ['Impresión personalizada', ['Lonas', 'Viniles', 'Etiquetas', 'Señalética industrial'], 'impresion.webp'],
+      ['Innovación digital', ['Páginas web a la medida', 'Automatizaciones', 'Paquetes de renta o compra'], 'market.webp'],
+      ['Soluciones en comunicación visual', ['Material POP', 'Stands', 'Rotulaciones', 'Exhibidores'], 'comunicacion.webp'],
+    ];
+    return {
+      // Escala de violeta: oscuro a la izquierda, claro a la derecha. z = solape del chevrón.
+      categorias: CAT.map(([titulo, items, archivo], i) => {
+        const fondos = ['#5B0A72', '#7C07A6', '#9126B4', '#A32FC9'];
+        const discos = ['#4A0860', '#6A0592', '#8A21AF', '#A34FCB'];
+        const primera = i === 0;   // borde izquierdo plano, sin solape
+        return { titulo, items, img: ICONOS_BASE + archivo, alt: 'Icono de ' + titulo,
+          fondo: fondos[i % 4], disco: discos[i % 4], z: CAT.length - i,
+          ml: primera ? '0' : '-30px',
+          pl: primera ? '32px' : '62px',
+          forma: primera
+            ? 'polygon(0 0,calc(100% - 36px) 0,100% 50%,calc(100% - 36px) 100%,0 100%)'
+            : 'polygon(0 0,calc(100% - 36px) 0,100% 50%,calc(100% - 36px) 100%,0 100%,36px 50%)' };
+      }),
+      puntos: P.map(([t, d], i) => ({ t, d, st: i % 3 })),
+      abrirChat: () => window.DZChat && window.DZChat.abrir(),
+    };
+  }
+}
+</script>
+</body>
+</html>

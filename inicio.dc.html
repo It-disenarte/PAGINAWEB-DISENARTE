@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Agencia de publicidad en San Juan del Río | Diseñarte México</title>
+<meta name="description" content="Señalética industrial, tableros, rotulación de flotillas y páginas web para empresas. 20 años en San Juan del Río, Querétaro. Cotiza en 24 horas.">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/png" href="assets/favicon-dz.png">
+<link rel="apple-touch-icon" href="assets/favicon-dz.png">
+<meta name="theme-color" content="#0E0714">
+<link rel="canonical" href="https://www.disenartemx.com/">
+<meta property="og:title" content="Agencia de publicidad en San Juan del Río | Diseñarte México">
+<meta property="og:description" content="Señalética industrial, tableros, rotulación de flotillas y páginas web para empresas. 20 años en San Juan del Río, Querétaro.">
+<meta property="og:image" content="https://www.disenartemx.com/assets/hero-poster.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.disenartemx.com/">
+<meta property="og:locale" content="es_MX">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+/* Tipografía corporativa: Creato Display para todo el texto, Walkway para eyebrows */
+@font-face{font-family:'Creato Display';src:url('assets/fonts/CreatoDisplay-Light.otf') format('opentype');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'Creato Display';src:url('assets/fonts/CreatoDisplay-Regular.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Creato Display';src:url('assets/fonts/CreatoDisplay-Medium.otf') format('opentype');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Creato Display';src:url('assets/fonts/CreatoDisplay-Bold.otf') format('opentype');font-weight:600 700;font-style:normal;font-display:swap}
+@font-face{font-family:'Creato Display';src:url('assets/fonts/CreatoDisplay-ExtraBold.otf') format('opentype');font-weight:800;font-style:normal;font-display:swap}
+@font-face{font-family:'Creato Display';src:url('assets/fonts/CreatoDisplay-Black.otf') format('opentype');font-weight:900;font-style:normal;font-display:swap}
+@font-face{font-family:'Walkway';src:url('assets/fonts/Walkway-Regular.ttf') format('truetype');font-weight:400 500;font-style:normal;font-display:swap}
+@font-face{font-family:'Walkway';src:url('assets/fonts/Walkway-Bold.ttf') format('truetype');font-weight:600 700;font-style:normal;font-display:swap}
+@font-face{font-family:'Walkway';src:url('assets/fonts/Walkway-Black.ttf') format('truetype');font-weight:800 900;font-style:normal;font-display:swap}
+:root{--tinta:#0E0714;--tinta-2:#1A0F24;--magenta:#A53692;--violeta:#7C07A6;--cian:#5CC6D0;--papel:#F2F1F3;--blanco:#FFFFFF;--gris:#96989A;--gris-texto:#55575A;--gradiente:linear-gradient(100deg,#7C07A6 0%,#A53692 45%,#5CC6D0 100%);--font-display:'Creato Display',sans-serif}
+html{lang:es-MX}
+body{margin:0;background:#FFFFFF;color:#0E0714;font-family:'Creato Display',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:hover{color:#7C07A6}
+:focus-visible{outline:2px solid #7C07A6;outline-offset:3px}
+@keyframes spin{to{transform:rotate(360deg)}}
+[data-card]{transition:transform 200ms cubic-bezier(.22,1,.36,1)}
+[data-card]:hover{transform:translateY(-6px)}
+[data-card] [data-corner]{opacity:0;transition:opacity 200ms ease}
+[data-card]:hover [data-corner]{opacity:1}
+@media(max-width:1023px){[data-desktop-nav]{display:none!important}}
+@media(min-width:1024px){[data-menu-btn]{display:none!important}}
+@media(max-width:767px){[data-hero-copy]{max-width:100%!important}}
+@media(prefers-reduced-motion:reduce){[data-card]:hover{transform:none}}
+
+/* ===== REVEALS DECLARATIVOS (CSS: sobreviven a los re-renders) ===== */
+[data-pal]{position:relative;animation:dzUp 700ms cubic-bezier(.22,1,.36,1) both,dzSel 700ms linear both;animation-timeline:view(),view();transition:transform 200ms cubic-bezier(.22,1,.36,1)}
+[data-pal]::after{content:"";position:absolute;inset:-4px -6px;border:1.5px dashed var(--gris);pointer-events:none;animation:dzCaja 700ms linear both;animation-timeline:view();animation-range:inherit}
+[data-pal][data-col="t"]{animation:dzUp 700ms cubic-bezier(.22,1,.36,1) both,dzTinta 700ms linear both;animation-timeline:view(),view()}
+[data-pal][data-col="v"]{animation:dzUp 700ms cubic-bezier(.22,1,.36,1) both,dzViolo 700ms linear both;animation-timeline:view(),view()}
+[data-marca]::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:3px;border-radius:2px;background:var(--gradiente);transform-origin:left center;animation:dzSub 700ms cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:inherit}
+@keyframes dzSub{0%{opacity:0;transform:scaleX(0)}100%{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){[data-marca]::after{animation:none!important;opacity:1!important;transform:none!important}}
+@keyframes dzCaja{0%{opacity:0;transform:scaleX(.25)}20%,62%{opacity:1;transform:none}100%{opacity:0;transform:none}}
+@keyframes dzSel{0%,100%{opacity:1}}
+@keyframes dzTinta{0%,58%{color:#96989A}100%{color:#0E0714}}
+@keyframes dzViolo{0%,58%{color:#96989A}100%{color:#7C07A6}}
+[data-pal]:hover{transform:translateY(-6px)}
+@media(prefers-reduced-motion:reduce){[data-pal]{animation:none!important;opacity:1!important;transform:none!important}[data-pal][data-col="t"]{color:#0E0714}[data-pal][data-col="v"]{color:#7C07A6}[data-pal]::after{display:none}}
+@keyframes dzStar{0%,4%{opacity:0;transform:scale(.2) rotate(-200deg)}16%,58%{opacity:1;transform:none}70%,100%{opacity:0;transform:scale(.2) rotate(200deg)}}
+@keyframes dzDot{0%,6%{opacity:1;transform:none}14%,62%{opacity:0;transform:scale(.4)}74%,100%{opacity:1;transform:none}}
+[data-estrella]{animation:dzStar 4200ms cubic-bezier(.22,1,.36,1) infinite both}
+[data-estrella-punto]{animation:dzDot 4200ms cubic-bezier(.22,1,.36,1) infinite both}
+@media(prefers-reduced-motion:reduce){[data-estrella]{animation:none!important;opacity:1!important;transform:none!important}[data-estrella-punto]{animation:none!important;opacity:0!important}}
+@keyframes dzUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes dzLine{from{opacity:0;transform:translateY(105%)}to{opacity:1;transform:none}}
+[data-hero-line]{animation:dzLine 700ms cubic-bezier(.22,1,.36,1) 120ms both}
+h1>span:nth-child(2) [data-hero-line]{animation-delay:210ms}
+h1>span:nth-child(3) [data-hero-line]{animation-delay:300ms}
+h1>span:nth-child(4) [data-hero-line]{animation-delay:390ms}
+[data-hero-line]:not(h1 [data-hero-line]){animation-delay:480ms}
+p [data-hero-line]{animation-delay:120ms}
+[data-reveal]{animation:dzUp 600ms cubic-bezier(.22,1,.36,1) both}
+[data-reveal="1"]{animation-delay:80ms}
+[data-reveal="2"]{animation-delay:160ms}
+[data-reveal="3"]{animation-delay:240ms}
+[data-reveal="4"]{animation-delay:320ms}
+[data-reveal="5"]{animation-delay:400ms}
+[data-reveal="6"]{animation-delay:480ms}
+[data-reveal="7"],[data-reveal="8"],[data-reveal="9"],[data-reveal="10"]{animation-delay:560ms}
+@supports (animation-timeline:view()){
+  [data-reveal]{animation-timeline:view();animation-range:entry 0% entry 55%;animation-delay:0s;animation-fill-mode:both}
+}
+@media(prefers-reduced-motion:reduce){
+  [data-hero-line],[data-reveal]{animation:none!important;opacity:1!important;transform:none!important}
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","name":"Diseñarte México","url":"https://www.disenartemx.com/","logo":"https://www.disenartemx.com/assets/hero-poster.png","telephone":"+524271004183"},
+{"@type":"WebSite","name":"Diseñarte México","url":"https://www.disenartemx.com/","inLanguage":"es-MX"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.disenartemx.com/"}]},
+{"@type":"LocalBusiness","name":"Diseñarte México","description":"Agencia de publicidad e innovación digital","url":"https://www.disenartemx.com/","telephone":"+524271004183","address":{"@type":"PostalAddress","addressLocality":"San Juan del Río","addressRegion":"Querétaro","addressCountry":"MX"},"areaServed":"Querétaro"}
+]}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H2JJVE75F3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H2JJVE75F3');
+  gtag('config', 'AW-16751651845');
+</script>
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2039038839979376');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2039038839979376&ev=PageView&noscript=1" alt=""></noscript>
+</helmet>
+
+<a href="#contenido" style="position:absolute;left:-9999px;z-index:100;background:var(--magenta);color:#fff;padding:12px 24px;border-radius:999px;font:600 15px 'Creato Display',sans-serif" style-focus="left:24px;top:12px">Ir al contenido</a>
+
+<!-- ===== NAVBAR ===== -->
+<header data-navbar="taller" data-nav-hero="noche" style="position:fixed;top:0;left:0;right:0;z-index:50;background:transparent">
+  <nav aria-label="Navegación principal" style="max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:32px;padding:0 clamp(24px,4vw,48px);height:96px">
+    <a href="/" aria-label="Diseñarte México, inicio" style="display:flex;align-items:baseline;gap:8px;text-decoration:none;color:var(--tinta)" style-hover="color:var(--tinta)">
+      <img src="assets/marca-color.png" alt="Diseñarte México, agencia de publicidad en San Juan del Río" width="82" height="76" style="display:block;width:auto;height:76px;object-fit:contain">
+    </a>
+    <div data-desktop-nav="" style="display:flex;align-items:center;gap:8px;margin-left:auto">
+      <a href="/" aria-current="page" style="padding:12px 14px;font:600 15px 'Creato Display',sans-serif;text-decoration:none;color:var(--tinta);border-bottom:2px solid var(--magenta)">Inicio</a>
+      <a href="/nosotros" style="padding:12px 14px;font:500 15px 'Creato Display',sans-serif;text-decoration:none;color:var(--tinta)" style-hover="color:#7C07A6">Nosotros</a>
+      <a href="/publicidad" style="padding:12px 14px;font:500 15px 'Creato Display',sans-serif;text-decoration:none;color:var(--tinta)" style-hover="color:#7C07A6">Publicidad</a>
+      <div data-dropdown="" style="position:relative">
+        <button data-dropdown-btn="" aria-expanded="false" aria-haspopup="true" style="display:flex;align-items:center;gap:6px;padding:12px 14px;font:500 15px 'Creato Display',sans-serif;background:none;border:none;color:var(--tinta);cursor:pointer" style-hover="color:#7C07A6">Innovación Digital
+          <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+        </button>
+        <div data-dropdown-panel="" style="position:absolute;top:100%;left:0;min-width:220px;background:var(--papel);border:1px solid rgba(14,7,20,.10);border-radius:6px 20px 20px 20px;padding:8px;display:flex;flex-direction:column">
+          <a href="/paginas-web" style="padding:12px 16px;font:500 15px 'Creato Display',sans-serif;text-decoration:none;color:var(--tinta);border-radius:12px" style-hover="background:rgba(14,7,20,.05);color:#7C07A6">Páginas web</a>
+          <a href="/innovacion-digital" style="padding:12px 16px;font:500 15px 'Creato Display',sans-serif;text-decoration:none;color:var(--tinta);border-radius:12px" style-hover="background:rgba(14,7,20,.05);color:#7C07A6">Otros servicios</a>
+        </div>
+      </div>
+      <a href="/contacto" style="display:inline-flex;align-items:center;min-height:48px;background:var(--magenta);color:#fff;border-radius:999px;padding:0 28px;font:600 15px 'Creato Display',sans-serif;text-decoration:none;margin-left:12px;transition:background 200ms ease,transform 200ms ease" style-hover="background:#7C07A6;transform:translateY(-2px);color:#fff" style-active="transform:translateY(0)">Cotizar</a>
+    </div>
+    <button data-menu-btn="" aria-expanded="false" aria-label="Abrir menú" style="margin-left:auto;width:48px;height:48px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:none;border:none;cursor:pointer">
+      <span aria-hidden="true" style="display:block;width:22px;height:2px;background:var(--tinta)"></span>
+      <span aria-hidden="true" style="display:block;width:22px;height:2px;background:var(--tinta)"></span>
+    </button>
+  </nav>
+</header>
+
+<!-- Menú móvil a pantalla completa -->
+
+
+<main id="contenido" data-sin-trazo="">
+<!-- ===== HERO: LA D RUEDA ===== -->
+<section data-hero="" style="position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;background:#0E0714">
+  <video data-hero-video="" autoplay="" muted="" loop="" playsinline="" preload="metadata" poster="assets/hero-poster.png" aria-hidden="true" width="1920" height="1080" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;aspect-ratio:16/9">
+    <source src="assets/hero-v1.mp4" type="video/mp4">
+  </video>
+  <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(90deg,#0E0714 0%,rgba(14,7,20,.72) 40%,transparent 72%)"></div>
+  <div aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;height:160px;background:linear-gradient(180deg,transparent,#0E0714)"></div>
+  <div style="position:relative;z-index:2;max-width:1240px;margin:0 auto;width:100%;padding:120px clamp(24px,4vw,48px) 96px">
+    <div data-hero-copy="" style="max-width:620px">
+      <p style="font:600 13px 'Walkway',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--cian);margin:0 0 24px"><span style="display:block;overflow:hidden"><span data-hero-line="" style="display:block">San Juan del Río, Qro. · Desde 2005</span></span></p>
+      <h1 style="font-family:var(--font-display);font-weight:900;font-size:clamp(42px,5vw,74px);line-height:.9;margin:0 0 32px;color:#FFFFFF;transform:rotate(-3.2deg);transform-origin:left center">
+        <span style="display:block;overflow:hidden"><span data-hero-line="" style="display:block"><span aria-hidden="true" style="color:var(--magenta);font-family:var(--font-display);font-weight:900;font-size:1.1em;line-height:0;vertical-align:-.06em">“</span><span style="font-family:'Walkway',sans-serif;font-weight:400;font-size:.62em;letter-spacing:.01em">Diseño &amp; </span></span></span>
+        <span style="display:block;overflow:visible"><span data-hero-line="" style="display:block"><span style="font-family:var(--font-display);font-weight:900;font-size:1.18em;letter-spacing:-.035em">estrategia</span></span></span>
+        <span style="display:block;overflow:visible;margin-top:-.05em"><span data-hero-line="" style="display:block"><span style="font-family:'Walkway',sans-serif;font-weight:400;font-size:.62em;letter-spacing:.01em;padding-left:.9em">al servicio</span></span></span>
+        <span style="display:block;overflow:hidden"><span data-hero-line="" style="display:block"><span style="font-family:var(--font-display);font-weight:900;font-size:1.18em;letter-spacing:-.035em">de tu marca</span><span aria-hidden="true" style="color:var(--magenta);font-family:var(--font-display);font-weight:900;font-size:1.1em;line-height:0;vertical-align:-.06em">”</span></span></span>
+      </h1>
+      <div style="overflow:hidden"><p data-hero-line="" style="font:400 clamp(17px,1.5vw,20px)/1.6 'Creato Display',sans-serif;color:rgba(255,255,255,.88);margin:0 0 32px;max-width:520px;text-wrap:pretty">En Diseñarte México <span style="color:var(--cian)">impulsamos la comunicación visual</span> del sector industrial con soluciones de marketing, diseño y publicidad, respaldadas por <span style="color:var(--cian)">más de 20 años</span> de experiencia.</p></div>
+      <div style="overflow:hidden"><div data-hero-line="" style="display:flex;flex-wrap:wrap;gap:16px">
+        <a href="/contacto" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;background:var(--magenta);color:#fff;border-radius:999px;padding:16px 32px;font:600 17px/1 'Creato Display',sans-serif;text-decoration:none;transition:background 200ms ease,transform 200ms ease" style-hover="background:#7C07A6;transform:translateY(-2px);color:#fff" style-active="transform:translateY(0)">Cotizar mi proyecto</a>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== PROMESA DE MARCA (texto del sitio actual) ===== -->
+<section style="background:#fff;display:flex;align-items:center;justify-content:center">
+  <div style="max-width:1240px;margin:0 auto;width:100%;padding:clamp(40px,5vw,72px) clamp(24px,4vw,48px) clamp(56px,7vw,96px)">
+    <p data-reveal="0" style="font-family:var(--font-display);font-weight:700;font-size:clamp(34px,5vw,64px);line-height:1.08;letter-spacing:-.025em;margin:0 auto;max-width:22ch;text-align:center;text-wrap:balance"><span data-pal="" data-col="t" style="display:inline-block;animation-range:entry 0% entry 48%">“Publicidad</span> <span data-pal="" data-col="t" style="display:inline-block;animation-range:entry 7% entry 55%">que</span> <span data-pal="" data-col="t" style="display:inline-block;animation-range:entry 14% entry 62%">conecta,</span><br><span data-pal="" data-col="v" style="display:inline-block;animation-range:entry 21% entry 69%">tecnología</span> <span data-pal="" data-col="v" style="display:inline-block;animation-range:entry 28% entry 76%">que</span> <span data-pal="" data-col="v" style="display:inline-block;animation-range:entry 35% entry 83%">convierte”</span></p>
+    <p data-reveal="1" style="font:400 clamp(18px,1.6vw,20px)/1.7 'Creato Display',sans-serif;color:var(--gris-texto);margin:32px auto 0;max-width:760px;text-align:center;text-wrap:pretty">Diseñamos <strong data-marca="" style="font-weight:600;color:var(--tinta);position:relative;animation-range:entry 20% entry 78%">soluciones publicitarias integrales</strong> que optimizan la comunicación de tu marca y potencian su posicionamiento en el mercado, y estrategias innovadoras orientadas a fortalecer su presencia y generar <strong data-marca="" style="font-weight:600;color:var(--tinta);position:relative;animation-range:entry 32% entry 84%">resultados medibles</strong>.&nbsp;</p>
+  </div>
+</section>
+
+<!-- ===== LAS DOS ÁREAS ===== -->
+<section id="areas" style="background:#fff">
+  <div style="max-width:1240px;margin:0 auto;padding:0 clamp(24px,4vw,48px) clamp(72px,10vw,128px)">
+    <h2 data-reveal="0" style="font-family:var(--font-display);font-weight:700;font-size:clamp(28px,3.4vw,40px);line-height:1.15;letter-spacing:-.01em;margin:0 0 48px;color:var(--tinta);text-wrap:pretty;text-align:center">Lo que <span style="font-family:Arial,sans-serif;font-weight:700"><span style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span></span> piensa de nosotros</h2>
+    <div role="region" aria-label="Reseñas de clientes en Google" style="position:relative">
+      <div ref="{{ setPista }}" onMouseEnter="{{ pistaPausar }}" onMouseLeave="{{ pistaReanudar }}" onFocus="{{ pistaPausar }}" onBlur="{{ pistaReanudar }}" onTouchStart="{{ pistaPausar }}" style="display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:4px 4px 16px;margin:0 -4px;scrollbar-width:none">
+        <sc-for list="{{ resenas }}" as="r" hint-placeholder-count="10">
+          <a href="{{ r.url }}" target="_blank" rel="noopener" style="scroll-snap-align:start;flex:0 0 300px;display:flex;flex-direction:column;gap:16px;padding:28px;background:var(--blanco);border:1px solid rgba(14,7,20,.10);border-radius:6px 28px 28px 28px;text-decoration:none;transition:transform 200ms ease,box-shadow 200ms ease" style-hover="transform:translateY(-4px);box-shadow:0 12px 24px rgba(14,7,20,.12)">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+              <span aria-hidden="true" style="display:flex;gap:2px"><svg width="16" height="16" viewBox="0 0 20 20" fill="#FBBC04" aria-hidden="true"><path d="M10 1l2.6 6 6.4.5-4.9 4.2 1.6 6.3L10 14.8 4.3 18l1.6-6.3L1 7.5l6.4-.5z"></path></svg><svg width="16" height="16" viewBox="0 0 20 20" fill="#FBBC04" aria-hidden="true"><path d="M10 1l2.6 6 6.4.5-4.9 4.2 1.6 6.3L10 14.8 4.3 18l1.6-6.3L1 7.5l6.4-.5z"></path></svg><svg width="16" height="16" viewBox="0 0 20 20" fill="#FBBC04" aria-hidden="true"><path d="M10 1l2.6 6 6.4.5-4.9 4.2 1.6 6.3L10 14.8 4.3 18l1.6-6.3L1 7.5l6.4-.5z"></path></svg><svg width="16" height="16" viewBox="0 0 20 20" fill="#FBBC04" aria-hidden="true"><path d="M10 1l2.6 6 6.4.5-4.9 4.2 1.6 6.3L10 14.8 4.3 18l1.6-6.3L1 7.5l6.4-.5z"></path></svg><svg width="16" height="16" viewBox="0 0 20 20" fill="#FBBC04" aria-hidden="true"><path d="M10 1l2.6 6 6.4.5-4.9 4.2 1.6 6.3L10 14.8 4.3 18l1.6-6.3L1 7.5l6.4-.5z"></path></svg></span>
+              <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4c-.3 1.5-1.2 2.7-2.5 3.6v3h4.1c2.4-2.2 3.5-5.5 3.5-8.8z"></path><path fill="#34A853" d="M12 24c3.2 0 5.9-1.1 7.9-2.9l-4.1-3c-1.1.8-2.5 1.2-3.8 1.2-3 0-5.5-2-6.4-4.7H1.4v3C3.3 21.4 7.3 24 12 24z"></path><path fill="#FBBC05" d="M5.6 14.6c-.2-.6-.3-1.3-.3-2s.1-1.4.3-2v-3H1.4C.5 9.2 0 10.5 0 12s.5 2.8 1.4 4.4l4.2-1.8z"></path><path fill="#EA4335" d="M12 4.7c1.6 0 3.1.6 4.2 1.7l3.7-3.7C17.9 1 15.2 0 12 0 7.3 0 3.3 2.6 1.4 6.4l4.2 3C6.5 6.7 9 4.7 12 4.7z"></path></svg>
+            </div>
+            <p style="font:400 17px/1.65 'Creato Display',sans-serif;color:var(--gris-texto);margin:0">{{ r.texto }}</p>
+            <div style="display:flex;flex-direction:column;gap:2px;margin-top:auto">
+              <strong style="font-family:var(--font-display);font-weight:700;font-size:17px;color:var(--tinta)">{{ r.nombre }}</strong>
+              <span style="font:400 14px/1.5 'Creato Display',sans-serif;color:var(--gris-texto)">{{ r.fecha }}</span>
+            </div>
+          </a>
+        </sc-for>
+      </div>
+      <button onClick="{{ pistaAnterior }}" aria-label="Reseña anterior" style="position:absolute;left:-8px;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:var(--blanco);border:1px solid rgba(14,7,20,.14);color:var(--tinta);cursor:pointer;box-shadow:0 6px 16px rgba(14,7,20,.14);display:flex;align-items:center;justify-content:center">
+        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" aria-hidden="true"><path d="M15 6H2M6 1L1 6l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </button>
+      <button onClick="{{ pistaSiguiente }}" aria-label="Siguiente reseña" style="position:absolute;right:-8px;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:var(--blanco);border:1px solid rgba(14,7,20,.14);color:var(--tinta);cursor:pointer;box-shadow:0 6px 16px rgba(14,7,20,.14);display:flex;align-items:center;justify-content:center">
+        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" aria-hidden="true"><path d="M1 6h13M10 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </button>
+    </div>
+    <a href="https://www.google.com/maps/place/%E2%9C%85DISE%C3%91ARTE+M%C3%89XICO+%7C+Agencia+de+publicidad+y+marketing+digital/@20.377935,-99.9605559,17z/data=!4m8!3m7!1s0x85d30b754c677837:0x2fb521035292e04b!8m2!3d20.377935!4d-99.957981!9m1!1b1!16s%2Fg%2F1tc_rcby?hl=es-419&entry=ttu&g_ep=EgoyMDI2MDgxNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" data-reveal="2" style="display:inline-block;font:600 14px 'Creato Display',sans-serif;color:var(--violeta);margin:24px auto 0;text-align:center;width:100%">Ver todas las reseñas en Google →</a>
+  </div>
+  <div aria-hidden="true" style="height:clamp(32px,5vw,64px);position:relative">
+    <div style="position:absolute;inset:0;background:#fff;clip-path:polygon(0 100%,100% 0,100% 100%)"></div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIOS EN VIDEO ===== -->
+<section style="background:#fff">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(0px,1vw,16px) clamp(24px,4vw,48px) clamp(72px,10vw,128px)">
+    <div role="region" aria-label="Testimonios en video" style="position:relative;display:flex;align-items:center;justify-content:center;height:clamp(420px,58vw,560px)">
+      <sc-for list="{{ testimonios }}" as="t" hint-placeholder-count="3">
+        <article aria-hidden="{{ t.oculta }}" onClick="{{ t.elegir }}" style="{{ t.cardStyle }}">
+          <video ref="{{ t.setVideo }}" src="{{ t.src }}" playsInline="{{ si }}" preload="metadata" onClick="{{ t.alternar }}" onPlay="{{ t.marcarPlay }}" onPause="{{ t.marcarPausa }}" onEnded="{{ t.marcarPausa }}" aria-label="{{ t.etiqueta }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;cursor:pointer"></video>
+          <sc-if value="{{ t.mostrarPlay }}" hint-placeholder-val="{{ true }}">
+            <span aria-hidden="true" style="position:absolute;left:50%;top:50%;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:50%;background:rgba(14,7,20,.55);display:flex;align-items:center;justify-content:center;pointer-events:none">
+              <svg width="20" height="22" viewBox="0 0 20 22" fill="#fff" aria-hidden="true"><path d="M0 1.2C0 .2 1.1-.4 2 .1l17 10a1 1 0 0 1 0 1.8L2 21.9c-.9.5-2-.1-2-1.1V1.2Z"></path></svg>
+            </span>
+          </sc-if>
+        </article>
+      </sc-for>
+      <button onClick="{{ testimonioAnterior }}" aria-label="Testimonio anterior" style="position:absolute;left:0;top:50%;margin-top:-24px;width:44px;height:44px;border-radius:50%;background:#fff;border:1.5px solid rgba(14,7,20,.16);color:var(--tinta);cursor:pointer;z-index:5;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(14,7,20,.12)">
+        <svg width="14" height="12" viewBox="0 0 16 12" fill="none" aria-hidden="true"><path d="M15 6H2M6 1L1 6l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </button>
+      <button onClick="{{ testimonioSiguiente }}" aria-label="Testimonio siguiente" style="position:absolute;right:0;top:50%;margin-top:-24px;width:44px;height:44px;border-radius:50%;background:#fff;border:1.5px solid rgba(14,7,20,.16);color:var(--tinta);cursor:pointer;z-index:5;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(14,7,20,.12)">
+        <svg width="14" height="12" viewBox="0 0 16 12" fill="none" aria-hidden="true"><path d="M1 6h13M10 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== CTA FINAL (único paralaje del sitio) ===== -->
+<section data-cta-final="" style="position:relative;overflow:hidden;background:var(--papel)">
+  <div data-parallax="" aria-hidden="true" style="position:absolute;inset:-60px;background:url('assets/hero-poster.png') center/cover no-repeat;opacity:.25;transform:scale(1.08)"></div>
+  <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,7,20,.85),rgba(26,15,36,.92))"></div>
+  <div style="position:relative;z-index:2;max-width:840px;margin:0 auto;padding:clamp(72px,10vw,128px) clamp(24px,4vw,48px);text-align:center">
+    <h2 data-reveal="0" style="font-family:var(--font-display);font-weight:700;font-size:clamp(28px,3.4vw,40px);line-height:1.15;margin:0 0 16px;color:#FFFFFF;text-wrap:pretty">Conviértete en una empresa que maximiza su impacto y crecimiento</h2>
+    <div data-reveal="2" style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center">
+      <a href="/contacto" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;background:var(--magenta);color:#fff;border-radius:999px;padding:16px 32px;font:600 17px/1 'Creato Display',sans-serif;text-decoration:none;transition:background 200ms ease,transform 200ms ease" style-hover="background:#7C07A6;transform:translateY(-2px);color:#fff" style-active="transform:translateY(0)">Pedir cotización</a>
+      <a href="https://wa.me/524272110528?text=Hola%2C%20vengo%20de%20su%20p%C3%A1gina%20web%20y%20quiero%20cotizar" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;border:1.5px solid currentColor;color:#FFFFFF;border-radius:999px;padding:16px 32px;font:600 17px/1 'Creato Display',sans-serif;text-decoration:none;transition:background 200ms ease" style-hover="background:rgba(255,255,255,.12);color:#FFFFFF">Escribir por WhatsApp</a>
+    </div>
+  </div>
+</section>
+<div data-menu="" style="display: flex; opacity: 0; pointer-events: none; position: fixed; inset: 0; z-index: 49; background: var(--papel); flex-direction: column; justify-content: center; gap: 8px; padding: 96px 32px 48px; left: -36px; top: 872px">
+  <a href="/" style="font-family:var(--font-display);font-weight:700;font-size:30px;color:var(--tinta);text-decoration:none;padding:12px 0">Inicio</a>
+  <a href="/nosotros" style="font-family:var(--font-display);font-weight:700;font-size:30px;color:var(--tinta);text-decoration:none;padding:12px 0">Nosotros</a>
+  <a href="/publicidad" style="font-family:var(--font-display);font-weight:700;font-size:30px;color:var(--tinta);text-decoration:none;padding:12px 0">Publicidad</a>
+  <a href="/innovacion-digital" style="font-family:var(--font-display);font-weight:700;font-size:30px;color:var(--tinta);text-decoration:none;padding:12px 0">Innovación Digital</a>
+  <a href="/paginas-web" style="font-family:var(--font-display);font-weight:700;font-size:30px;color:var(--violeta);text-decoration:none;padding:12px 0">Páginas web</a>
+  <a href="/contacto" style="display:inline-flex;align-items:center;justify-content:center;min-height:52px;background:var(--magenta);color:#fff;border-radius:999px;padding:0 32px;font:600 17px 'Creato Display',sans-serif;text-decoration:none;margin-top:24px;align-self:flex-start">Cotizar</a>
+</div></main>
+
+<!-- ===== FOOTER ===== -->
+<footer style="background:var(--papel);border-top:1px solid rgba(14,7,20,.10)">
+  <div style="max-width:1240px;margin:0 auto;padding:64px clamp(24px,4vw,48px) 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <img src="assets/marca-color.png" alt="Diseñarte México, agencia de publicidad en San Juan del Río" width="150" height="139" style="display:block;width:150px;height:auto">
+      <p style="font:400 15px/1.6 'Creato Display',sans-serif;color:var(--gris-texto);margin:0">Agencia de publicidad e innovación digital. San Juan del Río, Qro. Desde 2005.</p>
+    </div>
+    <nav aria-label="Publicidad" style="display:flex;flex-direction:column;gap:10px">
+      <span style="font:600 13px 'Walkway',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--violeta)">Publicidad</span>
+      <a href="/publicidad#catalogo" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Catálogo de servicios</a>
+      <a href="/publicidad#transformacion" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Antes y después</a>
+      <a href="/publicidad#pop" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Material POP</a>
+    </nav>
+    <nav aria-label="Innovación digital" style="display:flex;flex-direction:column;gap:10px">
+      <span style="font:600 13px 'Walkway',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--violeta)">Innovación digital</span>
+      <a href="/paginas-web" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Páginas web</a>
+      <a href="/paginas-web#paquetes" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Paquetes de renta</a>
+      <a href="/innovacion-digital" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Otros servicios</a>
+    </nav>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <span style="font:600 13px 'Walkway',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--violeta)">Contacto</span>
+      <a href="https://wa.me/524272110528" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">WhatsApp 427 211 05 28</a>
+      <a href="tel:+524271004183" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Tel. 427 100 41 83</a>
+      <a href="mailto:ventas@disenartemx.com" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">ventas@disenartemx.com</a>
+      <address style="font:400 15px/1.6 'Creato Display',sans-serif;color:var(--gris-texto);font-style:normal;margin:8px 0 0">Av. Lomas del Pedregoso #371<br>Col. Lomas de San Juan, Sección Campestre<br>San Juan del Río, Querétaro</address>
+    </div>
+  </div>
+  <div style="max-width:1240px;margin:0 auto;padding:24px clamp(24px,4vw,48px);border-top:1px solid rgba(14,7,20,.10);display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center">
+    <span style="font:400 14px 'Creato Display',sans-serif;color:var(--gris-texto)">© 2026 Diseñarte México®. Todos los derechos reservados.</span>
+    <div style="display:flex;gap:24px;align-items:center">
+      <a href="/aviso-de-privacidad" style="font:500 14px 'Creato Display',sans-serif;color:var(--gris-texto)">Aviso de privacidad</a>
+      <nav aria-label="Redes sociales" style="display:flex;gap:8px;align-items:center">
+        <a href="https://www.instagram.com/disenarte.mexico/" aria-label="Diseñarte México en Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;color:var(--tinta)" style-hover="color:#7C07A6">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5"></rect><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"></circle><circle cx="17.2" cy="6.8" r="1" fill="currentColor"></circle></svg>
+        </a>
+        <a href="https://www.facebook.com/Disenarte2mil" aria-label="Diseñarte México en Facebook" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;color:var(--tinta)" style-hover="color:#7C07A6">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14.5 8.5h2.5M14.5 21V8.5a3 3 0 0 1 3-3M11 13h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+        </a>
+        <a href="https://www.youtube.com/@DiseñarteMéxico" aria-label="Diseñarte México en YouTube" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;color:var(--tinta)" style-hover="color:#7C07A6">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="4" stroke="currentColor" stroke-width="1.5"></rect><path d="M11 9.5l4 2.5-4 2.5v-5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path></svg>
+        </a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== FLOTANTE: WHATSAPP (chatbot pendiente) ===== -->
+<div data-fab="" style="position:fixed;right:24px;bottom:24px;z-index:55">
+  <a href="https://wa.me/524272110528?text=Hola%2C%20vengo%20de%20su%20p%C3%A1gina%20web%20y%20quiero%20cotizar" aria-label="Escribir por WhatsApp" style="display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:#25D366;color:#0E0714;box-shadow:0 12px 32px rgba(14,7,20,.18)">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><path d="M8.8 9.2c.3 2.7 3.2 5.6 5.9 5.9l1.2-1.2-1.9-1.3-1 .6a5.7 5.7 0 0 1-2.3-2.3l.6-1-1.3-1.9-1.2 1.2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path></svg>
+  </a>
+</div>
+<div id="chatbot-root" data-estado="pendiente"></div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+// Reseñas reales de Google Business, con el link a cada opinión. Fácil de editar: agrega o quita objetos aquí.
+const RESENAS = [
+  { nombre: 'Israel Mora', fecha: 'Hace 11 meses', texto: 'Un excelente servicio personalizado con muy buen seguimiento y gran amabilidad. Usan materiales durables, yo rotulé mi camioneta hace seis años y apenas regresé a cambiar esos rótulos por unos iguales en calidad. Pedí ciertos cambios en la información y diseño y los ajustamos hasta que quedaron como lo necesitaba.', url: 'https://share.google/Ei3MSlzpevBzokePz' },
+  { nombre: 'Lord Valdomero', fecha: 'Hace un año', texto: '¡Estoy impresionado con la calidad del servicio de Diseñarte México! Desde el primer contacto, el equipo demostró un compromiso excepcional con la atención al cliente. La calidad de sus servicios de impresión es inigualable, con colores vibrantes y acabados perfectos en cada material promocional. Además, su servicio de marketing ha sido clave para impulsar nuestra visibilidad.', url: 'https://share.google/mQFxHVRNcX3WzWSDL' },
+  { nombre: 'Mayra BeGa', fecha: 'Hace 9 meses', texto: 'Una de las agencias que no solo cuentan con atención personalizada, si no que desde esa cualidad uno se puede dar cuenta de la formalidad y profesionalismo que los distingue. Muchas felicidades y agradezco el excelente servicio que hasta la fecha nos han otorgado.', url: 'https://share.google/Tp0zSqlv2f7Nwx9Kk' },
+  { nombre: 'Javier Maldonado', fecha: 'Hace un año', texto: '¡Impecable servicio y calidad en cada proyecto! Llevamos más de 5 años trabajando con Diseñarte como nuestro proveedor de impresos para señalética, material interno y aplicaciones gráficas, y no podemos estar más satisfechos. Quiero destacar especialmente la atención de Sara, quien ha sido nuestro contacto directo.', url: 'https://share.google/xIc5auZxOEQxayah4' },
+  { nombre: 'María Guadalupe Ramírez Ferrer', fecha: 'Hace un año', texto: 'Súper recomendable, entrega antes de lo acordado, muy amables y su trabajo al 100.', url: 'https://share.google/nDwtQQYQLje50bMbf' },
+  { nombre: 'Fernando Lemus', fecha: 'Hace un año', texto: 'Excelente calidad y muy buen servicio. Me ayudaron con el diseño de mis tarjetas. Muy recomendable.', url: 'https://share.google/LuhR6vzCx3tKn3038' },
+  { nombre: 'soy ulises López', fecha: 'Hace un año', texto: 'Quedé encantado con su servicio atención y amabilidad al momento de hacer mi pedido, se preocuparon por la calidad de impresión de mi material en todo momento. En la entrega de mi producto lo recibí en una bolsa de regalo negra, muy elegante, lo cual me hizo sentir especial y satisfecho al haber pagado por su servicio.', url: 'https://share.google/npXSYGe9wHzGWWQFi' },
+  { nombre: 'Eduardo Reséndiz', fecha: 'Editado hace 2 meses', texto: 'Es una agencia que cumple con los requerimientos del cliente, los diseños y el trabajo son de muy buena calidad, sin duda alguna recomiendo los servicios que ofrecen, espero seguir solicitando diseños y trabajos con ellos. ¡Muchas felicidades por el buen servicio!', url: 'https://share.google/cyg9pp2dwAmcbzm9z' },
+  { nombre: 'Pamela Itzel', fecha: 'Hace 2 meses', texto: 'Muy buen servicio, excelente atención al cliente, amables y satisfechos con su trabajo recomiendo ampliamente.', url: 'https://share.google/dD1CQskH3h6sMj9ay' },
+  { nombre: 'Maribel Reséndiz', fecha: 'Hace un mes', texto: 'Muchas gracias. Super excelente trabajo y más bonito con el nombre de Reséndiz 😊', url: 'https://share.google/THfviQ3ijPDrsc9C2' },
+];
+
+class Component extends DCLogic {
+  state = { testimonioActivo: 0, testimonioPlay: {} };
+  componentDidMount() {
+    import('./assets/site.js').then((m) => m.initSite());
+    // El video de la tarjeta solo se reproduce mientras la sección está en pantalla
+    const obs = new IntersectionObserver((ents) => ents.forEach((e) => {
+      const v = e.target;
+      if (e.isIntersecting) { v.muted = true; v.play().catch(() => {}); } else v.pause();
+    }), { threshold: 0.25 });
+    setTimeout(() => document.querySelectorAll('[data-video-vista]').forEach((v) => obs.observe(v)), 300);
+    this._obsVideo = obs;
+  }
+  componentWillUnmount() { if (this._obsVideo) this._obsVideo.disconnect(); clearInterval(this._autoplayResenas); }
+  _iniciarAutoplayResenas() {
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    clearInterval(this._autoplayResenas);
+    this._autoplayResenas = setInterval(() => {
+      const el = this._pistaResenas;
+      if (!el || this._resenasPausado) return;
+      const alFinal = el.scrollLeft + el.clientWidth >= el.scrollWidth - 4;
+      el.scrollTo({ left: alFinal ? 0 : el.scrollLeft + 324, behavior: 'smooth' });
+    }, 3500);
+  }
+  _irTestimonio(n) {
+    const total = 3;
+    const activo = this.state.testimonioActivo;
+    const anterior = this._videos && this._videos[activo];
+    if (anterior) anterior.pause();
+    this.setState({ testimonioActivo: (n + total) % total });
+  }
+  renderVals() {
+    const { testimonioActivo, testimonioPlay } = this.state;
+    this._videos = this._videos || {};
+    const rutas = ['assets/testimonio-1.mp4', 'assets/testimonio-2.mp4', 'assets/testimonio-3.mp4'];
+    const nombres = ['Testimonio de empresa automotriz', 'Testimonio de Unideq', 'Testimonio de Black Projektion'];
+    const testimonios = rutas.map((src, i) => {
+      const offset = ((i - testimonioActivo + 1 + 3) % 3) - 1; // -1, 0 ó 1
+      const activa = offset === 0;
+      const t = offset === -1
+        ? 'translateX(-58%) scale(.82) rotate(-6deg)'
+        : offset === 1
+          ? 'translateX(58%) scale(.82) rotate(6deg)'
+          : 'translateX(0) scale(1) rotate(0deg)';
+      return {
+        src,
+        etiqueta: nombres[i],
+        oculta: !activa,
+        cardStyle: `position:absolute;width:min(78vw,300px);aspect-ratio:9/16;border-radius:6px 20px 20px 20px;overflow:hidden;background:#1c1522;box-shadow:0 ${activa ? 24 : 10}px ${activa ? 40 : 18}px rgba(14,7,20,${activa ? .32 : .18});cursor:${activa ? 'default' : 'pointer'};z-index:${activa ? 3 : 1};opacity:${activa ? 1 : .55};transition:transform 420ms cubic-bezier(.22,1,.36,1),opacity 420ms ease,box-shadow 420ms ease;transform:${t}`,
+        mostrarPlay: !testimonioPlay[i],
+        elegir: activa ? undefined : () => this._irTestimonio(i),
+        setVideo: (el) => { if (el) this._videos[i] = el; },
+        alternar: (e) => {
+          e.stopPropagation();
+          const v = e.currentTarget;
+          if (v.paused) { v.play().catch(() => {}); } else v.pause();
+        },
+        marcarPlay: () => this.setState((s) => ({ testimonioPlay: { ...s.testimonioPlay, [i]: true } })),
+        marcarPausa: () => this.setState((s) => ({ testimonioPlay: { ...s.testimonioPlay, [i]: false } })),
+      };
+    });
+    return {
+      si: true,
+      testimonios,
+      testimonioAnterior: () => this._irTestimonio(testimonioActivo - 1),
+      testimonioSiguiente: () => this._irTestimonio(testimonioActivo + 1),
+      resenas: RESENAS,
+      setPista: (el) => {
+        if (el && el !== this._pistaResenas) { this._pistaResenas = el; this._iniciarAutoplayResenas(); }
+      },
+      pistaAnterior: () => { if (this._pistaResenas) this._pistaResenas.scrollBy({ left: -324, behavior: 'smooth' }); },
+      pistaSiguiente: () => { if (this._pistaResenas) this._pistaResenas.scrollBy({ left: 324, behavior: 'smooth' }); },
+      pistaPausar: () => { this._resenasPausado = true; },
+      pistaReanudar: () => { this._resenasPausado = false; },
+    };
+  }
+}
+</script>
+</body>
+</html>

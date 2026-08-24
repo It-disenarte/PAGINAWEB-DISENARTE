@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Innovación digital para empresas | Diseñarte México</title>
+<meta name="description" content="Páginas web, automatizaciones y herramientas digitales para empresas de Querétaro. Construimos activos que trabajan, no folletos digitales.">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/png" href="assets/favicon-dz.png">
+<link rel="apple-touch-icon" href="assets/favicon-dz.png">
+<meta name="theme-color" content="#0E0714">
+<link rel="canonical" href="https://www.disenartemx.com/innovacion-digital">
+<meta property="og:title" content="Innovación digital para empresas | Diseñarte México">
+<meta property="og:description" content="Páginas web, automatizaciones y herramientas digitales para empresas de Querétaro. Construimos activos que trabajan, no folletos digitales.">
+<meta property="og:image" content="https://www.disenartemx.com/assets/hero-poster.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.disenartemx.com/innovacion-digital">
+<meta property="og:locale" content="es_MX">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+/* Tipografía corporativa: Creato Display para todo el texto, Walkway para eyebrows */
+@font-face{font-family:'Creato Display';src:url('assets/fonts/CreatoDisplay-Light.otf') format('opentype');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'Creato Display';src:url('assets/fonts/CreatoDisplay-Regular.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Creato Display';src:url('assets/fonts/CreatoDisplay-Medium.otf') format('opentype');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Creato Display';src:url('assets/fonts/CreatoDisplay-Bold.otf') format('opentype');font-weight:600 700;font-style:normal;font-display:swap}
+@font-face{font-family:'Creato Display';src:url('assets/fonts/CreatoDisplay-ExtraBold.otf') format('opentype');font-weight:800;font-style:normal;font-display:swap}
+@font-face{font-family:'Creato Display';src:url('assets/fonts/CreatoDisplay-Black.otf') format('opentype');font-weight:900;font-style:normal;font-display:swap}
+@font-face{font-family:'Walkway';src:url('assets/fonts/Walkway-Regular.ttf') format('truetype');font-weight:400 500;font-style:normal;font-display:swap}
+@font-face{font-family:'Walkway';src:url('assets/fonts/Walkway-Bold.ttf') format('truetype');font-weight:600 700;font-style:normal;font-display:swap}
+@font-face{font-family:'Walkway';src:url('assets/fonts/Walkway-Black.ttf') format('truetype');font-weight:800 900;font-style:normal;font-display:swap}
+:root{--tinta:#0E0714;--tinta-2:#1A0F24;--magenta:#A53692;--violeta:#7C07A6;--cian:#5CC6D0;--papel:#F2F1F3;--blanco:#FFFFFF;--gris:#96989A;--gris-texto:#55575A;--gradiente:linear-gradient(100deg,#7C07A6 0%,#A53692 45%,#5CC6D0 100%);--font-display:'Creato Display',sans-serif}
+body{margin:0;background:#FFFFFF;color:#0E0714;font-family:'Creato Display',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:hover{color:#7C07A6}
+:focus-visible{outline:2px solid #7C07A6;outline-offset:3px}
+[data-card]{transition:transform 200ms cubic-bezier(.22,1,.36,1)}
+[data-card]:hover{transform:translateY(-6px)}
+[data-card] [data-corner]{opacity:0;transition:opacity 200ms ease}
+[data-card]:hover [data-corner]{opacity:1}
+@media(max-width:1023px){[data-desktop-nav]{display:none!important}}
+@media(min-width:1024px){[data-menu-btn]{display:none!important}}
+@media(prefers-reduced-motion:reduce){[data-card]:hover{transform:none}}
+
+/* ===== REVEALS DECLARATIVOS (CSS: sobreviven a los re-renders) ===== */
+@keyframes dzUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes dzTecla{0%{opacity:0;transform:translateY(-100%)}10%{opacity:.9}70%{opacity:.9}100%{opacity:0;transform:translateY(100%)}}
+[data-tecla]{position:relative;font:600 13px/1.5 ui-monospace,'SF Mono',monospace;color:var(--violeta);opacity:0;animation-name:dzTecla;animation-timing-function:linear;animation-iteration-count:infinite;white-space:pre-line;text-align:center}
+@media(prefers-reduced-motion:reduce){[data-tecla]{animation:none;opacity:.5;transform:none}}
+@media(max-width:767px){[data-tecla-panel]{display:none}}
+@keyframes dzLine{from{opacity:0;transform:translateY(105%)}to{opacity:1;transform:none}}
+[data-hero-line]{animation:dzLine 700ms cubic-bezier(.22,1,.36,1) 120ms both}
+h1>span:nth-child(2) [data-hero-line]{animation-delay:210ms}
+h1>span:nth-child(3) [data-hero-line]{animation-delay:300ms}
+h1>span:nth-child(4) [data-hero-line]{animation-delay:390ms}
+[data-hero-line]:not(h1 [data-hero-line]){animation-delay:480ms}
+p [data-hero-line]{animation-delay:120ms}
+[data-reveal]{animation:dzUp 600ms cubic-bezier(.22,1,.36,1) both}
+[data-reveal="1"]{animation-delay:80ms}
+[data-reveal="2"]{animation-delay:160ms}
+[data-reveal="3"]{animation-delay:240ms}
+[data-reveal="4"]{animation-delay:320ms}
+[data-reveal="5"]{animation-delay:400ms}
+[data-reveal="6"]{animation-delay:480ms}
+[data-reveal="7"],[data-reveal="8"],[data-reveal="9"],[data-reveal="10"]{animation-delay:560ms}
+@supports (animation-timeline:view()){
+  [data-reveal]{animation-timeline:view();animation-range:entry 0% entry 55%;animation-delay:0s;animation-fill-mode:both}
+}
+@media(prefers-reduced-motion:reduce){
+  [data-hero-line],[data-reveal]{animation:none!important;opacity:1!important;transform:none!important}
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","name":"Diseñarte México","url":"https://www.disenartemx.com/","telephone":"+524271004183"},
+{"@type":"WebSite","name":"Diseñarte México","url":"https://www.disenartemx.com/","inLanguage":"es-MX"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.disenartemx.com/"},{"@type":"ListItem","position":2,"name":"Innovación Digital","item":"https://www.disenartemx.com/innovacion-digital"}]},
+{"@type":"Service","name":"Innovación digital para empresas","provider":{"@type":"Organization","name":"Diseñarte México"},"areaServed":"Querétaro","description":"Páginas web, automatizaciones y herramientas digitales hechas a la medida de cómo opera tu empresa."}
+]}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H2JJVE75F3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H2JJVE75F3');
+  gtag('config', 'AW-16751651845');
+</script>
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2039038839979376');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2039038839979376&ev=PageView&noscript=1" alt=""></noscript>
+</helmet>
+
+<a href="#contenido" style="position:absolute;left:-9999px;z-index:100;background:var(--magenta);color:#fff;padding:12px 24px;border-radius:999px;font:600 15px 'Creato Display',sans-serif" style-focus="left:24px;top:12px">Ir al contenido</a>
+
+<!-- ===== NAVBAR ===== -->
+<header data-navbar="taller" style="position:fixed;top:0;left:0;right:0;z-index:50;background:transparent">
+  <nav aria-label="Navegación principal" style="max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:32px;padding:0 clamp(24px,4vw,48px);height:96px">
+    <a href="/" aria-label="Diseñarte México, inicio" style="display:flex;align-items:baseline;gap:8px;text-decoration:none;color:var(--tinta)" style-hover="color:var(--tinta)">
+      <img src="assets/marca-color.png" alt="Diseñarte México, agencia de publicidad en San Juan del Río" width="82" height="76" style="display:block;width:auto;height:76px;object-fit:contain">
+    </a>
+    <div data-desktop-nav="" style="display:flex;align-items:center;gap:8px;margin-left:auto">
+      <a href="/" style="padding:12px 14px;font:500 15px 'Creato Display',sans-serif;text-decoration:none;color:var(--tinta)" style-hover="color:#7C07A6">Inicio</a>
+      <a href="/nosotros" style="padding:12px 14px;font:500 15px 'Creato Display',sans-serif;text-decoration:none;color:var(--tinta)" style-hover="color:#7C07A6">Nosotros</a>
+      <a href="/publicidad" style="padding:12px 14px;font:500 15px 'Creato Display',sans-serif;text-decoration:none;color:var(--tinta)" style-hover="color:#7C07A6">Publicidad</a>
+      <div data-dropdown="" style="position:relative">
+        <button data-dropdown-btn="" aria-expanded="false" aria-haspopup="true" style="display:flex;align-items:center;gap:6px;padding:12px 14px;font:600 15px 'Creato Display',sans-serif;background:none;border:none;color:var(--tinta);border-bottom:2px solid var(--magenta);cursor:pointer">Innovación Digital
+          <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+        </button>
+        <div data-dropdown-panel="" style="position:absolute;top:100%;left:0;min-width:220px;background:var(--papel);border:1px solid rgba(14,7,20,.10);border-radius:6px 20px 20px 20px;padding:8px;display:flex;flex-direction:column">
+          <a href="/paginas-web" style="padding:12px 16px;font:500 15px 'Creato Display',sans-serif;text-decoration:none;color:var(--tinta);border-radius:12px" style-hover="background:rgba(14,7,20,.05);color:#7C07A6">Páginas web</a>
+          <a href="/innovacion-digital#servicios" style="padding:12px 16px;font:500 15px 'Creato Display',sans-serif;text-decoration:none;color:var(--tinta);border-radius:12px" style-hover="background:rgba(14,7,20,.05);color:#7C07A6">Otros servicios</a>
+        </div>
+      </div>
+      <a href="/contacto?interes=digital" style="display:inline-flex;align-items:center;min-height:48px;background:var(--magenta);color:#fff;border-radius:999px;padding:0 28px;font:600 15px 'Creato Display',sans-serif;text-decoration:none;margin-left:12px;transition:background 200ms ease,transform 200ms ease" style-hover="background:#7C07A6;transform:translateY(-2px);color:#fff" style-active="transform:translateY(0)">Cotizar</a>
+    </div>
+    <button data-menu-btn="" aria-expanded="false" aria-label="Abrir menú" style="margin-left:auto;width:48px;height:48px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:none;border:none;cursor:pointer">
+      <span aria-hidden="true" style="display:block;width:22px;height:2px;background:var(--tinta)"></span>
+      <span aria-hidden="true" style="display:block;width:22px;height:2px;background:var(--tinta)"></span>
+    </button>
+  </nav>
+</header>
+
+<div data-menu="" style="display:flex;opacity:0;pointer-events:none;position:fixed;inset:0;z-index:49;background:var(--papel);flex-direction:column;justify-content:center;gap:8px;padding:96px 32px 48px">
+  <a href="/" style="font-family:var(--font-display);font-weight:700;font-size:30px;color:var(--tinta);text-decoration:none;padding:12px 0">Inicio</a>
+  <a href="/nosotros" style="font-family:var(--font-display);font-weight:700;font-size:30px;color:var(--tinta);text-decoration:none;padding:12px 0">Nosotros</a>
+  <a href="/publicidad" style="font-family:var(--font-display);font-weight:700;font-size:30px;color:var(--tinta);text-decoration:none;padding:12px 0">Publicidad</a>
+  <a href="/innovacion-digital" style="font-family:var(--font-display);font-weight:700;font-size:30px;color:var(--magenta);text-decoration:none;padding:12px 0">Innovación Digital</a>
+  <a href="/paginas-web" style="font-family:var(--font-display);font-weight:700;font-size:30px;color:var(--tinta);text-decoration:none;padding:12px 0">Páginas web</a>
+  <a href="/contacto?interes=digital" style="display:inline-flex;align-items:center;justify-content:center;min-height:52px;background:var(--magenta);color:#fff;border-radius:999px;padding:0 32px;font:600 17px 'Creato Display',sans-serif;text-decoration:none;margin-top:24px;align-self:flex-start">Cotizar</a>
+</div>
+
+<main id="contenido">
+<!-- ===== HERO ===== -->
+<section data-hero="" style="position:relative;background:#fff;overflow:hidden">
+  <div aria-hidden="true" style="position:absolute;top:-20%;right:-10%;width:60%;height:140%;background:var(--gradiente);opacity:.10;clip-path:polygon(35% 0,100% 0,100% 100%,0 100%)"></div>
+  <div style="position:relative;max-width:1240px;margin:0 auto;padding:clamp(140px,18vw,200px) clamp(24px,4vw,48px) clamp(72px,10vw,128px)">
+    <p style="font:600 13px 'Walkway',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--violeta);margin:0 0 24px"><span style="display:block;overflow:hidden"><span data-hero-line="" style="display:block">Área de innovación tecnológica y digital</span></span></p>
+    <h1 style="font-family:var(--font-display);font-weight:700;font-size:clamp(34px,4.5vw,56px);line-height:1.05;letter-spacing:-.02em;margin:0 0 24px;max-width:860px;color:var(--tinta)">
+      <span style="display:block;overflow:hidden"><span data-hero-line="" style="display:block">Innovación digital para empresas</span></span>
+      <span style="display:block;overflow:hidden"><span data-hero-line="" style="display:block">que ya no quieren hacerlo a mano</span></span>
+    </h1>
+    <div style="overflow:hidden"><p data-hero-line="" style="font:400 clamp(18px,1.6vw,20px)/1.6 'Creato Display',sans-serif;color:var(--gris-texto);margin:0 0 40px;max-width:640px;text-wrap:pretty">La misma agencia que rotula tu flotilla ahora construye lo que corre en tus pantallas: páginas web, automatizaciones y herramientas hechas para cómo opera tu empresa de verdad.</p></div>
+    <div style="overflow:hidden"><div data-hero-line="">
+    </div></div>
+  </div>
+</section>
+
+<!-- ===== EL SERVICIO ESTRELLA ===== -->
+<section style="background:#fff">
+  <div style="max-width:1240px;margin:0 auto;padding:0 clamp(24px,4vw,48px) clamp(72px,10vw,128px)">
+    <a data-card="" data-reveal="1" href="/paginas-web" style="position:relative;display:flex;flex-direction:column;justify-content:center;gap:24px;min-height:min(60vh,480px);background:var(--papel);border:1px solid rgba(14,7,20,.10);border-radius:6px 28px 28px 28px;padding:clamp(32px,6vw,80px);text-decoration:none;overflow:hidden" style-hover="color:inherit">
+      <span data-corner="" aria-hidden="true" style="position:absolute;top:0;left:0;width:56px;height:56px;background:var(--gradiente);border-radius:6px 0 100% 0"></span>
+      <div aria-hidden="true" style="position:absolute;right:-5%;bottom:-30%;width:50%;height:120%;background:var(--gradiente);opacity:.08;clip-path:polygon(30% 0,100% 0,100% 100%,0 100%)"></div>
+      <div aria-hidden="true" data-tecla-panel="" style="position:absolute;right:6%;top:0;width:34%;height:100%;overflow:hidden;display:flex;justify-content:space-between">
+        <sc-for list="{{ columnasCodigo }}" as="col" hint-placeholder-count="7">
+          <span data-tecla="" style="{{ col.style }}">{{ col.texto }}</span>
+        </sc-for>
+      </div>
+      <span style="font-family:var(--font-display);font-weight:900;font-size:clamp(40px,6vw,88px);line-height:.95;letter-spacing:-.03em;background:var(--gradiente);-webkit-background-clip:text;background-clip:text;color:transparent">Páginas web</span>
+      <p style="font:400 clamp(18px,1.8vw,22px)/1.6 'Creato Display',sans-serif;color:var(--tinta);margin:0;max-width:640px;text-wrap:pretty">Cómprala y es tuya, o réntala y olvídate de todo. Dos formas de tenerla, tres paquetes, cero letras chiquitas.</p>
+      <span style="display:inline-flex;align-items:center;gap:10px;font:600 17px 'Creato Display',sans-serif;color:var(--violeta)">Ver los paquetes
+        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" aria-hidden="true"><path d="M1 6h13M10 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </span>
+    </a>
+  </div>
+  <div aria-hidden="true" style="height:clamp(56px,9vw,130px);position:relative">
+    <div style="position:absolute;inset:0;background:var(--papel);clip-path:polygon(0 100%,100% 0,100% 100%)"></div>
+  </div>
+</section>
+
+<!-- ===== OTROS SERVICIOS (desde el arreglo SERVICIOS_DIGITALES) ===== -->
+<section id="servicios" style="background:var(--papel)">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(48px,7vw,96px) clamp(24px,4vw,48px) clamp(72px,10vw,128px)">
+    <h2 data-reveal="0" style="font-family:var(--font-display);font-weight:700;font-size:clamp(28px,3.4vw,40px);line-height:1.15;margin:0 0 8px;color:var(--tinta)">Otros servicios</h2>
+    <p data-reveal="1" style="font:400 clamp(18px,1.6vw,20px)/1.6 'Creato Display',sans-serif;color:var(--gris-texto);margin:0 0 48px;max-width:760px">Innovación y marketing digital para que tu negocio venda más y trabaje menos.</p>
+    <sc-for list="{{ servicios }}" as="s" hint-placeholder-count="2">
+      <div id="{{ s.anchor }}" data-reveal="{{ $index }}" style="margin-bottom:56px">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:8px">
+          <span style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:6px 16px 16px 16px;background:var(--papel);color:var(--violeta);flex:none">{{ s.iconoSvg }}</span>
+          <h3 style="font-family:var(--font-display);font-weight:700;font-size:clamp(21px,2vw,26px);margin:0;color:var(--tinta)">{{ s.titulo }}</h3>
+        </div>
+        <p style="font:400 16px/1.65 'Creato Display',sans-serif;color:var(--gris-texto);margin:0 0 24px;max-width:760px;text-wrap:pretty">{{ s.descripcion }}</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:24px">
+          <sc-for list="{{ s.puntos }}" as="p" hint-placeholder-count="4">
+            <article data-card="" style="position:relative;background:#fff;border:1px solid rgba(14,7,20,.10);border-radius:6px 20px 20px 20px;padding:24px 20px;display:flex;flex-direction:column;gap:12px;transition:transform 200ms ease" style-hover="transform:translateY(-6px)">
+              <span aria-hidden="true" style="position:absolute;top:0;left:0;width:32px;height:32px;background:var(--gradiente);border-radius:6px 0 100% 0;transition:transform 200ms ease" style-hover="transform:scale(1.15)"></span>
+              <span style="display:flex;align-items:center;justify-content:center;width:40px;height:40px;color:var(--violeta);transition:transform 200ms ease" style-hover="transform:rotate(8deg) scale(1.1)">{{ p.iconoSvg }}</span>
+              <span style="font:600 15px/1.4 'Creato Display',sans-serif;color:var(--tinta)">{{ p.texto }}</span>
+            </article>
+          </sc-for>
+        </div>
+        <a href="{{ s.ctaHref }}" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;background:var(--magenta);color:#fff;border-radius:999px;padding:14px 28px;font:600 16px/1 'Creato Display',sans-serif;text-decoration:none;transition:background 200ms ease,transform 200ms ease" style-hover="background:#7C07A6;transform:translateY(-2px);color:#fff" style-active="transform:translateY(0)">{{ s.ctaTexto }}</a>
+      </div>
+    </sc-for>
+  </div>
+  <div aria-hidden="true" style="height:clamp(56px,9vw,130px);position:relative">
+    <div style="position:absolute;inset:0;background:#fff;clip-path:polygon(0 100%,100% 0,100% 100%)"></div>
+  </div>
+</section>
+
+<!-- ===== CTA FINAL ===== -->
+
+
+<!-- ===== FOOTER ===== -->
+<footer style="background:var(--papel);border-top:1px solid rgba(14,7,20,.10)">
+  <div style="max-width:1240px;margin:0 auto;padding:64px clamp(24px,4vw,48px) 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <img src="assets/marca-color.png" alt="Diseñarte México, agencia de publicidad en San Juan del Río" width="150" height="139" style="display:block;width:150px;height:auto">
+      <p style="font:400 15px/1.6 'Creato Display',sans-serif;color:var(--gris-texto);margin:0">Agencia de publicidad e innovación digital. San Juan del Río, Qro. Desde 2005.</p>
+    </div>
+    <nav aria-label="Publicidad" style="display:flex;flex-direction:column;gap:10px">
+      <span style="font:600 13px 'Walkway',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--violeta)">Publicidad</span>
+      <a href="/publicidad#catalogo" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Catálogo de servicios</a>
+      <a href="/publicidad#transformacion" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Antes y después</a>
+      <a href="/publicidad#pop" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Material POP</a>
+    </nav>
+    <nav aria-label="Innovación digital" style="display:flex;flex-direction:column;gap:10px">
+      <span style="font:600 13px 'Walkway',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--violeta)">Innovación digital</span>
+      <a href="/paginas-web" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Páginas web</a>
+      <a href="/innovacion-digital#automatiza" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Automatización</a>
+      <a href="/innovacion-digital#mentorias" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Mentorías y capacitación</a>
+    </nav>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <span style="font:600 13px 'Walkway',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--violeta)">Contacto</span>
+      <a href="https://wa.me/524272110528" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">WhatsApp 427 211 05 28</a>
+      <a href="tel:+524271004183" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Tel. 427 100 41 83</a>
+      <a href="mailto:ventas@disenartemx.com" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">ventas@disenartemx.com</a>
+      <address style="font:400 15px/1.6 'Creato Display',sans-serif;color:var(--gris-texto);font-style:normal;margin:8px 0 0">Av. Lomas del Pedregoso #371<br>Col. Lomas de San Juan, Sección Campestre<br>San Juan del Río, Querétaro</address>
+    </div>
+  </div>
+  <div style="max-width:1240px;margin:0 auto;padding:24px clamp(24px,4vw,48px);border-top:1px solid rgba(14,7,20,.10);display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center">
+    <span style="font:400 14px 'Creato Display',sans-serif;color:var(--gris-texto)">© 2026 Diseñarte México®. Todos los derechos reservados.</span>
+    <div style="display:flex;gap:24px;align-items:center">
+      <a href="/aviso-de-privacidad" style="font:500 14px 'Creato Display',sans-serif;color:var(--gris-texto)">Aviso de privacidad</a>
+      <nav aria-label="Redes sociales" style="display:flex;gap:8px;align-items:center">
+        <a href="https://www.instagram.com/disenarte.mexico/" aria-label="Diseñarte México en Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;color:var(--tinta)" style-hover="color:#7C07A6">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5"></rect><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"></circle><circle cx="17.2" cy="6.8" r="1" fill="currentColor"></circle></svg>
+        </a>
+        <a href="https://www.facebook.com/Disenarte2mil" aria-label="Diseñarte México en Facebook" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;color:var(--tinta)" style-hover="color:#7C07A6">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14.5 8.5h2.5M14.5 21V8.5a3 3 0 0 1 3-3M11 13h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+        </a>
+        <a href="https://www.youtube.com/@DiseñarteMéxico" aria-label="Diseñarte México en YouTube" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;color:var(--tinta)" style-hover="color:#7C07A6">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="4" stroke="currentColor" stroke-width="1.5"></rect><path d="M11 9.5l4 2.5-4 2.5v-5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path></svg>
+        </a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== FLOTANTE ===== -->
+<div data-fab="" style="position:fixed;right:24px;bottom:24px;z-index:55">
+  <a href="https://wa.me/524272110528?text=Hola%2C%20vengo%20de%20su%20p%C3%A1gina%20web%20y%20quiero%20cotizar" aria-label="Escribir por WhatsApp" style="display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:#25D366;color:#0E0714;box-shadow:0 12px 32px rgba(14,7,20,.18)">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><path d="M8.8 9.2c.3 2.7 3.2 5.6 5.9 5.9l1.2-1.2-1.9-1.3-1 .6a5.7 5.7 0 0 1-2.3-2.3l.6-1-1.3-1.9-1.2 1.2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path></svg>
+  </a>
+</div>
+<div id="chatbot-root" data-estado="pendiente"></div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+// ============================================================
+// SERVICIOS_DIGITALES — EDITA SOLO ESTE ARREGLO para agregar,
+// quitar o editar los servicios del área digital.
+//   titulo:       nombre del servicio
+//   descripcion:  una línea, concreta
+//   puntos:       lista de bullets (qué incluye)
+//   icono:        'automatizacion' | 'chat' | 'ads' (línea 1.5px, 24px)
+//   ctaTexto:     texto del botón
+//   interes:      valor que viaja en /contacto?interes=
+// ============================================================
+const SERVICIOS_DIGITALES = [
+  {
+    anchor: 'automatiza',
+    titulo: 'Automatiza lo que te quita tiempo',
+    descripcion: 'Ponemos la IA a trabajar en las tareas repetitivas de tu empresa.',
+    icono: 'automatizacion',
+    puntos: [
+      { texto: 'Creamos la aplicación que tu negocio necesita, hecha a tu medida', icono: 'app' },
+      { texto: 'Un asistente en WhatsApp que atiende, cotiza y agenda por ti', icono: 'chat' },
+      { texto: 'Procesos automáticos: cotizaciones, facturas, seguimiento a clientes', icono: 'gears' },
+      { texto: 'Tableros donde ves cómo va tu negocio, actualizados solos', icono: 'dashboard' },
+    ],
+    ctaTexto: 'Quiero automatizar mi negocio',
+    interes: 'digital',
+  },
+  {
+    anchor: 'mentorias',
+    titulo: 'Aprende a hacerlo tú',
+    descripcion: 'No solo lo hacemos por ti: te enseñamos. Formamos a tu equipo para que la IA y las ventas dejen de ser un misterio.',
+    icono: 'chat',
+    puntos: [
+      { texto: 'Programa anual de aceleración: ventas, IA y marketing digital trabajando juntos, con acompañamiento mes a mes', icono: 'calendar' },
+      { texto: 'Mentoría de cierre de ventas: cómo ganar y cerrar más clientes', icono: 'target' },
+      { texto: 'Taller intermedio de IA aplicada a ventas, administración y operación', icono: 'book' },
+    ],
+    ctaTexto: 'Quiero capacitar a mi equipo',
+    interes: 'digital',
+  },
+];
+
+const ICONOS = {
+  automatizacion: ['M4 12h6M14 12h6', 'M10 12a2 2 0 1 0 4 0 2 2 0 0 0-4 0Z', 'M12 4v4M12 16v4'],
+  chat: ['M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H9l-4 4V6Z', 'M8 9h8M8 12.5h5'],
+  ads: ['M4 14v-4l10-5v14L4 14Z', 'M14 9a3 3 0 0 1 0 6', 'M6 14v4'],
+  app: ['M4 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5Z', 'M4 8.5h16', 'M6.7 6.5h.01'],
+  gears: ['M12 8.3a3.7 3.7 0 1 0 0 7.4 3.7 3.7 0 0 0 0-7.4Z', 'M12 3v2.3M12 18.7V21M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M3 12h2.3M18.7 12H21M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6'],
+  dashboard: ['M4 20V11M10 20V6M16 20v-8M4 20h16'],
+  calendar: ['M4 5.5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1V19a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5.5Z', 'M4 9.5h16', 'M8 3v3M16 3v3'],
+  target: ['M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z', 'M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z'],
+  book: ['M5 4.5A2 2 0 0 1 7 3h11v17H7a2 2 0 0 1-2-2v-13.5Z', 'M7 3v17'],
+};
+
+class Component extends DCLogic {
+  componentDidMount() {
+    import('./assets/site.js').then((m) => m.initSite());
+  }
+  renderVals() {
+    const e = React.createElement;
+    // columnas de caracteres que caen en bucle, como lluvia de código
+    const CHARS = '01<>/{}=;#$_'.split('');
+    const columnasCodigo = Array.from({ length: 7 }, (_, i) => {
+      const largo = 10 + (i % 3) * 3;
+      const texto = Array.from({ length: largo }, (_, j) => CHARS[(i * 5 + j * 3 + 2) % CHARS.length]).join('\n');
+      return {
+        texto,
+        style: `animation-duration:${2.6 + (i % 4) * 0.6}s;animation-delay:${-i * 0.5}s`,
+      };
+    });
+    return {
+      columnasCodigo,
+      servicios: SERVICIOS_DIGITALES.map((s) => ({
+        ...s,
+        ctaHref: 'contacto.dc.html?interes=' + s.interes,
+        iconoSvg: e('svg', { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', 'aria-hidden': true },
+          ...(ICONOS[s.icono] || ICONOS.automatizacion).map((d, i) => e('path', { key: i, d, stroke: 'currentColor', strokeWidth: 1.5, strokeLinecap: 'round', strokeLinejoin: 'round' }))),
+        puntos: s.puntos.map((p) => ({
+          ...p,
+          iconoSvg: e('svg', { width: 22, height: 22, viewBox: '0 0 24 24', fill: 'none', 'aria-hidden': true },
+            ...(ICONOS[p.icono] || ICONOS.automatizacion).map((d, i) => e('path', { key: i, d, stroke: 'currentColor', strokeWidth: 1.5, strokeLinecap: 'round', strokeLinejoin: 'round' }))),
+        })),
+      })),
+      abrirChat: () => window.DZChat && window.DZChat.abrir(),
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Páginas web para empresas: compra o renta | Diseñarte MX</title>
+<meta name="description" content="Diseño de páginas web en San Juan del Río. Cómprala y es tuya o réntala desde una mensualidad fija con hosting, soporte y cambios incluidos.">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/png" href="assets/favicon-dz.png">
+<link rel="apple-touch-icon" href="assets/favicon-dz.png">
+<meta name="theme-color" content="#0E0714">
+<link rel="canonical" href="https://www.disenartemx.com/paginas-web">
+<meta property="og:title" content="Páginas web para empresas: compra o renta | Diseñarte MX">
+<meta property="og:description" content="Cómprala y es tuya o réntala desde una mensualidad fija con hosting, soporte y cambios incluidos.">
+<meta property="og:image" content="https://www.disenartemx.com/assets/hero-poster.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.disenartemx.com/paginas-web">
+<meta property="og:locale" content="es_MX">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+@font-face{font-family:'Creato Display';src:url('assets/fonts/CreatoDisplay-Light.otf') format('opentype');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'Creato Display';src:url('assets/fonts/CreatoDisplay-Regular.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Creato Display';src:url('assets/fonts/CreatoDisplay-Medium.otf') format('opentype');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Creato Display';src:url('assets/fonts/CreatoDisplay-Bold.otf') format('opentype');font-weight:600 700;font-style:normal;font-display:swap}
+@font-face{font-family:'Creato Display';src:url('assets/fonts/CreatoDisplay-ExtraBold.otf') format('opentype');font-weight:800;font-style:normal;font-display:swap}
+@font-face{font-family:'Creato Display';src:url('assets/fonts/CreatoDisplay-Black.otf') format('opentype');font-weight:900;font-style:normal;font-display:swap}
+@font-face{font-family:'Walkway';src:url('assets/fonts/Walkway-Regular.ttf') format('truetype');font-weight:400 500;font-style:normal;font-display:swap}
+@font-face{font-family:'Walkway';src:url('assets/fonts/Walkway-Bold.ttf') format('truetype');font-weight:600 700;font-style:normal;font-display:swap}
+@font-face{font-family:'Walkway';src:url('assets/fonts/Walkway-Black.ttf') format('truetype');font-weight:800 900;font-style:normal;font-display:swap}
+:root{--tinta:#0E0714;--tinta-2:#1A0F24;--magenta:#A53692;--violeta:#7C07A6;--cian:#5CC6D0;--papel:#F2F1F3;--blanco:#FFFFFF;--gris:#96989A;--gris-texto:#55575A;--gradiente:linear-gradient(100deg,#7C07A6 0%,#A53692 45%,#5CC6D0 100%);--font-display:'Creato Display',sans-serif}
+body{margin:0;background:#FFFFFF;color:#0E0714;font-family:'Creato Display',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:hover{color:#7C07A6}
+:focus-visible{outline:2px solid #7C07A6;outline-offset:3px}
+[data-card]{transition:transform 200ms cubic-bezier(.22,1,.36,1)}
+[data-card]:hover{transform:translateY(-6px)}
+[data-card] [data-corner]{opacity:0;transition:opacity 200ms ease}
+[data-card]:hover [data-corner]{opacity:1}
+details summary{cursor:pointer;list-style:none}
+details summary::-webkit-details-marker{display:none}
+@keyframes autoscroll{0%,12%{transform:translateY(0)}88%,100%{transform:translateY(calc(-100% + 420px))}}
+@media(max-width:1023px){[data-desktop-nav]{display:none!important}}
+@media(min-width:1024px){[data-menu-btn]{display:none!important}}
+@media(prefers-reduced-motion:reduce){[data-card]:hover{transform:none}}
+
+/* ===== REVEALS DECLARATIVOS (CSS: sobreviven a los re-renders) ===== */
+@keyframes dzUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes dzTecla{0%{opacity:0;transform:translateY(-100%)}10%{opacity:.9}70%{opacity:.9}100%{opacity:0;transform:translateY(100%)}}
+[data-tecla]{position:relative;font:600 13px/1.5 ui-monospace,'SF Mono',monospace;color:var(--violeta);opacity:0;animation-name:dzTecla;animation-timing-function:linear;animation-iteration-count:infinite;white-space:pre-line;text-align:center}
+@media(prefers-reduced-motion:reduce){[data-tecla]{animation:none;opacity:.5;transform:none}}
+@media(max-width:767px){[data-tecla-panel]{display:none}}
+@keyframes dzLine{from{opacity:0;transform:translateY(105%)}to{opacity:1;transform:none}}
+[data-hero-line]{animation:dzLine 700ms cubic-bezier(.22,1,.36,1) 120ms both}
+h1>span:nth-child(2) [data-hero-line]{animation-delay:210ms}
+h1>span:nth-child(3) [data-hero-line]{animation-delay:300ms}
+h1>span:nth-child(4) [data-hero-line]{animation-delay:390ms}
+[data-hero-line]:not(h1 [data-hero-line]){animation-delay:480ms}
+p [data-hero-line]{animation-delay:120ms}
+[data-reveal]{animation:dzUp 600ms cubic-bezier(.22,1,.36,1) both}
+[data-reveal="1"]{animation-delay:80ms}
+[data-reveal="2"]{animation-delay:160ms}
+[data-reveal="3"]{animation-delay:240ms}
+[data-reveal="4"]{animation-delay:320ms}
+[data-reveal="5"]{animation-delay:400ms}
+[data-reveal="6"]{animation-delay:480ms}
+[data-reveal="7"],[data-reveal="8"],[data-reveal="9"],[data-reveal="10"]{animation-delay:560ms}
+@supports (animation-timeline:view()){
+  [data-reveal]{animation-timeline:view();animation-range:entry 0% entry 55%;animation-delay:0s;animation-fill-mode:both}
+}
+@media(prefers-reduced-motion:reduce){
+  [data-hero-line],[data-reveal]{animation:none!important;opacity:1!important;transform:none!important}
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","name":"Diseñarte México","url":"https://www.disenartemx.com/","telephone":"+524271004183"},
+{"@type":"WebSite","name":"Diseñarte México","url":"https://www.disenartemx.com/","inLanguage":"es-MX"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.disenartemx.com/"},{"@type":"ListItem","position":2,"name":"Innovación Digital","item":"https://www.disenartemx.com/innovacion-digital"},{"@type":"ListItem","position":3,"name":"Páginas Web","item":"https://www.disenartemx.com/paginas-web"}]},
+{"@type":"Service","name":"Páginas web para empresas","provider":{"@type":"Organization","name":"Diseñarte México"},"areaServed":"Querétaro","offers":[
+{"@type":"Offer","name":"Hola Mundo","priceCurrency":"MXN"},
+{"@type":"Offer","name":"Next Level","priceCurrency":"MXN"},
+{"@type":"Offer","name":"Rockstar Digital","priceCurrency":"MXN"}
+]},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"¿Cuánto cuesta una página web?","acceptedAnswer":{"@type":"Answer","text":"Depende de cuántas secciones lleve y de si necesitas que redactemos el contenido. En renta arrancas desde una mensualidad fija; en compra es un pago único."}},
+{"@type":"Question","name":"¿Cuál me conviene: comprar o rentar?","acceptedAnswer":{"@type":"Answer","text":"Si tienes quién le dé mantenimiento y prefieres que sea un activo tuyo, compra. Si quieres estar en línea sin invertir de golpe ni contratar a nadie, renta."}},
+{"@type":"Question","name":"¿En cuánto tiempo está lista?","acceptedAnswer":{"@type":"Answer","text":"Desde que tenemos el contenido completo, se define el plazo de entrega del proyecto."}},
+{"@type":"Question","name":"¿Aparece en Google?","acceptedAnswer":{"@type":"Answer","text":"Se entrega optimizada técnicamente y dada de alta en Google. Posicionarse en búsquedas competidas es un trabajo continuo, y eso viene en los paquetes con SEO."}},
+{"@type":"Question","name":"¿Yo puedo actualizarla?","acceptedAnswer":{"@type":"Answer","text":"En compra, te capacitamos para hacerlo. En renta, nos lo pides y lo hacemos nosotros dentro de los cambios de tu paquete."}},
+{"@type":"Question","name":"¿El dominio es mío?","acceptedAnswer":{"@type":"Answer","text":"Sí en el esquema de compra. En renta lo administramos nosotros mientras dure el servicio."}}
+]}
+]}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H2JJVE75F3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H2JJVE75F3');
+  gtag('config', 'AW-16751651845');
+</script>
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2039038839979376');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2039038839979376&ev=PageView&noscript=1" alt=""></noscript>
+</helmet>
+
+<a href="#contenido" style="position:absolute;left:-9999px;z-index:100;background:var(--magenta);color:#fff;padding:12px 24px;border-radius:999px;font:600 15px 'Creato Display',sans-serif" style-focus="left:24px;top:12px">Ir al contenido</a>
+
+<!-- ===== NAVBAR ===== -->
+<header data-navbar="taller" style="position:fixed;top:0;left:0;right:0;z-index:50;background:transparent">
+  <nav aria-label="Navegación principal" style="max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:32px;padding:0 clamp(24px,4vw,48px);height:96px">
+    <a href="/" aria-label="Diseñarte México, inicio" style="display:flex;align-items:baseline;gap:8px;text-decoration:none;color:var(--tinta)" style-hover="color:var(--tinta)">
+      <img src="assets/marca-color.png" alt="Diseñarte México, agencia de publicidad en San Juan del Río" width="82" height="76" style="display:block;width:auto;height:76px;object-fit:contain">
+    </a>
+    <div data-desktop-nav="" style="display:flex;align-items:center;gap:8px;margin-left:auto">
+      <a href="/" style="padding:12px 14px;font:500 15px 'Creato Display',sans-serif;text-decoration:none;color:var(--tinta)" style-hover="color:#7C07A6">Inicio</a>
+      <a href="/nosotros" style="padding:12px 14px;font:500 15px 'Creato Display',sans-serif;text-decoration:none;color:var(--tinta)" style-hover="color:#7C07A6">Nosotros</a>
+      <a href="/publicidad" style="padding:12px 14px;font:500 15px 'Creato Display',sans-serif;text-decoration:none;color:var(--tinta)" style-hover="color:#7C07A6">Publicidad</a>
+      <div data-dropdown="" style="position:relative">
+        <button data-dropdown-btn="" aria-expanded="false" aria-haspopup="true" style="display:flex;align-items:center;gap:6px;padding:12px 14px;font:600 15px 'Creato Display',sans-serif;background:none;border:none;color:var(--tinta);border-bottom:2px solid var(--magenta);cursor:pointer">Innovación Digital
+          <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+        </button>
+        <div data-dropdown-panel="" style="position:absolute;top:100%;left:0;min-width:220px;background:var(--papel);border:1px solid rgba(14,7,20,.10);border-radius:6px 20px 20px 20px;padding:8px;display:flex;flex-direction:column">
+          <a href="/paginas-web" style="padding:12px 16px;font:600 15px 'Creato Display',sans-serif;text-decoration:none;color:var(--violeta);border-radius:12px" style-hover="background:rgba(14,7,20,.05)">Páginas web</a>
+          <a href="/innovacion-digital#servicios" style="padding:12px 16px;font:500 15px 'Creato Display',sans-serif;text-decoration:none;color:var(--tinta);border-radius:12px" style-hover="background:rgba(14,7,20,.05);color:#7C07A6">Otros servicios</a>
+        </div>
+      </div>
+      <a href="/contacto?interes=pagina-web" style="display:inline-flex;align-items:center;min-height:48px;background:var(--magenta);color:#fff;border-radius:999px;padding:0 28px;font:600 15px 'Creato Display',sans-serif;text-decoration:none;margin-left:12px;transition:background 200ms ease,transform 200ms ease" style-hover="background:#7C07A6;transform:translateY(-2px);color:#fff" style-active="transform:translateY(0)">Cotizar</a>
+    </div>
+    <button data-menu-btn="" aria-expanded="false" aria-label="Abrir menú" style="margin-left:auto;width:48px;height:48px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:none;border:none;cursor:pointer">
+      <span aria-hidden="true" style="display:block;width:22px;height:2px;background:var(--tinta)"></span>
+      <span aria-hidden="true" style="display:block;width:22px;height:2px;background:var(--tinta)"></span>
+    </button>
+  </nav>
+</header>
+
+<div data-menu="" style="display:flex;opacity:0;pointer-events:none;position:fixed;inset:0;z-index:49;background:var(--papel);flex-direction:column;justify-content:center;gap:8px;padding:96px 32px 48px">
+  <a href="/" style="font-family:var(--font-display);font-weight:700;font-size:30px;color:var(--tinta);text-decoration:none;padding:12px 0">Inicio</a>
+  <a href="/nosotros" style="font-family:var(--font-display);font-weight:700;font-size:30px;color:var(--tinta);text-decoration:none;padding:12px 0">Nosotros</a>
+  <a href="/publicidad" style="font-family:var(--font-display);font-weight:700;font-size:30px;color:var(--tinta);text-decoration:none;padding:12px 0">Publicidad</a>
+  <a href="/innovacion-digital" style="font-family:var(--font-display);font-weight:700;font-size:30px;color:var(--tinta);text-decoration:none;padding:12px 0">Innovación Digital</a>
+  <a href="/paginas-web" style="font-family:var(--font-display);font-weight:700;font-size:30px;color:var(--magenta);text-decoration:none;padding:12px 0">Páginas web</a>
+  <a href="/contacto?interes=pagina-web" style="display:inline-flex;align-items:center;justify-content:center;min-height:52px;background:var(--magenta);color:#fff;border-radius:999px;padding:0 32px;font:600 17px 'Creato Display',sans-serif;text-decoration:none;margin-top:24px;align-self:flex-start">Cotizar</a>
+</div>
+
+<main id="contenido">
+<!-- ===== HERO ===== -->
+<section data-hero="" style="position:relative;background:#fff;overflow:hidden">
+  <div aria-hidden="true" style="position:absolute;top:-20%;right:-10%;width:60%;height:140%;background:var(--gradiente);opacity:.10;clip-path:polygon(35% 0,100% 0,100% 100%,0 100%)"></div>
+  <div aria-hidden="true" data-tecla-panel="" style="position:absolute;right:2%;top:0;width:30%;height:100%;overflow:hidden;display:flex;justify-content:space-between">
+    <sc-for list="{{ columnasCodigo }}" as="col" hint-placeholder-count="7">
+      <span data-tecla="" style="{{ col.style }}">{{ col.texto }}</span>
+    </sc-for>
+  </div>
+  <div style="position:relative;max-width:1240px;margin:0 auto;padding:clamp(140px,18vw,200px) clamp(24px,4vw,48px) clamp(72px,10vw,128px)">
+    <p style="font:600 13px 'Walkway',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--violeta);margin:0 0 24px"><span style="display:block;overflow:hidden"><span data-hero-line="" style="display:block">Innovación digital · Páginas web</span></span></p>
+    <h1 style="font-family:var(--font-display);font-weight:700;font-size:clamp(34px,4.5vw,56px);line-height:1.05;letter-spacing:-.02em;margin:0 0 24px;max-width:860px;color:var(--tinta)">
+      <span style="display:block;overflow:hidden"><span data-hero-line="" style="display:block">Páginas web para empresas:</span></span>
+      <span style="display:block;overflow:hidden"><span data-hero-line="" style="display:block;background:var(--gradiente);-webkit-background-clip:text;background-clip:text;color:transparent">cómprala o réntala</span></span>
+    </h1>
+    <div style="overflow:hidden"><p data-hero-line="" style="font:400 clamp(18px,1.6vw,20px)/1.6 'Creato Display',sans-serif;color:var(--tinta);margin:0 0 40px;max-width:640px;text-wrap:pretty">Estás viendo un ejemplo ahora mismo. Esta página la hicimos nosotros, y la tuya la hacemos igual de bien.</p></div>
+    <div style="overflow:hidden"><div data-hero-line="" style="display:flex;flex-wrap:wrap;gap:16px">
+      <a href="#paquetes" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;background:var(--magenta);color:#fff;border-radius:999px;padding:16px 32px;font:600 17px/1 'Creato Display',sans-serif;text-decoration:none;transition:background 200ms ease,transform 200ms ease" style-hover="background:#7C07A6;transform:translateY(-2px);color:#fff" style-active="transform:translateY(0)">Ver paquetes</a>
+      <a href="#demos" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;border:1.5px solid currentColor;color:var(--tinta);border-radius:999px;padding:16px 32px;font:600 17px/1 'Creato Display',sans-serif;text-decoration:none;transition:background 200ms ease" style-hover="background:rgba(14,7,20,.10);color:var(--tinta)">Ver ejemplos en vivo</a>
+    </div></div>
+  </div>
+</section>
+
+<!-- ===== PROBLEMA ===== -->
+<section style="background:#fff">
+  <div style="max-width:840px;margin:0 auto;padding:clamp(24px,4vw,48px) clamp(24px,4vw,48px) clamp(72px,10vw,128px);text-align:center">
+    <h2 data-reveal="0" style="font-family:var(--font-display);font-weight:700;font-size:clamp(28px,3.4vw,40px);line-height:1.15;margin:0 0 24px;color:var(--tinta);text-wrap:pretty">El 90% de las páginas de empresas de la región son un folleto que nadie abre</h2>
+    <p data-reveal="1" style="font:400 clamp(18px,1.6vw,20px)/1.65 'Creato Display',sans-serif;color:var(--gris-texto);margin:0;text-wrap:pretty">Están hechas en plantilla, tardan seis segundos en cargar, no aparecen en Google y no hay a quién llamar cuando algo se rompe. Cuestan poco y no producen nada, que es la forma más cara de gastar.</p>
+  </div>
+  <div aria-hidden="true" style="height:clamp(56px,9vw,130px);position:relative">
+    <div style="position:absolute;inset:0;background:var(--papel);clip-path:polygon(0 100%,100% 0,100% 100%)"></div>
+  </div>
+</section>
+
+
+<!-- ===== PAQUETES: CARRUSEL 3D (CSS puro) ===== -->
+<section id="paquetes" style="background:#fff;overflow:hidden">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(48px,7vw,96px) clamp(24px,4vw,48px) clamp(72px,10vw,128px)">
+    <p data-reveal="0" style="font-family:var(--font-display);font-weight:900;font-size:clamp(24px,2.8vw,34px);line-height:1.25;margin:0 0 40px;max-width:820px;color:var(--tinta);text-wrap:pretty">Que cada peso invertido termine en una venta, en dos modelos de adquisición.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-bottom:48px">
+      <div data-reveal="2" style="display:flex;flex-direction:column;gap:8px;padding:24px;background:var(--papel);border-radius:6px 20px 20px 20px">
+        <span style="font:700 15px 'Creato Display',sans-serif;color:var(--violeta)">Modelo → Sé el dueño</span>
+        <p style="font:400 15px/1.6 'Creato Display',sans-serif;color:var(--gris-texto);margin:0">Pago único, la página es 100% tuya para siempre. Para hacerlo fácil, lo divides en 2 pagos. Al liquidar, recibes tu sitio, tus accesos y el control total de tu página web, que estará lista máximo en 5 días.</p>
+      </div>
+      <div data-reveal="3" style="display:flex;flex-direction:column;gap:8px;padding:24px;background:var(--papel);border-radius:6px 20px 20px 20px">
+        <span style="font:700 15px 'Creato Display',sans-serif;color:var(--violeta)">Modelo → Réntala</span>
+        <p style="font:400 15px/1.6 'Creato Display',sans-serif;color:var(--gris-texto);margin:0">Empiezas con una activación (pago inicial) y una mensualidad accesible. Incluye hosting, dominio y mantenimiento cada mes. Puedes volverte dueño cuando quieras, acreditando una evaluación de mensualidades pagas vs costo del servicio.</p>
+      </div>
+    </div>
+    <div role="region" aria-label="Carrusel de paquetes de renta" tabindex="0" onKeyDown="{{ carruselTeclado }}" onPointerDown="{{ dragStart }}" onPointerMove="{{ dragMove }}" onPointerUp="{{ dragEnd }}" onPointerCancel="{{ dragEnd }}" style="{{ pistaStyle }}">
+      <sc-for list="{{ paquetes }}" as="pq" hint-placeholder-count="3">
+        <article aria-hidden="{{ pq.oculta }}" style="{{ pq.slotStyle }}">
+          <div style="{{ pq.cardStyle }}">
+            <sc-if value="{{ pq.destacado }}" hint-placeholder-val="{{ false }}">
+              <span style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);white-space:nowrap;font:600 12px 'Creato Display',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--magenta);padding:6px 16px;border-radius:999px">El más elegido</span>
+            </sc-if>
+            <h3 style="font-family:var(--font-display);font-weight:700;font-size:24px;margin:0;color:#fff">{{ pq.nivel }} {{ pq.nombre }}</h3>
+            <p style="font:600 15px/1.4 'Creato Display',sans-serif;color:#fff;margin:0">{{ pq.sitio }} <em style="font-style:italic;font-weight:400;color:rgba(255,255,255,.72)">· {{ pq.para }}</em></p>
+            <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px">
+              <sc-for list="{{ pq.puntos }}" as="pt" hint-placeholder-count="6">
+                <li style="font:400 14px/1.4 'Creato Display',sans-serif;color:#fff;padding-left:20px;position:relative"><svg aria-hidden="true" width="13" height="10" viewBox="0 0 14 11" fill="none" style="position:absolute;left:0;top:3px"><path d="M1 5.5l4 4L13 1" stroke="var(--cian)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>{{ pt }}</li>
+              </sc-for>
+            </ul>
+            <div style="margin-top:auto;padding-top:12px;border-top:1px solid rgba(255,255,255,.25);display:flex;flex-direction:column;gap:2px">
+              <span style="font:600 12px 'Walkway',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--cian)">Pago modo renta</span>
+              <p style="font-family:var(--font-display);font-weight:900;font-size:32px;line-height:1;font-variant-numeric:tabular-nums;margin:0;color:#fff">{{ pq.rentaMes }}<span style="font:400 14px 'Creato Display',sans-serif;color:rgba(255,255,255,.72)"> /mes x 1 año</span></p>
+              <span style="font:400 12px 'Creato Display',sans-serif;color:rgba(255,255,255,.72)">Activación inicial: {{ pq.rentaActivacion }}</span>
+            </div>
+            <div style="padding-top:10px;display:flex;flex-direction:column;gap:2px">
+              <span style="font:600 12px 'Walkway',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--cian)">Pago modo dueño</span>
+              <p style="font-family:var(--font-display);font-weight:900;font-size:26px;line-height:1;font-variant-numeric:tabular-nums;margin:0;color:#fff">{{ pq.duenoPrecio }} <span style="font:400 13px 'Creato Display',sans-serif;color:rgba(255,255,255,.72)">{{ pq.duenoNota }}</span></p>
+              <span style="font:400 12px 'Creato Display',sans-serif;color:rgba(255,255,255,.72)">Stack de propiedad digital · sé el dueño total</span>
+            </div>
+            <a href="{{ pq.whatsapp }}" target="_blank" rel="noopener" tabindex="{{ pq.tab }}" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;background:#fff;color:var(--violeta);border-radius:999px;padding:14px 28px;font:600 16px/1 'Creato Display',sans-serif;text-decoration:none;transition:opacity 200ms ease" style-hover="opacity:.88">Elegir {{ pq.nombre }}</a>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:24px;margin-top:32px">
+      <button onClick="{{ anterior }}" aria-label="Paquete anterior" style="width:48px;height:48px;border-radius:50%;background:transparent;border:1.5px solid rgba(14,7,20,.25);color:var(--tinta);cursor:pointer;display:inline-flex;align-items:center;justify-content:center" style-hover="background:rgba(14,7,20,.10)">
+        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" aria-hidden="true"><path d="M15 6H2M6 1L1 6l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </button>
+      <div style="display:flex;gap:10px">
+        <sc-for list="{{ puntos3 }}" as="p3" hint-placeholder-count="3">
+          <button onClick="{{ p3.ir }}" aria-label="{{ p3.label }}" style="{{ p3.style }}"></button>
+        </sc-for>
+      </div>
+      <button onClick="{{ siguiente }}" aria-label="Paquete siguiente" style="width:48px;height:48px;border-radius:50%;background:transparent;border:1.5px solid rgba(14,7,20,.25);color:var(--tinta);cursor:pointer;display:inline-flex;align-items:center;justify-content:center" style-hover="background:rgba(14,7,20,.10)">
+        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" aria-hidden="true"><path d="M1 6h13M10 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </button>
+    </div>
+    <details style="margin-top:48px;background:var(--papel);border:1px solid rgba(14,7,20,.10);border-radius:6px 20px 20px 20px;padding:0 24px">
+      <summary style="font:600 17px 'Creato Display',sans-serif;color:var(--tinta);padding:20px 0;display:flex;justify-content:space-between;align-items:center;min-height:48px">Ver tabla comparativa completa<span aria-hidden="true" style="color:var(--magenta);font-size:20px">+</span></summary>
+      <div style="overflow-x:auto;padding-bottom:24px">
+        <table style="border-collapse:collapse;width:100%;min-width:640px;font:400 15px/1.5 'Creato Display',sans-serif;color:var(--tinta)">
+          <caption style="text-align:left;font:400 13px 'Creato Display',sans-serif;color:var(--gris-texto);padding-bottom:12px">Comparativa de los tres paquetes: Hola Mundo, Next Level y Rockstar Digital</caption>
+          <thead>
+            <tr>
+              <th scope="col" style="position:sticky;left:0;background:var(--papel);text-align:left;padding:12px 16px;border-bottom:1px solid rgba(14,7,20,.16)"></th>
+              <th scope="col" style="text-align:left;padding:12px 16px;border-bottom:1px solid rgba(14,7,20,.16);font-family:var(--font-display);font-size:17px">Hola Mundo</th>
+              <th scope="col" style="text-align:left;padding:12px 16px;border-bottom:1px solid rgba(14,7,20,.16);font-family:var(--font-display);font-size:17px;color:var(--violeta)">Next Level ★</th>
+              <th scope="col" style="text-align:left;padding:12px 16px;border-bottom:1px solid rgba(14,7,20,.16);font-family:var(--font-display);font-size:17px">Rockstar Digital</th>
+            </tr>
+          </thead>
+          <tbody>
+            <sc-for list="{{ filasTabla }}" as="fila" hint-placeholder-count="11">
+              <tr>
+                <th scope="row" style="position:sticky;left:0;background:var(--papel);text-align:left;padding:12px 16px;border-bottom:1px solid rgba(14,7,20,.10);font-weight:600;white-space:nowrap">{{ fila.label }}</th>
+                <td style="padding:12px 16px;border-bottom:1px solid rgba(14,7,20,.10);color:var(--gris-texto)">{{ fila.a }}</td>
+                <td style="padding:12px 16px;border-bottom:1px solid rgba(14,7,20,.10)">{{ fila.b }}</td>
+                <td style="padding:12px 16px;border-bottom:1px solid rgba(14,7,20,.10);color:var(--gris-texto)">{{ fila.c }}</td>
+              </tr>
+            </sc-for>
+          </tbody>
+        </table>
+      </div>
+    </details>
+    <div data-reveal="0" style="margin-top:32px;padding:28px 32px;background:var(--papel);border-radius:6px 20px 20px 20px;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between">
+      <p style="margin:0;max-width:620px"><span style="display:block;font-family:var(--font-display);font-weight:700;font-size:clamp(20px,2.2vw,26px);color:var(--tinta);margin:0 0 8px">¿Tu proyecto no encaja en ninguno de estos tres esquemas?</span><span style="font:400 16px/1.6 'Creato Display',sans-serif;color:var(--gris-texto)">También cotizamos <strong style="font-weight:600;color:var(--tinta)">páginas web a la medida, desde cero</strong>, con los aspectos exactos que tu negocio necesite.</span></p>
+      <a href="https://wa.me/524272110528?text=Hola%2C%20vengo%20de%20su%20p%C3%A1gina%20web%20y%20quiero%20cotizar%20un%20proyecto%20a%20la%20medida" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;border:1.5px solid var(--tinta);color:var(--tinta);border-radius:999px;padding:14px 28px;font:600 15px/1 'Creato Display',sans-serif;text-decoration:none;white-space:nowrap;transition:background 200ms ease" style-hover="background:rgba(14,7,20,.06)">Cotizar proyecto a la medida</a>
+    </div>
+  </div>
+  <div aria-hidden="true" style="height:clamp(56px,9vw,130px);position:relative">
+    <div style="position:absolute;inset:0;background:var(--papel);clip-path:polygon(0 100%,100% 0,100% 100%)"></div>
+  </div>
+</section>
+
+<!-- ===== PROCESO DE TRABAJO: 4 FASES ENCADENADAS ===== -->
+<section aria-label="Proceso de trabajo" style="background:var(--papel)">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(48px,7vw,96px) clamp(24px,4vw,48px) clamp(72px,10vw,128px)">
+    <p data-reveal="0" style="font:600 13px 'Walkway',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--violeta);margin:0 0 16px">Proceso de trabajo</p>
+    <h2 data-reveal="1" style="font-family:var(--font-display);font-weight:900;font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin:0 0 48px;color:var(--tinta)">De tu idea a tu sitio en línea</h2>
+    <div style="display:flex;flex-direction:column;gap:0">
+      <sc-for list="{{ proceso }}" as="ps" hint-placeholder-count="4">
+        <div data-reveal="{{ $index }}" style="display:grid;grid-template-columns:96px 1fr;gap:24px;align-items:start;padding:20px 0;position:relative">
+          <div aria-hidden="true" style="width:76px;height:76px;border-radius:50%;background:{{ ps.disco }};display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:900;font-size:24px;color:#fff;flex-shrink:0">{{ ps.num }}</div>
+          <div style="padding-top:14px">
+            <h3 style="font-family:var(--font-display);font-weight:700;font-size:19px;margin:0 0 6px;color:var(--tinta)">{{ ps.titulo }}</h3>
+            <p style="font:400 16px/1.6 'Creato Display',sans-serif;color:var(--gris-texto);margin:0">{{ ps.texto }}</p>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DEMOS ===== -->
+<section id="demos" style="background:var(--papel)">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(48px,7vw,96px) clamp(24px,4vw,48px) clamp(72px,10vw,128px)">
+    <h2 data-reveal="0" style="font-family:var(--font-display);font-weight:700;font-size:clamp(28px,3.4vw,40px);margin:0 0 16px;color:var(--tinta)">Míralas funcionando</h2>
+    <p data-reveal="1" style="font:400 clamp(18px,1.6vw,20px)/1.6 'Creato Display',sans-serif;color:var(--gris-texto);margin:0 0 40px;max-width:640px;text-wrap:pretty">No te vamos a describir cómo quedaría. Interactúa con tres sitios reales, en la pantalla que quieras.</p>
+    <div role="group" aria-label="Selector de vista" style="display:inline-flex;gap:0;border:1.5px solid rgba(14,7,20,.25);border-radius:999px;padding:4px;margin-bottom:40px">
+      <button onClick="{{ verEscritorio }}" aria-pressed="{{ esEscritorio }}" style="{{ btnEscritorioStyle }}">Escritorio</button>
+      <button onClick="{{ verTelefono }}" aria-pressed="{{ esTelefono }}" style="{{ btnTelefonoStyle }}">Teléfono</button>
+    </div>
+    <div data-demos="" style="display:flex;flex-direction:column;align-items:center;gap:32px">
+      <div style="{{ marcoWrapStyle }}">
+        <div ref="{{ setMarcoWrap }}" style="{{ marcoScaleOuterStyle }}">
+          <div style="{{ marcoScaleInnerStyle }}">
+        <sc-if value="{{ esEscritorio }}" hint-placeholder-val="{{ true }}">
+          <x-import component-from-global-scope="ChromeWindow" from="./browser-window.jsx" width="{{ anchoMarco }}" height="{{ altoMarco }}" url="{{ demoActivo.urlMostrada }}" hint-size="960px,560px">
+            <div style="position:relative;width:100%;height:100%;background:#fff">
+              <sc-if value="{{ demoActivo.cargarIframe }}" hint-placeholder-val="{{ false }}">
+                <iframe src="{{ demoActivo.url }}" title="{{ demoActivo.titulo }}" loading="lazy" sandbox="allow-scripts allow-same-origin" onLoad="{{ iframeCargo }}" style="width:100%;height:100%;border:none;background:#fff"></iframe>
+              </sc-if>
+              <sc-if value="{{ demoActivo.mostrarFallback }}" hint-placeholder-val="{{ true }}">
+                <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;background:repeating-linear-gradient(45deg,rgba(92,198,208,.05) 0 12px,transparent 12px 24px);padding:32px;text-align:center">
+                  <span style="font:600 11px ui-monospace,monospace;letter-spacing:.1em;color:var(--tinta);background:var(--cian);padding:4px 10px;border-radius:999px">PENDIENTE</span>
+                  <p style="font:500 14px/1.7 ui-monospace,monospace;color:var(--gris-texto);margin:0;max-width:420px">{{ demoActivo.notaFallback }}</p>
+                </div>
+              </sc-if>
+            </div>
+          </x-import>
+        </sc-if>
+        <sc-if value="{{ esTelefono }}" hint-placeholder-val="{{ false }}">
+          <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" width="{{ anchoTelefono }}" height="{{ altoTelefono }}" hint-size="320px,660px">
+            <div style="position:relative;width:100%;height:100%;background:#fff;padding-top:64px;box-sizing:border-box">
+              <sc-if value="{{ demoActivo.cargarIframe }}" hint-placeholder-val="{{ false }}">
+                <iframe src="{{ demoActivo.url }}" title="{{ demoActivo.titulo }}" loading="lazy" sandbox="allow-scripts allow-same-origin" onLoad="{{ iframeCargo }}" style="position:absolute;top:64px;left:0;width:100%;height:calc(100% - 64px);border:none;background:#fff"></iframe>
+              </sc-if>
+              <sc-if value="{{ demoActivo.mostrarFallback }}" hint-placeholder-val="{{ true }}">
+                <div style="position:absolute;left:0;right:0;top:64px;bottom:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;background:repeating-linear-gradient(45deg,rgba(92,198,208,.05) 0 12px,transparent 12px 24px);padding:32px;text-align:center">
+                  <span style="font:600 11px ui-monospace,monospace;letter-spacing:.1em;color:var(--tinta);background:var(--cian);padding:4px 10px;border-radius:999px">PENDIENTE</span>
+                  <p style="font:500 14px/1.7 ui-monospace,monospace;color:var(--gris-texto);margin:0;max-width:420px">{{ demoActivo.notaFallback }}</p>
+                </div>
+              </sc-if>
+            </div>
+          </x-import>
+        </sc-if>
+          </div>
+        </div>
+      </div>
+      <div role="group" aria-label="Elegir demo" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center">
+        <sc-for list="{{ demosBotones }}" as="db" hint-placeholder-count="3">
+          <button onClick="{{ db.elegir }}" aria-pressed="{{ db.activo }}" style="{{ db.style }}">{{ db.nombre }}<span style="display:block;font:400 12px 'Creato Display',sans-serif;opacity:.7">{{ db.giro }}</span></button>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+  <div aria-hidden="true" style="height:clamp(56px,9vw,130px);position:relative">
+    <div style="position:absolute;inset:0;background:#fff;clip-path:polygon(0 100%,100% 0,100% 100%)"></div>
+  </div>
+</section>
+
+<!-- ===== QUÉ INCLUYE SIEMPRE ===== -->
+<section style="background:#fff">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(48px,7vw,96px) clamp(24px,4vw,48px) clamp(72px,10vw,128px)">
+    <h2 data-reveal="0" style="font-family:var(--font-display);font-weight:700;font-size:clamp(28px,3.4vw,40px);margin:0 0 48px;color:var(--tinta)">Qué incluye siempre, en cualquier esquema</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px">
+      <sc-for list="{{ incluye }}" as="inc" hint-placeholder-count="7">
+        <div data-reveal="{{ $index }}" style="display:flex;align-items:center;gap:14px;border:1px solid rgba(14,7,20,.10);border-radius:6px 20px 20px 20px;padding:20px 24px;min-height:48px">
+          <svg aria-hidden="true" width="14" height="11" viewBox="0 0 14 11" fill="none" style="flex-shrink:0"><path d="M1 5.5l4 4L13 1" stroke="#7C07A6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          <span style="font:400 16px/1.5 'Creato Display',sans-serif;color:var(--tinta)">{{ inc }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+  <div aria-hidden="true" style="height:clamp(56px,9vw,130px);position:relative">
+    <div style="position:absolute;inset:0;background:var(--papel);clip-path:polygon(0 100%,100% 0,100% 100%)"></div>
+  </div>
+</section>
+
+
+
+<!-- ===== CTA FINAL ===== -->
+<section data-cta-final="" style="position:relative;background:var(--papel);overflow:hidden">
+  <div aria-hidden="true" style="position:absolute;right:-10%;top:-20%;width:55%;height:140%;background:var(--gradiente);opacity:.10;clip-path:polygon(35% 0,100% 0,100% 100%,0 100%)"></div>
+  <div style="position:relative;max-width:840px;margin:0 auto;padding:clamp(72px,10vw,128px) clamp(24px,4vw,48px);text-align:center">
+    <h2 data-reveal="0" style="font-family:var(--font-display);font-weight:700;font-size:clamp(28px,3.4vw,40px);margin:0 0 16px;color:var(--tinta)">¿Empezamos por la tuya?</h2>
+    <p data-reveal="1" style="font:400 clamp(18px,1.6vw,20px)/1.6 'Creato Display',sans-serif;color:var(--gris-texto);margin:0 0 40px;text-wrap:pretty">Cuéntanos a qué te dedicas y te decimos cuál de los dos esquemas te conviene — aunque sea el más barato.</p>
+    <a data-reveal="2" href="/contacto?interes=pagina-web" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;background:var(--magenta);color:#fff;border-radius:999px;padding:16px 32px;font:600 17px/1 'Creato Display',sans-serif;text-decoration:none;transition:background 200ms ease,transform 200ms ease" style-hover="background:#7C07A6;transform:translateY(-2px);color:#fff" style-active="transform:translateY(0)">Cotizar mi página web</a>
+  </div>
+</section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer style="background:var(--papel);border-top:1px solid rgba(14,7,20,.10)">
+  <div style="max-width:1240px;margin:0 auto;padding:64px clamp(24px,4vw,48px) 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <img src="assets/marca-color.png" alt="Diseñarte México, agencia de publicidad en San Juan del Río" width="150" height="139" style="display:block;width:150px;height:auto">
+      <p style="font:400 15px/1.6 'Creato Display',sans-serif;color:var(--gris-texto);margin:0">Agencia de publicidad e innovación digital. San Juan del Río, Qro. Desde 2005.</p>
+    </div>
+    <nav aria-label="Publicidad" style="display:flex;flex-direction:column;gap:10px">
+      <span style="font:600 13px 'Walkway',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--violeta)">Publicidad</span>
+      <a href="/publicidad#catalogo" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Catálogo de servicios</a>
+      <a href="/publicidad#transformacion" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Antes y después</a>
+      <a href="/publicidad#pop" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Material POP</a>
+    </nav>
+    <nav aria-label="Innovación digital" style="display:flex;flex-direction:column;gap:10px">
+      <span style="font:600 13px 'Walkway',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--violeta)">Innovación digital</span>
+      <a href="/paginas-web" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Páginas web</a>
+      <a href="#paquetes" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Paquetes de renta</a>
+      <a href="/innovacion-digital#servicios" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Otros servicios</a>
+    </nav>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <span style="font:600 13px 'Walkway',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--violeta)">Contacto</span>
+      <a href="https://wa.me/524272110528" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">WhatsApp 427 211 05 28</a>
+      <a href="tel:+524271004183" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Tel. 427 100 41 83</a>
+      <a href="mailto:ventas@disenartemx.com" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">ventas@disenartemx.com</a>
+      <address style="font:400 15px/1.6 'Creato Display',sans-serif;color:var(--gris-texto);font-style:normal;margin:8px 0 0">Av. Lomas del Pedregoso #371<br>Col. Lomas de San Juan, Sección Campestre<br>San Juan del Río, Querétaro</address>
+    </div>
+  </div>
+  <div style="max-width:1240px;margin:0 auto;padding:24px clamp(24px,4vw,48px);border-top:1px solid rgba(14,7,20,.10);display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center">
+    <span style="font:400 14px 'Creato Display',sans-serif;color:var(--gris-texto)">© 2026 Diseñarte México®. Todos los derechos reservados.</span>
+    <div style="display:flex;gap:24px;align-items:center">
+      <a href="/aviso-de-privacidad" style="font:500 14px 'Creato Display',sans-serif;color:var(--gris-texto)">Aviso de privacidad</a>
+      <nav aria-label="Redes sociales" style="display:flex;gap:8px;align-items:center">
+        <a href="https://www.instagram.com/disenarte.mexico/" aria-label="Diseñarte México en Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;color:var(--tinta)" style-hover="color:#7C07A6">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5"></rect><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"></circle><circle cx="17.2" cy="6.8" r="1" fill="currentColor"></circle></svg>
+        </a>
+        <a href="https://www.facebook.com/Disenarte2mil" aria-label="Diseñarte México en Facebook" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;color:var(--tinta)" style-hover="color:#7C07A6">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14.5 8.5h2.5M14.5 21V8.5a3 3 0 0 1 3-3M11 13h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+        </a>
+        <a href="https://www.youtube.com/@DiseñarteMéxico" aria-label="Diseñarte México en YouTube" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;color:var(--tinta)" style-hover="color:#7C07A6">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="4" stroke="currentColor" stroke-width="1.5"></rect><path d="M11 9.5l4 2.5-4 2.5v-5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path></svg>
+        </a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== FLOTANTE ===== -->
+<div data-fab="" style="position:fixed;right:24px;bottom:24px;z-index:55">
+  <a href="https://wa.me/524272110528?text=Hola%2C%20vengo%20de%20su%20p%C3%A1gina%20web%20y%20quiero%20cotizar" aria-label="Escribir por WhatsApp" style="display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:#25D366;color:#0E0714;box-shadow:0 12px 32px rgba(14,7,20,.18)">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><path d="M8.8 9.2c.3 2.7 3.2 5.6 5.9 5.9l1.2-1.2-1.9-1.3-1 .6a5.7 5.7 0 0 1-2.3-2.3l.6-1-1.3-1.9-1.2 1.2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path></svg>
+  </a>
+</div>
+<div id="chatbot-root" data-estado="pendiente"></div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+// ============================================================
+// ARREGLOS DE CONFIGURACIÓN — edita solo esto.
+//
+// DEMOS: los 3 sitios de ejemplo. Pon la URL cuando esté
+// desplegada (y permita iframe). Si url queda '' se muestra el
+// placeholder PENDIENTE. imagenFallback: captura larga del sitio
+// (se muestra con auto-scroll al hacer hover si el iframe falla).
+// ============================================================
+const DEMOS = [
+  { nombre: 'Hola Mundo', giro: 'Plan Inicial', url: 'https://hola-mundo-muestra.vercel.app/', imagenFallback: '' },
+  { nombre: 'Demo 2', giro: '[PENDIENTE: giro, ej. Servicios industriales]', url: '', imagenFallback: '' },
+  { nombre: 'Demo 3', giro: '[PENDIENTE: giro, ej. Tienda / catálogo]', url: '', imagenFallback: '' },
+];
+
+// PAQUETES: edita precios y contenido aquí.
+const PAQUETES = [
+  { nombre: '“Hola Mundo”', nivel: 'Plan Inicial', sitio: 'Sitio de una página', para: 'Ideal para comenzar', destacado: false,
+    puntos: ['Sitio de 1 página (3-4 secciones)', 'Dominio + hosting 1 año', '1 correo corporativo', 'Botón de WhatsApp', 'Entrega en 3 días', 'Mantenimiento: 1 actualización/mes'],
+    rentaMes: '$750', rentaActivacion: '$2,900 sin IVA', duenoPrecio: '$11,900', duenoNota: '+ sin IVA a 2 pagos' },
+  { nombre: '“Next Level”', nivel: 'Plan Medio', sitio: 'Sitio corporativo', para: 'Para negocios en crecimiento', destacado: true,
+    puntos: ['Hasta 4 páginas', 'Dominio + hosting 1 año', 'Hasta 3 correos corporativos', 'WhatsApp + formulario de contacto', 'SEO básico (apareces en Google)', 'Entrega en 4 días', 'Mantenimiento: 2 actualizaciones/mes'],
+    rentaMes: '$950', rentaActivacion: '$6,500 sin IVA', duenoPrecio: '$17,900', duenoNota: '+ sin IVA a 2 pagos' },
+  { nombre: '“Rockstar Digital”', nivel: 'Plan Completo', sitio: 'Sitio avanzado', para: 'Para destacar y vender más', destacado: false,
+    puntos: ['Hasta 6 páginas', 'Dominio + hosting 1 año', 'Hasta 10 correos corporativos', 'WhatsApp + llamada directa + formularios', 'SEO avanzado', 'Entrega en 5 días', 'Mantenimiento: 5 actualizaciones/mes'],
+    rentaMes: '$1,200', rentaActivacion: '$9,500 sin IVA', duenoPrecio: '$23,900', duenoNota: 'sin IVA a 2 pagos' },
+];
+
+const FILAS_TABLA = [
+  { label: 'Para quién', a: 'Ideal para comenzar', b: 'Para negocios en crecimiento', c: 'Para destacar y vender más' },
+  { label: 'Páginas', a: '1 (3-4 secciones)', b: 'Hasta 4', c: 'Hasta 6' },
+  { label: 'Dominio + hosting', a: '1 año', b: '1 año', c: '1 año' },
+  { label: 'Correos corporativos', a: '1', b: 'Hasta 3', c: 'Hasta 10' },
+  { label: 'Contacto', a: 'Botón de WhatsApp', b: 'WhatsApp + formulario', c: 'WhatsApp + llamada directa + formularios' },
+  { label: 'SEO', a: '—', b: 'Básico (apareces en Google)', c: 'Avanzado' },
+  { label: 'Entrega', a: '3 días', b: '4 días', c: '5 días' },
+  { label: 'Mantenimiento', a: '1 actualización/mes x año', b: '2 actualizaciones/mes x año', c: '5 actualizaciones/mes x año' },
+  { label: 'Modo renta', a: '$750/mes x 1 año', b: '$950/mes x 1 año', c: '$1,200/mes x 1 año' },
+  { label: 'Activación (renta)', a: '$2,900 sin IVA', b: '$6,500 sin IVA', c: '$9,500 sin IVA' },
+  { label: 'Modo dueño', a: '$11,900 + IVA a 2 pagos', b: '$17,900 + IVA a 2 pagos', c: '$23,900 + IVA a 2 pagos' },
+];
+
+// PROCESO DE TRABAJO: las 4 fases, en orden.
+const PROCESO = [
+  { num: '01', titulo: 'Primer contacto | Diseño interfaz de usuario', texto: 'Recepción del brief para personalizar la propuesta, seguida de una videollamada para definir la línea de diseño.' },
+  { num: '02', titulo: 'Programación y desarrollo', texto: 'Elaboración de la propuesta visual y envío al cliente para su revisión, ajustes y aprobación final.' },
+  { num: '03', titulo: 'Diseño y revisión', texto: 'Configuración técnica (dominio, servidor y entorno), indexación SEO básica e integración de formularios y accesos a redes/WhatsApp. Diseño responsive adaptado a escritorio y móviles.' },
+  { num: '04', titulo: 'Producción y entrega', texto: 'Despliegue del sitio 100% operativo (posterior al pago) y capacitación técnica sobre el uso del stack digital y sus herramientas según el plan contratado.' },
+];
+
+const EASE = 'cubic-bezier(.22,1,.36,1)';
+
+class Component extends DCLogic {
+  state = {
+    activo: 1,               // paquete central (Next Level, el medio)
+    demo: 0,
+    vista: 'escritorio',      // 'escritorio' | 'telefono'
+    demosVisibles: false,     // los iframes solo cargan al entrar en viewport
+    iframeOk: {},             // idx -> true si cargó antes del timeout
+    iframeTimeout: {},        // idx -> true si pasaron 3s sin cargar
+    esMovil: false,
+    reducido: false,
+    escala: 1,
+  };
+  componentDidMount() {
+    import('./assets/site.js').then((m) => m.initSite());
+    const mq = matchMedia('(max-width: 767px)');
+    const rm = matchMedia('(prefers-reduced-motion: reduce)');
+    this.setState({ esMovil: mq.matches, reducido: rm.matches });
+    mq.addEventListener('change', (e) => this.setState({ esMovil: e.matches }));
+    // Cargar demos al entrar en viewport
+    const sec = document.getElementById('demos');
+    if (sec) {
+      new IntersectionObserver((entries, io) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          this.setState({ demosVisibles: true });
+          this._armarTimeout(this.state.demo);
+          io.disconnect();
+        }
+      }, { threshold: 0.1 }).observe(sec);
+    }
+  }
+  _armarTimeout(idx) {
+    if (!DEMOS[idx].url) return;
+    setTimeout(() => {
+      if (!this.state.iframeOk[idx]) this.setState((s) => ({ iframeTimeout: { ...s.iframeTimeout, [idx]: true } }));
+    }, 3000);
+  }
+  _ir(n) { this.setState({ activo: (n + PAQUETES.length) % PAQUETES.length }); }
+  setMarcoWrap(el) {
+    if (!el || el === this._marcoWrap) return;
+    this._marcoWrap = el;
+    this._roMarco = new ResizeObserver(() => this._recalcEscala());
+    this._roMarco.observe(el);
+    this._recalcEscala();
+  }
+  _recalcEscala() {
+    if (!this._marcoWrap) return;
+    const w = this._marcoWrap.getBoundingClientRect().width;
+    const base = this.state.vista === 'escritorio' ? 1280 : 320;
+    const escala = w > 0 ? Math.min(1, w / base) : 1;
+    if (escala !== this.state.escala) this.setState({ escala });
+  }
+  componentWillUnmount() { if (this._roMarco) this._roMarco.disconnect(); }
+  renderVals() {
+    const { activo, demo, vista, esMovil, reducido, demosVisibles, iframeOk, iframeTimeout, escala } = this.state;
+    const apilado = reducido;
+    // columnas de caracteres que caen en bucle, como lluvia de código (hero)
+    const CHARS = '01<>/{}=;#$_'.split('');
+    const columnasCodigo = Array.from({ length: 7 }, (_, i) => {
+      const largo = 10 + (i % 3) * 3;
+      const texto = Array.from({ length: largo }, (_, j) => CHARS[(i * 5 + j * 3 + 2) % CHARS.length]).join('\n');
+      return { texto, style: `animation-duration:${2.6 + (i % 4) * 0.6}s;animation-delay:${-i * 0.5}s` };
+    });
+    // --- Carrusel 3D ---
+    const pistaStyle = apilado
+      ? 'display:flex;flex-direction:column;gap:24px;align-items:center'
+      : esMovil
+        ? 'display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:24px 4px;-webkit-overflow-scrolling:touch'
+        : 'position:relative;height:800px;perspective:1600px;touch-action:pan-y;outline-offset:6px';
+    const paquetes = PAQUETES.map((pq, i) => {
+      const rel = i - activo;
+      const off = rel === 0 ? 0 : (rel === 1 || rel === -2) ? 1 : -1; // -1 izq, 0 centro, 1 der
+      const esCentro = off === 0;
+      let slotStyle, cardStyle;
+      // Fondo morado degradado en las tres tarjetas; la destacada lleva aro blanco y sombra.
+      const cardBase = 'position:relative;display:flex;flex-direction:column;gap:10px;background:linear-gradient(160deg,#5B0A72 0%,#7C07A6 55%,#A53692 100%);border-radius:6px 28px 28px 28px;padding:36px 28px;height:100%;box-sizing:border-box;overflow:visible;';
+      const bordeGrad = 'border:2px solid #fff;box-shadow:0 16px 40px rgba(91,10,114,.35);';
+      const bordeSimple = 'border:1px solid rgba(255,255,255,.18);';
+      if (apilado || esMovil) {
+        slotStyle = apilado ? 'width:min(100%,420px)' : 'flex:0 0 86%;scroll-snap-align:center';
+        cardStyle = cardBase + (pq.destacado ? bordeGrad : bordeSimple);
+      } else {
+        const t = esCentro
+          ? 'translate(-50%,-50%) translateZ(0) scale(1)'
+          : `translate(-50%,-50%) translateX(${off * 340}px) translateZ(-180px) rotateY(${off * -32}deg) scale(.86)`;
+        slotStyle = `position:absolute;top:50%;left:50%;width:min(400px,86vw);height:760px;transform:${t};opacity:${esCentro ? 1 : 0.55};z-index:${esCentro ? 2 : 1};transition:transform 550ms ${EASE},opacity 550ms ${EASE};transform-style:preserve-3d`;
+        cardStyle = cardBase + (esCentro ? bordeGrad : bordeSimple);
+      }
+      const whatsapp = 'https://wa.me/524272110528?text=' + encodeURIComponent(`Hola, vengo de su página web y quiero cotizar el plan ${pq.nombre.replace(/[“”]/g, '')}`);
+      return { ...pq, slotStyle, cardStyle, whatsapp, oculta: !(apilado || esMovil) && !esCentro, tab: (apilado || esMovil || esCentro) ? 0 : -1 };
+    });
+    const puntos3 = PAQUETES.map((pq, i) => ({
+      label: `Ir al paquete ${pq.nombre}`,
+      ir: () => this._ir(i),
+      style: `width:12px;height:12px;border-radius:50%;border:none;cursor:pointer;padding:0;background:${i === activo ? '#A53692' : 'rgba(14,7,20,.25)'};transition:opacity 200ms ease`,
+    }));
+    // --- Demos ---
+    const d = DEMOS[demo];
+    const tieneUrl = !!d.url;
+    const fallo = iframeTimeout[demo] && !iframeOk[demo];
+    const marcoWrapStyle = vista === 'escritorio'
+      ? 'display:flex;justify-content:center;width:100%;max-width:1280px;transition:opacity 300ms ease'
+      : 'display:flex;justify-content:center;width:100%;max-width:320px;transition:opacity 300ms ease';
+    const anchoMarco = 1280, altoMarco = 760;
+    const anchoTelefono = 320, altoTelefono = 660;
+    const anchoBase = vista === 'escritorio' ? anchoMarco : anchoTelefono;
+    const altoBase = vista === 'escritorio' ? altoMarco : altoTelefono;
+    const marcoScaleOuterStyle = `width:100%;height:${Math.round(altoBase * escala)}px;overflow:hidden`;
+    const marcoScaleInnerStyle = `width:${anchoBase}px;height:${altoBase}px;transform:scale(${escala});transform-origin:top left`;
+    const notaFallback = tieneUrl
+      ? (fallo ? `El demo "${d.nombre}" no permitió cargarse (X-Frame-Options). Sube imagenFallback en el arreglo DEMOS para mostrar la captura con auto-scroll.` : '')
+      : 'URL del demo por definir. Edita el arreglo DEMOS al inicio del código con { nombre, giro, url, imagenFallback }.';
+    const btnBase = "min-height:44px;border-radius:999px;padding:10px 24px;font:600 15px 'Creato Display',sans-serif;cursor:pointer;border:none;transition:opacity 200ms ease;";
+    return {
+      paquetes, puntos3, pistaStyle,
+      columnasCodigo,
+      marcoWrapStyle, anchoMarco, altoMarco,
+      marcoScaleOuterStyle, marcoScaleInnerStyle,
+      anchoTelefono, altoTelefono,
+      setMarcoWrap: (el) => this.setMarcoWrap(el),
+      filasTabla: FILAS_TABLA,
+      proceso: PROCESO.map((ps, i) => ({ ...ps, disco: ['#5B0A72', '#7C07A6', '#9126B4', '#A32FC9'][i] })),
+      anterior: () => this._ir(activo - 1),
+      siguiente: () => this._ir(activo + 1),
+      carruselTeclado: (e) => {
+        if (e.key === 'ArrowLeft') { e.preventDefault(); this._ir(activo - 1); }
+        if (e.key === 'ArrowRight') { e.preventDefault(); this._ir(activo + 1); }
+      },
+      dragStart: (e) => { this._dx = e.clientX; },
+      dragMove: () => {},
+      dragEnd: (e) => {
+        if (this._dx == null) return;
+        const delta = e.clientX - this._dx;
+        this._dx = null;
+        if (Math.abs(delta) > 40) this._ir(activo + (delta < 0 ? 1 : -1));
+      },
+      demoActivo: {
+        ...d,
+        titulo: `Demo de página web: ${d.nombre} — ${d.giro}`,
+        urlMostrada: d.url ? d.url.replace(/^https?:\/\//, '').replace(/\/$/, '') : 'ejemplo.com',
+        cargarIframe: demosVisibles && tieneUrl && !fallo,
+        mostrarFallback: !tieneUrl || fallo,
+        notaFallback,
+      },
+      iframeCargo: () => this.setState((s) => ({ iframeOk: { ...s.iframeOk, [demo]: true } })),
+      demosBotones: DEMOS.map((dd, i) => ({
+        ...dd,
+        activo: i === demo,
+        elegir: () => { this.setState({ demo: i }); this._armarTimeout(i); },
+        style: `text-align:left;min-height:48px;border-radius:6px 16px 16px 16px;padding:12px 20px;font:600 15px 'Creato Display',sans-serif;cursor:pointer;border:1px solid ${i === demo ? '#A53692' : 'rgba(14,7,20,.16)'};background:${i === demo ? 'rgba(165,54,146,.10)' : 'transparent'};color:var(--tinta)`,
+      })),
+      esEscritorio: vista === 'escritorio',
+      esTelefono: vista === 'telefono',
+      verEscritorio: () => this.setState({ vista: 'escritorio' }, () => this._recalcEscala()),
+      verTelefono: () => this.setState({ vista: 'telefono' }, () => this._recalcEscala()),
+      btnEscritorioStyle: btnBase + (vista === 'escritorio' ? 'background:#A53692;color:#fff' : 'background:transparent;color:var(--tinta)'),
+      btnTelefonoStyle: btnBase + (vista === 'telefono' ? 'background:#A53692;color:#fff' : 'background:transparent;color:var(--tinta)'),
+      incluye: ['Diseño responsive real (no "se ve en celular")', 'Velocidad de carga optimizada', 'SEO técnico desde el primer día', 'Formulario que llega a tu correo', 'Botón de WhatsApp', 'Certificado de seguridad', 'Google Analytics configurado'],
+      faq: [
+        { p: '¿Cuánto cuesta una página web?', r: '[PENDIENTE: rango] Depende de cuántas secciones lleve y de si necesitas que redactemos el contenido. En renta arrancas desde $X al mes; en compra es un pago único.' },
+        { p: '¿Cuál me conviene: comprar o rentar?', r: 'Si tienes quién le dé mantenimiento y prefieres que sea un activo tuyo, compra. Si quieres estar en línea sin invertir de golpe ni contratar a nadie, renta.' },
+        { p: '¿Qué pasa si rento y luego quiero comprarla?', r: 'Se puede: te cotizamos la compra y descontamos parte de lo que ya pagaste. [supuesto: por confirmar — es un argumento de venta muy fuerte]' },
+        { p: '¿En cuánto tiempo está lista?', r: '[PENDIENTE: plazo real] desde que tenemos el contenido completo.' },
+        { p: '¿Aparece en Google?', r: 'Se entrega optimizada técnicamente y dada de alta en Google. Posicionarse en búsquedas competidas es un trabajo continuo, y eso viene en los paquetes con SEO.' },
+        { p: '¿Yo puedo actualizarla?', r: 'En compra, te capacitamos para hacerlo. En renta, nos lo pides y lo hacemos nosotros dentro de los cambios de tu paquete.' },
+        { p: '¿El dominio es mío?', r: 'Sí en el esquema de compra. En renta lo administramos nosotros mientras dure el servicio.' },
+      ],
+      abrirChat: () => window.DZChat && window.DZChat.abrir(),
+    };
+  }
+}
+</script>
+</body>
+</html>

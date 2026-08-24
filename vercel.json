@@ -1,0 +1,11 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/inicio.dc.html" },
+    { "source": "/nosotros", "destination": "/nosotros.dc.html" },
+    { "source": "/publicidad", "destination": "/publicidad.dc.html" },
+    { "source": "/innovacion-digital", "destination": "/innovacion-digital.dc.html" },
+    { "source": "/paginas-web", "destination": "/paginas-web.dc.html" },
+    { "source": "/contacto", "destination": "/contacto.dc.html" },
+    { "source": "/aviso-de-privacidad", "destination": "/aviso-privacidad.dc.html" }
+  ]
+}

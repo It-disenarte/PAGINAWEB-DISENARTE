@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Señalética industrial y rotulación en Querétaro | Diseñarte</title>
+<meta name="description" content="Señalética bajo NOM-026-STPS, etiquetado de tuberías y SGA, tableros, rotulación de flotillas y películas de seguridad. Fabricamos e instalamos. Cotiza hoy.">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/png" href="assets/favicon-dz.png">
+<link rel="apple-touch-icon" href="assets/favicon-dz.png">
+<meta name="theme-color" content="#0E0714">
+<link rel="canonical" href="https://www.disenartemx.com/publicidad">
+<meta property="og:title" content="Señalética industrial y rotulación en Querétaro | Diseñarte">
+<meta property="og:description" content="Señalética bajo NOM-026-STPS, etiquetado de tuberías y SGA, tableros, rotulación de flotillas y películas de seguridad. Fabricamos e instalamos.">
+<meta property="og:image" content="https://www.disenartemx.com/assets/hero-poster.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.disenartemx.com/publicidad">
+<meta property="og:locale" content="es_MX">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+/* Tipografía corporativa: Creato Display para todo el texto, Walkway para eyebrows */
+@font-face{font-family:'Creato Display';src:url('assets/fonts/CreatoDisplay-Light.otf') format('opentype');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'Creato Display';src:url('assets/fonts/CreatoDisplay-Regular.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Creato Display';src:url('assets/fonts/CreatoDisplay-Medium.otf') format('opentype');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Creato Display';src:url('assets/fonts/CreatoDisplay-Bold.otf') format('opentype');font-weight:600 700;font-style:normal;font-display:swap}
+@font-face{font-family:'Creato Display';src:url('assets/fonts/CreatoDisplay-ExtraBold.otf') format('opentype');font-weight:800;font-style:normal;font-display:swap}
+@font-face{font-family:'Creato Display';src:url('assets/fonts/CreatoDisplay-Black.otf') format('opentype');font-weight:900;font-style:normal;font-display:swap}
+@font-face{font-family:'Walkway';src:url('assets/fonts/Walkway-Regular.ttf') format('truetype');font-weight:400 500;font-style:normal;font-display:swap}
+@font-face{font-family:'Walkway';src:url('assets/fonts/Walkway-Bold.ttf') format('truetype');font-weight:600 700;font-style:normal;font-display:swap}
+@font-face{font-family:'Walkway';src:url('assets/fonts/Walkway-Black.ttf') format('truetype');font-weight:800 900;font-style:normal;font-display:swap}
+:root{--tinta:#0E0714;--tinta-2:#1A0F24;--magenta:#A53692;--violeta:#7C07A6;--cian:#5CC6D0;--papel:#F2F1F3;--blanco:#FFFFFF;--gris:#96989A;--gris-texto:#55575A;--gradiente:linear-gradient(100deg,#7C07A6 0%,#A53692 45%,#5CC6D0 100%);--font-display:'Creato Display',sans-serif}
+body{margin:0;background:#F2F1F3;color:#0E0714;font-family:'Creato Display',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:hover{color:#7C07A6}
+:focus-visible{outline:2px solid #7C07A6;outline-offset:3px}
+[data-card]{transition:transform 200ms cubic-bezier(.22,1,.36,1)}
+[data-card]:hover{transform:translateY(-6px)}
+[data-card] [data-corner]{opacity:0;transition:opacity 200ms ease}
+[data-card]:hover [data-corner]{opacity:1}
+details summary{cursor:pointer;list-style:none}
+details summary::-webkit-details-marker{display:none}
+@media(max-width:1023px){[data-desktop-nav]{display:none!important}}
+@media(min-width:1024px){[data-menu-btn]{display:none!important}}
+@media(prefers-reduced-motion:reduce){[data-card]:hover{transform:none}}
+
+/* ===== REVEALS DECLARATIVOS (CSS: sobreviven a los re-renders) ===== */
+@keyframes dzUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes dzTrazoLinea{0%{opacity:0;transform:scaleX(0)}8%{opacity:.85}55%{opacity:.85;transform:scaleX(1)}82%{opacity:.85;transform:scaleX(1)}100%{opacity:0;transform:scaleX(1)}}
+@keyframes dzTrazoForma{0%{opacity:0;transform:scale(.5)}15%{opacity:.85;transform:scale(1)}75%{opacity:.85;transform:scale(1)}100%{opacity:0;transform:scale(1.08)}}
+@keyframes dzTrazoCrecer{0%{opacity:.85;transform:scale(.03,.03)}35%{opacity:.85;transform:scale(1,.03)}65%{opacity:.85;transform:scale(1,1)}85%{opacity:.85;transform:scale(1,1)}100%{opacity:0;transform:scale(1,1)}}
+[data-vec]{position:absolute;opacity:0;animation-timing-function:cubic-bezier(.22,1,.36,1);animation-iteration-count:infinite}
+@media(prefers-reduced-motion:reduce){[data-vec]{animation:none;opacity:.5;transform:none!important}}
+@media(max-width:767px){[data-vec-panel]{display:none}}
+@keyframes dzLine{from{opacity:0;transform:translateY(105%)}to{opacity:1;transform:none}}
+[data-hero-line]{animation:dzLine 700ms cubic-bezier(.22,1,.36,1) 120ms both}
+h1>span:nth-child(2) [data-hero-line]{animation-delay:210ms}
+h1>span:nth-child(3) [data-hero-line]{animation-delay:300ms}
+h1>span:nth-child(4) [data-hero-line]{animation-delay:390ms}
+[data-hero-line]:not(h1 [data-hero-line]){animation-delay:480ms}
+p [data-hero-line]{animation-delay:120ms}
+[data-reveal]{animation:dzUp 600ms cubic-bezier(.22,1,.36,1) both}
+[data-reveal="1"]{animation-delay:80ms}
+[data-reveal="2"]{animation-delay:160ms}
+[data-reveal="3"]{animation-delay:240ms}
+[data-reveal="4"]{animation-delay:320ms}
+[data-reveal="5"]{animation-delay:400ms}
+[data-reveal="6"]{animation-delay:480ms}
+[data-reveal="7"],[data-reveal="8"],[data-reveal="9"],[data-reveal="10"]{animation-delay:560ms}
+@supports (animation-timeline:view()){
+  [data-reveal]{animation-timeline:view();animation-range:entry 0% entry 55%;animation-delay:0s;animation-fill-mode:both}
+}
+@media(prefers-reduced-motion:reduce){
+  [data-hero-line],[data-reveal]{animation:none!important;opacity:1!important;transform:none!important}
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","name":"Diseñarte México","url":"https://www.disenartemx.com/","telephone":"+524271004183"},
+{"@type":"WebSite","name":"Diseñarte México","url":"https://www.disenartemx.com/","inLanguage":"es-MX"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.disenartemx.com/"},{"@type":"ListItem","position":2,"name":"Publicidad","item":"https://www.disenartemx.com/publicidad"}]},
+{"@type":"Service","name":"Señalética industrial","provider":{"@type":"Organization","name":"Diseñarte México"},"areaServed":"Querétaro","description":"Señalética industrial bajo NOM-026-STPS-2011: protección civil, línea industrial y línea transportes."},
+{"@type":"Service","name":"Rotulación de flotillas","provider":{"@type":"Organization","name":"Diseñarte México"},"areaServed":"Querétaro","description":"Rotulación de unidades y flotillas con póliza de garantía de 2 años."},
+{"@type":"Service","name":"Tableros de seguridad y KPIs","provider":{"@type":"Organization","name":"Diseñarte México"},"areaServed":"Querétaro","description":"Tableros móviles, giratorios, cruz de seguridad, imantados y personalizados."},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"¿Trabajan bajo norma?","acceptedAnswer":{"@type":"Answer","text":"Sí. Señalética conforme a NOM-026-STPS-2011 y soporte de implementación del SGA conforme a NOM-018-STPS."}},
+{"@type":"Question","name":"¿Instalan o solo fabrican?","acceptedAnswer":{"@type":"Answer","text":"Fabricamos e instalamos. La instalación en planta se cotiza según distancia, altura y ventana de trabajo."}},
+{"@type":"Question","name":"¿Cuánto tardan?","acceptedAnswer":{"@type":"Answer","text":"Depende del volumen, pero los plazos cortos son parte de nuestra propuesta. Si tu proyecto es urgente, dilo al cotizar: tenemos capacidad para urgencias."}},
+{"@type":"Question","name":"¿Atienden fuera de San Juan del Río?","acceptedAnswer":{"@type":"Answer","text":"Sí, damos servicio en Querétaro y estados vecinos. El traslado se incluye en la cotización."}},
+{"@type":"Question","name":"¿Dan garantía?","acceptedAnswer":{"@type":"Answer","text":"Sí. En rotulación vehicular, póliza por 2 años. En el resto, garantía de calidad en cada entrega."}},
+{"@type":"Question","name":"¿Puedo pedir una sola pieza?","acceptedAnswer":{"@type":"Answer","text":"Sí. Producimos desde una pieza única hasta series a gran escala."}}
+]}
+]}
+</script>
+<style>
+/* Catálogo: imagen a la izquierda y lista a la derecha en desktop */
+@media(min-width:1024px){[data-catalogo]{grid-template-columns:1.1fr .9fr!important;gap:64px!important}}
+@media(prefers-reduced-motion:reduce){[data-catalogo] [data-anillo-caja] *{transition:none!important}}
+/* Material POP: cintas en movimiento continuo, solo transform */
+@keyframes dzPalomita{0%,4%{opacity:0;transform:scale(.2) translateY(6px)}9%{opacity:1;transform:scale(1.4) translateY(-5px)}13%{transform:scale(.9)}17%,44%{opacity:1;transform:scale(1)}52%,100%{opacity:0;transform:scale(.5)}}
+@media(prefers-reduced-motion:reduce){#pop svg{animation:none!important;opacity:1!important}}
+@keyframes dzPop{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){#pop [style*="dzPop"]{animation:none!important;flex-wrap:wrap;width:auto!important}}
+[data-anillo-caja]{mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%)}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H2JJVE75F3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H2JJVE75F3');
+  gtag('config', 'AW-16751651845');
+</script>
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2039038839979376');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2039038839979376&ev=PageView&noscript=1" alt=""></noscript>
+</helmet>
+
+<a href="#contenido" style="position:absolute;left:-9999px;z-index:100;background:var(--magenta);color:#fff;padding:12px 24px;border-radius:999px;font:600 15px 'Creato Display',sans-serif" style-focus="left:24px;top:12px">Ir al contenido</a>
+
+<!-- ===== NAVBAR (Modo Taller) ===== -->
+<header data-navbar="taller" style="position:fixed;top:0;left:0;right:0;z-index:50;background:transparent">
+  <nav aria-label="Navegación principal" style="max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:32px;padding:0 clamp(24px,4vw,48px);height:96px">
+    <a href="/" aria-label="Diseñarte México, inicio" style="display:flex;align-items:baseline;gap:8px;text-decoration:none;color:var(--tinta)" style-hover="color:var(--tinta)">
+      <img src="assets/marca-color.png" alt="Diseñarte México, agencia de publicidad en San Juan del Río" width="82" height="76" style="display:block;width:auto;height:76px;object-fit:contain">
+    </a>
+    <div data-desktop-nav="" style="display:flex;align-items:center;gap:8px;margin-left:auto">
+      <a href="/" style="padding:12px 14px;font:500 15px 'Creato Display',sans-serif;text-decoration:none;color:var(--tinta)" style-hover="color:#7C07A6">Inicio</a>
+      <a href="/nosotros" style="padding:12px 14px;font:500 15px 'Creato Display',sans-serif;text-decoration:none;color:var(--tinta)" style-hover="color:#7C07A6">Nosotros</a>
+      <a href="/publicidad" aria-current="page" style="padding:12px 14px;font:600 15px 'Creato Display',sans-serif;text-decoration:none;color:var(--tinta);border-bottom:2px solid var(--magenta)">Publicidad</a>
+      <div data-dropdown="" style="position:relative">
+        <button data-dropdown-btn="" aria-expanded="false" aria-haspopup="true" style="display:flex;align-items:center;gap:6px;padding:12px 14px;font:500 15px 'Creato Display',sans-serif;background:none;border:none;color:var(--tinta);cursor:pointer" style-hover="color:#7C07A6">Innovación Digital
+          <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+        </button>
+        <div data-dropdown-panel="" style="position:absolute;top:100%;left:0;min-width:220px;background:#fff;box-shadow:0 12px 32px rgba(14,7,20,.18);border-radius:6px 20px 20px 20px;padding:8px;display:flex;flex-direction:column">
+          <a href="/paginas-web" style="padding:12px 16px;font:500 15px 'Creato Display',sans-serif;text-decoration:none;color:var(--tinta);border-radius:12px" style-hover="background:rgba(14,7,20,.05);color:#7C07A6">Páginas web</a>
+          <a href="/innovacion-digital" style="padding:12px 16px;font:500 15px 'Creato Display',sans-serif;text-decoration:none;color:var(--tinta);border-radius:12px" style-hover="background:rgba(14,7,20,.05);color:#7C07A6">Otros servicios</a>
+        </div>
+      </div>
+      <a href="/contacto?interes=publicidad" style="display:inline-flex;align-items:center;min-height:48px;background:var(--magenta);color:#fff;border-radius:999px;padding:0 28px;font:600 15px 'Creato Display',sans-serif;text-decoration:none;margin-left:12px;transition:background 200ms ease,transform 200ms ease" style-hover="background:#7C07A6;transform:translateY(-2px);color:#fff" style-active="transform:translateY(0)">Cotizar</a>
+    </div>
+    <button data-menu-btn="" aria-expanded="false" aria-label="Abrir menú" style="margin-left:auto;width:48px;height:48px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:none;border:none;cursor:pointer">
+      <span aria-hidden="true" style="display:block;width:22px;height:2px;background:var(--tinta)"></span>
+      <span aria-hidden="true" style="display:block;width:22px;height:2px;background:var(--tinta)"></span>
+    </button>
+  </nav>
+</header>
+
+<div data-menu="" style="display:flex;opacity:0;pointer-events:none;position:fixed;inset:0;z-index:49;background:var(--papel);flex-direction:column;justify-content:center;gap:8px;padding:96px 32px 48px">
+  <a href="/" style="font-family:var(--font-display);font-weight:700;font-size:30px;color:var(--tinta);text-decoration:none;padding:12px 0">Inicio</a>
+  <a href="/nosotros" style="font-family:var(--font-display);font-weight:700;font-size:30px;color:var(--tinta);text-decoration:none;padding:12px 0">Nosotros</a>
+  <a href="/publicidad" style="font-family:var(--font-display);font-weight:700;font-size:30px;color:var(--magenta);text-decoration:none;padding:12px 0">Publicidad</a>
+  <a href="/innovacion-digital" style="font-family:var(--font-display);font-weight:700;font-size:30px;color:var(--tinta);text-decoration:none;padding:12px 0">Innovación Digital</a>
+  <a href="/paginas-web" style="font-family:var(--font-display);font-weight:700;font-size:30px;color:var(--tinta);text-decoration:none;padding:12px 0">Páginas web</a>
+  <a href="/contacto?interes=publicidad" style="display:inline-flex;align-items:center;justify-content:center;min-height:52px;background:var(--magenta);color:#fff;border-radius:999px;padding:0 32px;font:600 17px 'Creato Display',sans-serif;text-decoration:none;margin-top:24px;align-self:flex-start">Cotizar</a>
+</div>
+
+<main id="contenido">
+<!-- ===== HERO ===== -->
+<section data-hero="" style="position:relative;background:var(--papel);overflow:hidden">
+  <div aria-hidden="true" style="position:absolute;top:0;right:0;width:45%;height:100%;background:var(--gradiente);opacity:.06;clip-path:polygon(30% 0,100% 0,100% 100%,0 100%)"></div>
+  <div aria-hidden="true" data-vec-panel="" style="position:absolute;top:0;right:0;width:42%;height:100%;overflow:hidden">
+    <sc-for list="{{ trazosVector }}" as="tv" hint-placeholder-count="17">
+      <span data-vec="" style="{{ tv.style }}"></span>
+    </sc-for>
+  </div>
+  <div style="position:relative;max-width:1240px;margin:0 auto;padding:clamp(140px,18vw,200px) clamp(24px,4vw,48px) clamp(72px,10vw,128px)">
+    <p style="font:600 13px 'Walkway',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--violeta);margin:0 0 24px"><span style="display:block;overflow:hidden"><span data-hero-line="" style="display:block">Área de publicidad</span></span></p>
+    <h1 style="font-family:var(--font-display);font-weight:700;font-size:clamp(34px,4.5vw,56px);line-height:1.05;letter-spacing:-.02em;margin:0 0 24px;max-width:820px;color:var(--tinta)">
+      <span style="display:block;overflow:hidden"><span data-hero-line="" style="display:block">Publicidad con propósito: <span style="color:var(--violeta)">creamos atmósferas</span></span></span>
+      <span style="display:block;overflow:hidden"><span data-hero-line="" style="display:block">que comunican, inspiran y transforman espacios.</span></span>
+    </h1>
+
+  </div>
+  <div aria-hidden="true" style="height:clamp(48px,7vw,110px);position:relative;overflow:hidden">
+    <div style="position:absolute;inset:0;background:#fff;clip-path:polygon(0 100%,100% 0,100% 100%)"></div>
+  </div>
+</section>
+
+
+<!-- ===== CATÁLOGO: CARRUSEL 3D EN ANILLO (CSS puro, sin librerías) ===== -->
+<section id="catalogo" aria-label="Catálogo de servicios de publicidad" style="background:#fff;overflow:hidden">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(48px,7vw,96px) clamp(24px,4vw,48px) clamp(72px,10vw,128px)">
+    <div data-catalogo="" role="region" aria-label="Catálogo de servicios, carrusel" tabIndex="0" onKeyDown="{{ teclas }}" style="display:grid;grid-template-columns:1fr;gap:48px;align-items:center;outline:none">
+
+      <div data-anillo-caja="" style="position:relative;perspective:1600px;height:clamp(280px,34vw,400px);padding:0 56px;margin-bottom:24px">
+        <div style="position:absolute;top:0;bottom:0;left:56px;right:56px;transform-style:preserve-3d">
+          <sc-for list="{{ tarjetas }}" as="t" hint-placeholder-count="7">
+            <div aria-hidden="{{ t.oculta }}" style="{{ t.estilo }}">
+              <img src="{{ t.img }}" alt="{{ t.alt }}" width="900" height="700" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block">
+            </div>
+          </sc-for>
+        </div>
+        <button type="button" aria-label="Servicio anterior" onClick="{{ anterior }}" style="position:absolute;top:50%;left:0;transform:translateY(-50%);z-index:5;width:52px;height:52px;border-radius:999px;border:none;background:rgba(14,7,20,.06);color:var(--tinta);cursor:pointer;display:flex;align-items:center;justify-content:center" style-hover="background:rgba(14,7,20,.14)">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M12.5 4 6.5 10l6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </button>
+        <button type="button" aria-label="Servicio siguiente" onClick="{{ siguiente }}" style="position:absolute;top:50%;right:0;transform:translateY(-50%);z-index:5;width:52px;height:52px;border-radius:999px;border:none;background:rgba(14,7,20,.06);color:var(--tinta);cursor:pointer;display:flex;align-items:center;justify-content:center" style-hover="background:rgba(14,7,20,.14)">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7.5 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </button>
+      </div>
+
+      <div>
+        <h2 style="{{ estiloTitulo }}">{{ activoTitulo }}</h2>
+        <ul style="margin:0 0 32px;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px">
+          <sc-for list="{{ activoItems }}" as="it" hint-placeholder-count="6">
+            <li style="display:flex;gap:12px;font:400 18px/1.5 'Creato Display',sans-serif;color:var(--gris-texto)"><span aria-hidden="true" style="color:{{ colorVineta }};font-weight:700">/</span>{{ it }}</li>
+          </sc-for>
+        </ul>
+        <div role="tablist" aria-label="Elegir servicio" style="display:flex;flex-wrap:wrap;gap:10px">
+          <sc-for list="{{ puntos }}" as="p" hint-placeholder-count="7">
+            <button type="button" role="tab" aria-selected="{{ p.activo }}" aria-label="{{ p.etiqueta }}" onClick="{{ p.ir }}" style="{{ p.estilo }}"></button>
+          </sc-for>
+        </div>
+      </div>
+  </div>
+    </div>
+  <div aria-hidden="true" style="height:clamp(48px,7vw,110px);position:relative;overflow:hidden">
+    <div style="position:absolute;inset:0;background:var(--papel);clip-path:polygon(0 100%,100% 0,100% 100%)"></div>
+  </div>
+</section>
+
+<!-- ===== ANTES Y DESPUÉS: TRES FASES CON BARRIDO ARRASTRABLE ===== -->
+<section id="transformacion" aria-label="Antes y después de un espacio" style="background:var(--papel)">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(48px,7vw,96px) clamp(24px,4vw,48px) clamp(72px,10vw,128px)">
+    <p style="font:600 13px 'Walkway',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--violeta);margin:0 0 16px">Antes y después</p>
+    <h2 style="font-family:var(--font-display);font-weight:900;font-size:clamp(28px,3.4vw,40px);line-height:1.15;letter-spacing:-.01em;margin:0 0 24px;max-width:760px;color:var(--tinta);text-wrap:pretty">Hacemos que los espacios comuniquen mejor</h2>
+
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin:0 0 24px">
+      <sc-for list="{{ pasos }}" as="p" hint-placeholder-count="3">
+        <button type="button" onClick="{{ p.ir }}" aria-pressed="{{ p.activo }}" style="{{ p.estilo }}">
+          <strong style="font:900 15px 'Creato Display',sans-serif">{{ p.num }}</strong>
+          <span style="font:500 15px 'Creato Display',sans-serif">{{ p.titulo }}</span>
+        </button>
+      </sc-for>
+    </div>
+    <div data-fases="" style="position:relative;border-radius:6px 28px 28px 28px;overflow:hidden;background:#fff;box-shadow:0 12px 32px rgba(14,7,20,.18);touch-action:pan-y;cursor:ew-resize" onPointerDown="{{ tomar }}">
+      <div style="position:relative;aspect-ratio:16/9">
+        <sc-for list="{{ fases }}" as="f" hint-placeholder-count="3">
+          <div style="{{ f.capa }}">
+            <img src="{{ f.img }}" alt="{{ f.alt }}" width="1920" height="1080" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+            <span style="{{ f.chapa }}">{{ f.etiqueta }}</span>
+          </div>
+        </sc-for>
+        <div aria-hidden="true" style="{{ estiloBarra }}">
+          <span style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:999px;background:#fff;box-shadow:0 2px 8px rgba(14,7,20,.28);display:flex;align-items:center;justify-content:center;color:var(--violeta);font:700 15px 'Creato Display',sans-serif">‹ ›</span>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+  <div aria-hidden="true" style="height:clamp(48px,7vw,110px);position:relative;overflow:hidden">
+    <div style="position:absolute;inset:0;background:var(--tinta);clip-path:polygon(0 100%,100% 0,100% 100%)"></div>
+  </div>
+</section>
+
+<!-- ===== MATERIAL POP: TRES CINTAS EN MOVIMIENTO CONTINUO ===== -->
+<section id="pop" aria-label="Material POP" style="background:var(--tinta);overflow:hidden">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(48px,7vw,96px) clamp(24px,4vw,48px) 32px">
+    <p style="font:600 13px 'Walkway',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--cian);margin:0 0 16px">Material POP</p>
+    <h2 style="font-family:var(--font-display);font-weight:900;font-size:clamp(28px,3.4vw,40px);line-height:1.15;letter-spacing:-.01em;margin:0 0 16px;max-width:760px;color:#fff;text-wrap:pretty">Todo lo que tu marca reparte, entrega y regala</h2>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:16px;padding-bottom:clamp(48px,7vw,96px)">
+    <sc-for list="{{ cintas }}" as="c" hint-placeholder-count="3">
+      <div style="overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)">
+        <div style="{{ c.pista }}">
+          <sc-for list="{{ c.items }}" as="it" hint-placeholder-count="10">
+            <button type="button" onClick="{{ it.fijar }}" style="{{ it.estilo }}">
+              <span aria-hidden="true" style="{{ it.barra }}">/</span>{{ it.nombre }}
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="{{ it.icono }}"><sc-for list="{{ it.trazos }}" as="d" hint-placeholder-count="2"><path d="{{ d }}"></path></sc-for></svg>
+            </button>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+  <div aria-hidden="true" style="height:clamp(48px,7vw,110px);position:relative;overflow:hidden">
+    <div style="position:absolute;inset:0;background:var(--papel);clip-path:polygon(0 100%,100% 0,100% 100%)"></div>
+  </div>
+</section>
+
+
+<!-- ===== CTA FINAL ===== -->
+<section data-cta-final="" style="position:relative;background:var(--papel);overflow:hidden">
+  <div aria-hidden="true" style="position:absolute;top:0;left:0;right:0;height:clamp(56px,9vw,130px)">
+    <div style="position:absolute;inset:0;background:var(--gradiente);opacity:.9;clip-path:polygon(0 0,100% 0,100% 28%,0 100%)"></div>
+    <div style="position:absolute;inset:0;background:var(--papel);clip-path:polygon(0 0,100% 0,100% 26%,0 72%)"></div>
+  </div>
+  <div style="position:relative;max-width:840px;margin:0 auto;padding:clamp(120px,14vw,180px) clamp(24px,4vw,48px) clamp(72px,10vw,128px);text-align:center">
+    <h2 data-reveal="0" style="font-family:var(--font-display);font-weight:700;font-size:clamp(28px,3.4vw,40px);margin:0 0 16px;color:var(--tinta)">Cuéntanos qué necesitas</h2>
+    <div data-reveal="2" style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center">
+      <a href="/contacto?interes=publicidad" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;background:var(--magenta);color:#fff;border-radius:999px;padding:16px 32px;font:600 17px/1 'Creato Display',sans-serif;text-decoration:none;transition:background 200ms ease,transform 200ms ease" style-hover="background:#7C07A6;transform:translateY(-2px);color:#fff" style-active="transform:translateY(0)">Cotizar</a>
+      <a href="https://wa.me/524272110528?text=Hola%2C%20vengo%20de%20su%20p%C3%A1gina%20web%20y%20quiero%20cotizar" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;border:1.5px solid currentColor;color:var(--tinta);border-radius:999px;padding:16px 32px;font:600 17px/1 'Creato Display',sans-serif;text-decoration:none;transition:background 200ms ease" style-hover="background:rgba(14,7,20,.10);color:#fff">Escribir por WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer style="background:var(--papel);border-top:1px solid rgba(14,7,20,.10);color:var(--tinta)">
+  <div style="max-width:1240px;margin:0 auto;padding:64px clamp(24px,4vw,48px) 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <img src="assets/marca-color.png" alt="Diseñarte México, agencia de publicidad en San Juan del Río" width="150" height="139" style="display:block;width:150px;height:auto">
+      <p style="font:400 15px/1.6 'Creato Display',sans-serif;color:var(--gris);margin:0">Agencia de publicidad e innovación digital. San Juan del Río, Qro. Desde 2005.</p>
+    </div>
+    <nav aria-label="Publicidad" style="display:flex;flex-direction:column;gap:10px">
+      <span style="font:600 13px 'Walkway',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--violeta)">Publicidad</span>
+      <a href="#catalogo" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Catálogo de servicios</a>
+      <a href="#transformacion" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Antes y después</a>
+      <a href="#pop" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Material POP</a>
+    </nav>
+    <nav aria-label="Innovación digital" style="display:flex;flex-direction:column;gap:10px">
+      <span style="font:600 13px 'Walkway',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--violeta)">Innovación digital</span>
+      <a href="/paginas-web" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Páginas web</a>
+      <a href="/paginas-web#paquetes" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Paquetes de renta</a>
+      <a href="/innovacion-digital" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Otros servicios</a>
+    </nav>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <span style="font:600 13px 'Walkway',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--violeta)">Contacto</span>
+      <a href="https://wa.me/524272110528" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">WhatsApp 427 211 05 28</a>
+      <a href="tel:+524271004183" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Tel. 427 100 41 83</a>
+      <a href="mailto:ventas@disenartemx.com" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">ventas@disenartemx.com</a>
+      <address style="font:400 15px/1.6 'Creato Display',sans-serif;color:var(--gris);font-style:normal;margin:8px 0 0">Av. Lomas del Pedregoso #371<br>Col. Lomas de San Juan, Sección Campestre<br>San Juan del Río, Querétaro</address>
+    </div>
+  </div>
+  <div style="max-width:1240px;margin:0 auto;padding:24px clamp(24px,4vw,48px);border-top:1px solid rgba(14,7,20,.10);display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center">
+    <span style="font:400 14px 'Creato Display',sans-serif;color:var(--gris)">© 2026 Diseñarte México®. Todos los derechos reservados.</span>
+    <div style="display:flex;gap:24px;align-items:center">
+      <a href="/aviso-de-privacidad" style="font:500 14px 'Creato Display',sans-serif;color:var(--gris)">Aviso de privacidad</a>
+      <nav aria-label="Redes sociales" style="display:flex;gap:8px;align-items:center">
+        <a href="https://www.instagram.com/disenarte.mexico/" aria-label="Diseñarte México en Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;color:var(--tinta)" style-hover="color:#7C07A6">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5"></rect><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"></circle><circle cx="17.2" cy="6.8" r="1" fill="currentColor"></circle></svg>
+        </a>
+        <a href="https://www.facebook.com/Disenarte2mil" aria-label="Diseñarte México en Facebook" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;color:var(--tinta)" style-hover="color:#7C07A6">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14.5 8.5h2.5M14.5 21V8.5a3 3 0 0 1 3-3M11 13h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+        </a>
+        <a href="https://www.youtube.com/@DiseñarteMéxico" aria-label="Diseñarte México en YouTube" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;color:var(--tinta)" style-hover="color:#7C07A6">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="4" stroke="currentColor" stroke-width="1.5"></rect><path d="M11 9.5l4 2.5-4 2.5v-5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path></svg>
+        </a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== FLOTANTE ===== -->
+<div data-fab="" style="position:fixed;right:24px;bottom:24px;z-index:55">
+  <a href="https://wa.me/524272110528?text=Hola%2C%20vengo%20de%20su%20p%C3%A1gina%20web%20y%20quiero%20cotizar" aria-label="Escribir por WhatsApp" style="display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:#25D366;color:#0E0714;box-shadow:0 12px 32px rgba(14,7,20,.18)">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><path d="M8.8 9.2c.3 2.7 3.2 5.6 5.9 5.9l1.2-1.2-1.9-1.3-1 .6a5.7 5.7 0 0 1-2.3-2.3l.6-1-1.3-1.9-1.2 1.2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path></svg>
+  </a>
+</div>
+<div id="chatbot-root" data-estado="pendiente"></div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;profundidad3D&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;sutil&quot;,&quot;medio&quot;,&quot;dramatico&quot;],&quot;default&quot;:&quot;medio&quot;,&quot;tsType&quot;:&quot;'sutil'|'medio'|'dramatico'&quot;,&quot;section&quot;:&quot;Carrusel&quot;},&quot;acento&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;magenta&quot;,&quot;violeta&quot;,&quot;degradado&quot;],&quot;default&quot;:&quot;violeta&quot;,&quot;tsType&quot;:&quot;'magenta'|'violeta'|'degradado'&quot;,&quot;section&quot;:&quot;Marca&quot;},&quot;vecinasVisibles&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Carrusel&quot;}}">
+// ─── CATÁLOGO DE PUBLICIDAD ────────────────────────────────────────────────
+// Un solo arreglo: añade, quita o reordena categorías aquí y el carrusel se ajusta.
+const CATALOGO = [
+  ['Señalética', ['Letreros', 'Etiquetas', 'Rotulación de tuberías', 'Delimitación de áreas', 'Código de colores', 'Rotulación de tanques/silos', 'Campañas de seguridad e higiene']],
+  ['Tableros', ['Móvil', 'Giratorio', 'Cruz de seguridad', 'Con acrílico', 'Imantado', 'Personalizado', 'Dinámicos de EHS/KPI\u2019S']],
+  ['Impresión digital', ['Lona 13oz', 'Wall Graphic', 'Fotomural', 'Vinil brillante/mate', 'Vinil wrap', 'Microperforado', 'Floor graphic']],
+  ['Rotulación', ['Corte de vinil', 'Cuadrillas completas', 'Balizado', 'Diseño personalizado']],
+  ['Acrílico', ['Gravoply', 'Termos', 'Cristal', 'Cuero', 'Corpóreo 3D', 'Porta hojas', 'Proyectos especiales']],
+  ['Corte y grabado láser', ['Acrílico', 'MDF', 'Papel', 'Madera', 'ABS', 'Led']],
+  ['Diseño gráfico', ['Creación de logotipos', 'Manual de identidad', 'Identidad corporativa', 'Branding', 'Imagen corporativa integral']],
+];
+
+// Tres fases del antes y después. Edita textos aquí; las fotos se sueltan en la vista.
+const FASES = [
+  ['01', 'El espacio', 'Levantamiento en sitio: medidas, materiales, normativa aplicable y condiciones de instalación.'],
+  ['02', 'Diseño y desarrollo', 'Propuesta gráfica, planos de fabricación y muestras físicas aprobadas antes de producir.'],
+  ['03', 'Instalación final', 'Fabricación en taller propio e instalación con cuadrilla, sin detener la operación de la planta.'],
+];
+
+// Material POP: edita, añade o quita productos aquí; las tres cintas se reparten solas.
+// [nombre, trazos del icono de línea 1.5px]
+const POP = [
+  ['Volantes', ['M6 3h12v18H6z', 'M9 8h6M9 12h6']],
+  ['Tarjetas', ['M3 6h18v12H3z', 'M3 10h18']],
+  ['Formatos', ['M6 3h12v18H6z', 'M9 9h6M9 13h6M9 17h3']],
+  ['Calendarios', ['M4 6h16v14H4z', 'M4 10h16M9 3v4M15 3v4']],
+  ['Etiquetas', ['M4 4h9l7 8-7 8H4z', 'M8 11h1']],
+  ['Folletos', ['M4 5h8v14H4zM12 5h8v14h-8z', 'M12 5v14']],
+  ['Marbetes', ['M13 3H5v8l8 8 8-8z', 'M9 7h1']],
+  ['Sellos', ['M8 3h8v6H8z', 'M4 12h16v8H4z']],
+  ['Banner', ['M5 4h14v10l-7 4-7-4z', 'M9 8h6']],
+  ['Libretas', ['M7 3h11v18H7z', 'M7 8H4M7 12H4M7 16H4']],
+  ['Tazas', ['M4 7h11v10H4z', 'M15 9h4v5h-4']],
+  ['Playeras', ['M8 4 4 7l2 3 2-1v9h8v-9l2 1 2-3-4-3z']],
+  ['Agendas', ['M6 3h12v18H6z', 'M14 3v7l-2-2-2 2V3']],
+  ['Termos', ['M9 3h6v3H9z', 'M8 6h8v15H8z']],
+  ['Y más…', ['M5 12h1M12 12h1M19 12h1']],
+];
+
+class Component extends DCLogic {
+  state = { activo: 0, prog: 0, suave: true, popPausado: false, popFijo: null };
+
+  // El salto de fase es un solo setState: la suavidad la da la transición CSS
+  // de clip-path y de la barra (el tween por rAF no aplicaba estado).
+  animarA(destino) {
+    this.setState({ prog: destino, suave: true });
+  }
+
+  arrastrar(e) {
+    const caja = this._cajaFases;
+    if (!caja) return;
+    const r = caja.getBoundingClientRect();
+    const x = Math.min(1, Math.max(0, (e.clientX - r.left) / r.width));
+    this.setState({ prog: x * 2, suave: false });   // el arrastre sigue al dedo, sin retardo
+  }
+
+  ir(n) {
+    const N = CATALOGO.length;
+    this.setState({ activo: ((n % N) + N) % N });
+  }
+
+  componentDidMount() {
+    import('./assets/site.js').then((m) => m.initSite());
+    // respaldo: algunos navegadores ignoran autoplay hasta que se pide play()
+    setTimeout(() => document.querySelectorAll('video[loop]').forEach((v) => { v.muted = true; v.play().catch(() => {}); }), 300);
+
+    // Antes y después: recorre las tres fases una sola vez al entrar en pantalla
+    setTimeout(() => {
+      this._cajaFases = document.querySelector('[data-fases]');
+      if (!this._cajaFases) return;
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) { this.setState({ prog: 2 }); return; }
+      const io = new IntersectionObserver((es) => es.forEach((en) => {
+        if (en.isIntersecting) { io.disconnect(); this.animarA(2); }
+      }), { threshold: 0.35 });
+      io.observe(this._cajaFases);
+      const mover = (ev) => { if (this._arrastrando) { ev.preventDefault(); this.arrastrar(ev); } };
+      const soltar = () => { this._arrastrando = false; };
+      addEventListener('pointermove', mover, { passive: false });
+      addEventListener('pointerup', soltar);
+      addEventListener('pointercancel', soltar);
+    }, 300);
+  }
+  renderVals() {
+    // trazos vectoriales: líneas que "se dibujan" (scaleX/scaleY) y figuras que aparecen (scale+opacity),
+    // con manijas de selección en las esquinas — como si CorelDraw estuviera trazando la figura.
+    // Posiciones aleatorias, calculadas una sola vez (no en cada render) para que no salten.
+    if (!this._formasVector) {
+      const rnd = (min, max) => min + Math.random() * (max - min);
+      this._formasVector = [
+        { top: rnd(4, 82), left: rnd(4, 60), w: Math.round(rnd(60, 130)), h: 2, tipo: 'h' },
+        { top: rnd(4, 40), left: rnd(20, 80), w: 2, h: Math.round(rnd(50, 100)), tipo: 'v' },
+        { top: rnd(30, 88), left: rnd(4, 55), w: Math.round(rnd(50, 100)), h: 2, tipo: 'h' },
+        { top: rnd(6, 60), left: rnd(4, 55), w: Math.round(rnd(36, 56)), h: Math.round(rnd(36, 56)), tipo: 'cuadro' },
+        { top: rnd(4, 55), left: rnd(45, 82), w: Math.round(rnd(24, 38)), h: Math.round(rnd(24, 38)), tipo: 'circulo' },
+        { top: rnd(30, 90), left: rnd(4, 40), w: 2, h: Math.round(rnd(40, 80)), tipo: 'v' },
+        { top: rnd(4, 30), left: rnd(20, 70), w: 2, h: Math.round(rnd(30, 60)), tipo: 'v' },
+        { top: rnd(30, 80), left: rnd(35, 80), w: Math.round(rnd(60, 100)), h: 2, tipo: 'h' },
+        { top: rnd(50, 88), left: rnd(50, 85), w: Math.round(rnd(18, 30)), h: Math.round(rnd(18, 30)), tipo: 'circulo' },
+      ];
+    }
+    const formas = this._formasVector;
+    const trazosVector = [];
+    formas.forEach((s, i) => {
+      const delay = i * 0.55, dur = 4.2 + (i % 3) * 0.6;
+      const base = `top:${s.top}%;left:${s.left}%;width:${s.w}px;height:${s.h}px;animation-delay:${delay}s;animation-duration:${dur}s;`;
+      if (s.tipo === 'h') { trazosVector.push({ style: base + `border-top:2px solid var(--violeta);transform-origin:left center;animation-name:dzTrazoLinea` }); return; }
+      if (s.tipo === 'v') { trazosVector.push({ style: base + `border-left:2px solid var(--violeta);transform-origin:top center;animation-name:dzTrazoLinea` }); return; }
+      const forma = s.tipo === 'circulo' ? 'border-radius:50%' : 'border-radius:4px';
+      trazosVector.push({ style: base + `border:1.5px solid var(--violeta);${forma};transform-origin:top left;animation-name:dzTrazoCrecer` });
+      // manijas de selección: aparecen cuando la figura ya terminó de crecer (65% de su ciclo)
+      [[0, 0], [1, 0], [0, 1], [1, 1]].forEach(([hx, hy]) => {
+        trazosVector.push({
+          style: `top:${s.top + (s.h / 16) * (hy ? 3.6 : -0.4)}%;left:calc(${s.left}% + ${hx ? s.w - 3 : -3}px);width:6px;height:6px;background:var(--tinta);animation-delay:${delay + dur * 0.6}s;animation-duration:${dur * 0.4}s;animation-name:dzTrazoForma`,
+        });
+      });
+      // marca de centro (x)
+      trazosVector.push({
+        style: `top:calc(${s.top}% + ${s.h / 2 - 3}px);left:calc(${s.left}% + ${s.w / 2 - 3}px);width:6px;height:6px;border:1px solid var(--magenta);animation-delay:${delay + dur * 0.6}s;animation-duration:${dur * 0.4}s;animation-name:dzTrazoForma`,
+      });
+    });
+    const N = CATALOGO.length;
+    const activo = this.state.activo;
+    // Tweaks: reconfiguran la sensación del carrusel y el acento de marca
+    const P = { sutil: [26, -14, -110, 0.92, 0.6], medio: [46, -30, -200, 0.84, 0.42], dramatico: [62, -46, -320, 0.72, 0.28] };
+    const [sep, rot, prof, esc, opa] = P[this.props.profundidad3D] || P.medio;
+    const vecinas = this.props.vecinasVisibles ?? true;
+    const acento = this.props.acento ?? 'violeta';
+    const colorTitulo = acento === 'magenta' ? 'var(--magenta)' : acento === 'degradado'
+      ? 'transparent' : 'var(--violeta)';
+    const fondoTitulo = acento === 'degradado' ? 'var(--gradiente)' : 'none';
+    return {
+      trazosVector,
+      si: true,
+      catalogo: CATALOGO.map(([titulo, items]) => ({ titulo, items })),
+      estiloTitulo: `font-family:var(--font-display);font-weight:900;font-size:clamp(28px,3.4vw,40px);line-height:1.1;letter-spacing:-.01em;text-transform:uppercase;margin:0 0 24px;color:${colorTitulo};background:${fondoTitulo};-webkit-background-clip:${acento === 'degradado' ? 'text' : 'border-box'};background-clip:${acento === 'degradado' ? 'text' : 'border-box'}`,
+      colorVineta: acento === 'magenta' ? 'var(--magenta)' : 'var(--violeta)',
+      activoTitulo: CATALOGO[activo][0],
+      activoItems: CATALOGO[activo][1],
+      // Solo la activa y sus dos vecinas se dibujan: nada de caras traseras en espejo.
+      tarjetas: CATALOGO.map(([titulo], i) => {
+        let d = i - activo;
+        if (d > N / 2) d -= N;
+        if (d < -N / 2) d += N;
+        const cerca = vecinas && Math.abs(d) <= 1;
+        const slug = titulo.toLowerCase().normalize('NFD').replace(/[^a-z ]/g, '').trim().replace(/ +/g, '-');
+        return {
+          img: 'assets/cat-' + slug + '.webp',
+          alt: titulo + ' para empresas, trabajo de Diseñarte México',
+          oculta: d !== 0,
+          estilo: [
+            'position:absolute', 'top:0', 'left:14%', 'width:72%', 'height:100%',
+            `transform:translateX(${d * sep}%) rotateY(${d * rot}deg) translateZ(${d ? prof : 0}px) scale(${d ? esc : 1})`,
+            `opacity:${d === 0 ? 1 : cerca ? opa : 0}`,
+            `visibility:${cerca ? 'visible' : 'hidden'}`,
+            `z-index:${10 - Math.abs(d)}`,
+            'transition:opacity 560ms ease, transform 560ms cubic-bezier(.22,1,.36,1)',
+          ].join(';'),
+        };
+      }),
+      puntos: CATALOGO.map(([titulo], i) => ({
+        etiqueta: titulo,
+        activo: i === activo,
+        ir: () => this.ir(i),
+        estilo: `width:${i === activo ? 34 : 12}px;height:12px;border-radius:999px;border:none;cursor:pointer;padding:0;background:${i === activo ? 'var(--magenta)' : 'rgba(14,7,20,.18)'};transition:width 300ms ease,background 300ms ease`,
+      })),
+      // ── Material POP ─────────────────────────────────────────────────
+      cintas: [0, 1, 2].map((fila) => {
+        const propios = POP.filter((_, i) => i % 3 === fila).map(([n]) => n);
+        const dur = [38, 46, 32][fila];
+        const dir = fila === 1 ? 'reverse' : 'normal';
+        return {
+          pista: `display:flex;gap:16px;width:max-content;will-change:transform;animation:dzPop ${dur}s linear infinite ${dir};animation-play-state:running`,
+          // cuatro copias: media pista supera cualquier ancho de pantalla, así el bucle no deja hueco
+          items: propios.concat(propios, propios, propios).map((nombre, k) => {
+            const fijo = this.state.popFijo === nombre;
+            return {
+              nombre,
+              // forma funcional: el toggle lee el estado vigente, no el del render
+              fijar: () => this.setState((s) => ({ popFijo: s.popFijo === nombre ? null : nombre })),
+              estilo: `display:inline-flex;align-items:center;gap:10px;min-height:56px;padding:0 28px;border-radius:999px;cursor:pointer;white-space:nowrap;font:600 clamp(17px,1.7vw,22px) 'Creato Display',sans-serif;transition:background 250ms ease,color 250ms ease,border-color 250ms ease;border:1.5px solid ${fijo ? 'transparent' : 'rgba(255,255,255,.18)'};background:${fijo ? 'var(--magenta)' : 'rgba(255,255,255,.04)'};color:#fff`,
+              barra: `color:${fijo ? '#fff' : 'var(--cian)'};font-weight:700`,
+              // el iconito salta como palomita cada tantos segundos, con su propio ritmo
+              trazos: (POP.find(([n]) => n === nombre) || ['', []])[1],
+              icono: `width:24px;height:24px;flex:none;color:${fijo ? '#fff' : 'var(--cian)'};opacity:0;animation:dzPalomita ${9 + (k % 5) * 1.7}s ease-in-out ${((k * 1.31) % 7).toFixed(2)}s infinite both`,
+            };
+          }),
+        };
+      }),
+
+      // ── Antes y después ──────────────────────────────────────────────
+      fases: FASES.map(([num, titulo], i) => {
+        const rev = Math.min(1, Math.max(0, this.state.prog - (i - 1)));   // 0..1
+        const visible = i === 0 ? 1 : rev;
+        const trans = this.state.suave ? 'transition:clip-path 700ms cubic-bezier(.22,1,.36,1);' : '';
+        const dominante = Math.min(2, Math.round(this.state.prog)) === i;   // solo una chapa a la vez
+        return {
+          img: 'assets/fase-' + num + '.webp',
+          alt: 'Fase ' + num + ', ' + titulo.toLowerCase() + ': mural corporativo Abastecimiento Sostenible',
+          etiqueta: num + ' · ' + titulo,
+          capa: `position:absolute;inset:0;${trans}clip-path:inset(0 0 0 ${(1 - visible) * 100}%);z-index:${i}`,
+          chapa: `position:absolute;left:20px;bottom:20px;font:600 12px 'Walkway',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:${i === 2 ? 'var(--magenta)' : 'rgba(14,7,20,.72)'};padding:8px 14px;border-radius:999px;opacity:${dominante ? 1 : 0};visibility:${dominante ? 'visible' : 'hidden'};transition:opacity 250ms ease`,
+        };
+      }),
+      estiloBarra: `position:absolute;top:0;bottom:0;left:${(this.state.prog / 2) * 100}%;width:3px;background:var(--gradiente);z-index:5;pointer-events:none;${this.state.suave ? 'transition:left 700ms cubic-bezier(.22,1,.36,1)' : ''}`,
+      pasos: FASES.map(([num, titulo], i) => {
+        const cerca = Math.abs(this.state.prog - i) < 0.5;
+        return {
+          num, titulo, activo: cerca,
+          ir: () => this.animarA(i),
+          estilo: `display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 20px;border-radius:999px;cursor:pointer;border:1.5px solid ${cerca ? 'transparent' : 'rgba(14,7,20,.18)'};background:${cerca ? 'var(--violeta)' : 'transparent'};color:${cerca ? '#fff' : 'var(--tinta)'};transition:background 250ms ease,color 250ms ease,border-color 250ms ease`,
+        };
+      }),
+      descripcionFase: FASES[Math.min(2, Math.round(this.state.prog))][2],
+      valorRango: Math.round(this.state.prog * 100),
+      mover: (e) => this.setState({ prog: Number(e.target.value) / 100, suave: false }),
+      tomar: (e) => { this._arrastrando = true; this.arrastrar(e); },
+
+      anterior: () => this.ir(activo - 1),
+      siguiente: () => this.ir(activo + 1),
+      teclas: (e) => {
+        if (e.key === 'ArrowLeft') { e.preventDefault(); this.ir(activo - 1); }
+        if (e.key === 'ArrowRight') { e.preventDefault(); this.ir(activo + 1); }
+      },
+      materiales: [
+        { nombre: 'Vinil calandrado', uso: 'Colores sólidos. Se adapta a superficies curvas y planas. Interior y exterior.' },
+        { nombre: 'Vinil reflejante', uso: 'Señalización vial. Resiste intemperie extrema. Se ilumina reflejando la luz. Exterior.' },
+        { nombre: 'Vinil luminiscente', uso: 'Se carga con luz natural o artificial. 5 h de iluminación. Señalización de emergencia, uso exclusivo interior.' },
+        { nombre: 'Acrílico', uso: 'Duradero, resistente, acabados detallados. Interior y exterior.' },
+        { nombre: 'Estireno', uso: 'Resistente, flexible, termoformable. Usos múltiples. Exterior.' },
+        { nombre: 'Coroplast', uso: 'Económico, ligero, absorbe impactos. Señalización.' },
+        { nombre: 'Trovicel', uso: 'Ligero, resistente, resistencia a corrosión. Señalización interior y exterior.' },
+      ],
+      frentes: [
+        { titulo: 'Código de colores', desc: 'Asesoría en identificación correcta de líneas.' },
+        { titulo: 'Placas', desc: 'Aluminio, ABS bicapa, Gravoply 3 capas, resistentes a corrosivos e intemperie.' },
+        { titulo: 'Etiquetado', desc: 'Color de seguridad, color complementario, banda franjeada, vista 360°.' },
+        { titulo: 'Guías', desc: 'Material de apoyo visual para capacitar a tu personal.' },
+        { titulo: 'Delimitación de áreas', desc: 'Pintura de alto tránsito para mayor durabilidad.' },
+      ],
+      faq: [
+        { p: '¿Trabajan bajo norma?', r: 'Sí. Señalética conforme a NOM-026-STPS-2011 y soporte de implementación del SGA conforme a NOM-018-STPS.' },
+        { p: '¿Instalan o solo fabrican?', r: 'Fabricamos e instalamos. La instalación en planta se cotiza según distancia, altura y ventana de trabajo.' },
+        { p: '¿Cuánto tardan?', r: 'Depende del volumen, pero los plazos cortos son parte de nuestra propuesta. Si tu proyecto es urgente, dilo al cotizar: tenemos capacidad para urgencias.' },
+        { p: '¿Atienden fuera de San Juan del Río?', r: 'Sí, damos servicio en Querétaro y estados vecinos. El traslado se incluye en la cotización.' },
+        { p: '¿Dan garantía?', r: 'Sí. En rotulación vehicular, póliza por 2 años. En el resto, garantía de calidad en cada entrega.' },
+        { p: '¿Puedo pedir una sola pieza?', r: 'Sí. Producimos desde una pieza única hasta series a gran escala.' },
+      ],
+      abrirChat: () => window.DZChat && window.DZChat.abrir(),
+    };
+  }
+}
+</script>
+</body>
+</html>
