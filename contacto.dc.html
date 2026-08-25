@@ -148,9 +148,9 @@ p [data-hero-line]{animation-delay:120ms}
     <!-- action: endpoint de Bigin. Si Zoho te da otra URL al copiar el formulario, sustitúyela aquí. -->
     <form action="https://bigin.zoho.com/crm/WebToRecordForm" id="BiginWebToRecordForm7358066000000859329" name="BiginWebToRecordForm7358066000000859329" method="POST" encType="multipart/form-data" target="hidden7358066000000859329Frame" acceptCharset="UTF-8" onSubmit="{{ enviar }}" noValidate="" style="background:var(--papel);border:1px solid rgba(14,7,20,.10);border-radius:6px 28px 28px 28px;padding:clamp(24px,4vw,48px);display:flex;flex-direction:column;gap:20px">
       <!-- Campos ocultos requeridos por Bigin. No eliminar. -->
-      <input type="hidden" name="xnQsjsdp" value="797527f3dba20bde131e613ce8f0b7a2f14d94452d18f1832141cc4f95e84396">
+      <input type="hidden" name="xnQsjsdp" value="082737945c36ce06d0e131fc56b1082d15d3681c86ed1e02233622f02159b164">
       <input type="hidden" name="zc_gad" id="zc_gad" value="">
-      <input type="hidden" name="xmIwtLD" value="f4f34969b7c303eb3ef62b65e331adaa65a6f40753b21d4bbd79834b9a4de5d6791a7209f15197fda9f51caec82bf3af">
+      <input type="hidden" name="xmIwtLD" value="58cc69c5ae55a514ee3a3048ba44c0aecfd3303276c1bae1e21e4d99274c525a77b9bca23f1cea1760f9d52f8def0e7f">
       <input type="hidden" name="actionType" value="UG90ZW50aWFscw==">
       <input type="hidden" name="rmsg" id="rmsg" value="true">
       <input type="hidden" name="returnURL" value="null">
@@ -170,10 +170,10 @@ p [data-hero-line]{animation-delay:120ms}
         <input name="nombre_completo" type="text" placeholder="Ej. Juan Pérez" required="" maxLength="120" autoComplete="name" style="min-height:52px;background:#fff;border:1px solid rgba(14,7,20,.12);border-radius:16px;color:var(--tinta);font:400 16px 'Creato Display',sans-serif;padding:0 18px">
       </label>
       <label style="display:flex;flex-direction:column;gap:10px;font:600 13px 'Walkway',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--violeta)"><span>Teléfono*</span>
-        <input name="Contacts.Mobile" type="tel" placeholder="427 000 0000" required="" maxLength="30" autoComplete="tel" style="min-height:52px;background:#fff;border:1px solid rgba(14,7,20,.12);border-radius:16px;color:var(--tinta);font:400 16px 'Creato Display',sans-serif;padding:0 18px">
+        <input name="POTENTIALCF52" type="tel" inputMode="numeric" placeholder="4271004183" required="" maxLength="9" autoComplete="tel" onInput="{{ soloDigitos }}" style="min-height:52px;background:#fff;border:1px solid rgba(14,7,20,.12);border-radius:16px;color:var(--tinta);font:400 16px 'Creato Display',sans-serif;padding:0 18px">
       </label>
       <label style="display:flex;flex-direction:column;gap:10px;font:600 13px 'Walkway',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--violeta)"><span>Correo electrónico*</span>
-        <input name="Contacts.Email" type="email" placeholder="correo@ejemplo.com" required="" maxLength="100" autoComplete="email" onBlur="{{ validarCorreo }}" style="min-height:52px;background:#fff;border:1px solid rgba(14,7,20,.12);border-radius:16px;color:var(--tinta);font:400 16px 'Creato Display',sans-serif;padding:0 18px">
+        <input name="POTENTIALCF1" type="email" placeholder="correo@ejemplo.com" required="" maxLength="100" autoComplete="email" onBlur="{{ validarCorreo }}" style="min-height:52px;background:#fff;border:1px solid rgba(14,7,20,.12);border-radius:16px;color:var(--tinta);font:400 16px 'Creato Display',sans-serif;padding:0 18px">
         <sc-if value="{{ correoInvalido }}" hint-placeholder-val="{{ false }}"><span role="alert" style="font:500 13px 'Creato Display',sans-serif;letter-spacing:normal;text-transform:none;color:var(--violeta)">Revisa el correo: parece incompleto.</span></sc-if>
       </label>
       <label style="display:flex;flex-direction:column;gap:10px;font:600 13px 'Walkway',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--violeta)"><span>Empresa (opcional)</span>
@@ -294,13 +294,12 @@ class Component extends DCLogic {
     this.montarBigin();
   }
 
-  // Carga el script de Zoho Bigin DESPUÉS de que el formulario existe en el DOM:
-  // ese script es el que fija el action del <form> hacia el CRM.
+  // Carga el script de Zoho Bigin DESPUÉS de que el formulario existe en el DOM.
   montarBigin() {
     const ID = '7358066000000859329';
     if (!window['mndFields' + ID]) {
-      window['mndFields' + ID] = ['Potential Name', 'Contacts.Last Name', 'Contacts.Mobile', 'Contacts.Email', 'Accounts.Account Name', 'Description'];
-      window['fldLangVal' + ID] = ['Nombre', 'Apellidos', 'Móvil', 'Correo electrónico', 'Nombre de Empresa', 'Mensaje'];
+      window['mndFields' + ID] = ['Potential Name', 'Contacts.Last Name', 'Accounts.Account Name', 'Description'];
+      window['fldLangVal' + ID] = ['Nombre', 'Apellidos', 'Nombre de Empresa', 'Mensaje'];
       // La validación visible la hace este componente; estos stubs solo satisfacen al script de Bigin.
       window['checkMandatory' + ID] = () => true;
       window['validateFields' + ID] = () => true;
@@ -322,7 +321,7 @@ class Component extends DCLogic {
     if (document.getElementById('wf_script')) return;
     const s = document.createElement('script');
     s.id = 'wf_script';
-    s.src = 'https://bigin.zoho.com/crm/WebformScriptServlet?rid=f4f34969b7c303eb3ef62b65e331adaa65a6f40753b21d4bbd79834b9a4de5d6791a7209f15197fda9f51caec82bf3afgid797527f3dba20bde131e613ce8f0b7a2f14d94452d18f1832141cc4f95e84396';
+    s.src = 'https://bigin.zoho.com/crm/WebformScriptServlet?rid=58cc69c5ae55a514ee3a3048ba44c0aecfd3303276c1bae1e21e4d99274c525a77b9bca23f1cea1760f9d52f8def0e7fgid082737945c36ce06d0e131fc56b1082d15d3681c86ed1e02233622f02159b164';
     s.onerror = () => this.setState({ error: true });
     document.body.appendChild(s);
   }
@@ -336,19 +335,20 @@ class Component extends DCLogic {
       btnEnviarTexto: enviando ? 'Enviando…' : 'Enviar solicitud',
       btnEnviarStyle: `display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;background:#A53692;color:#fff;border:none;border-radius:999px;padding:16px 32px;font:600 17px/1 'Creato Display',sans-serif;cursor:${enviando ? 'not-allowed' : 'pointer'};opacity:${enviando ? 0.45 : 1};transition:background 200ms ease;align-self:flex-start`,
       validarCorreo: (e) => this.setState({ correoInvalido: e.target.value !== '' && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e.target.value) }),
+      // El campo de teléfono en Bigin es numérico puro (máx. 9 dígitos)
+      soloDigitos: (e) => { e.target.value = e.target.value.replace(/\D/g, '').slice(0, 9); },
 
       // No hay fetch ni API: el <form> hace POST nativo a Bigin contra el iframe oculto.
       enviar: (e) => {
         const form = e.currentTarget;
         const v = (n) => (form.elements[n] ? String(form.elements[n].value || '').replace(/[\s\u00a0]+/g, ' ').trim() : '');
-        const correo = v('Contacts.Email');
+        const correo = v('POTENTIALCF1');
         const nombre = v('nombre_completo');
-        const ok = nombre && correo && v('Contacts.Mobile') && v('Description')
+        const ok = nombre && correo && v('POTENTIALCF52') && v('Description')
           && form.elements.privacidad.checked && /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(correo);
         if (!ok) { e.preventDefault(); this.setState({ faltanCampos: true, correoInvalido: !!correo && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(correo) }); return; }
         if (!form.getAttribute('action')) { e.preventDefault(); this.setState({ error: true }); return; }
         // nombre_completo y privacidad no existen en Bigin: se excluyen del POST (disabled) y se reactivan después.
-        // Bigin pide nombre del trato, apellido y empresa: se derivan del nombre completo.
         const partes = nombre.split(/\s+/);
         form.elements['Potential Name'].value = nombre;
         form.elements['Contacts.Last Name'].value = partes.length > 1 ? partes.slice(1).join(' ') : nombre;
