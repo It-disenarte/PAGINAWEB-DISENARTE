@@ -356,7 +356,6 @@ class Component extends DCLogic {
         const fuera = [form.elements.nombre_completo, form.elements.privacidad];
         fuera.forEach((el) => { el.disabled = true; });
         setTimeout(() => fuera.forEach((el) => { el.disabled = false; }), 0);
-        document.charset = 'UTF-8';
         this.setState({ faltanCampos: false, error: false, enviando: true });
       },
       abrirChat: () => window.DZChat && window.DZChat.abrir(),
