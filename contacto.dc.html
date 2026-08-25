@@ -182,6 +182,7 @@ p [data-hero-line]{animation-delay:120ms}
       <label style="display:flex;flex-direction:column;gap:10px;font:600 13px 'Walkway',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--violeta)"><span>Mensaje*</span>
         <textarea name="Description" required="" rows="5" maxLength="32000" placeholder="Cuéntanos sobre tu proyecto..." style="background:#fff;border:1px solid rgba(14,7,20,.12);border-radius:16px;color:var(--tinta);font:400 16px/1.6 'Creato Display',sans-serif;padding:16px 18px;resize:vertical"></textarea>
       </label>
+      <label style="display:flex;align-items:flex-start;gap:10px;font:400 14px/1.5 'Creato Display',sans-serif;color:var(--gris-texto);cursor:pointer">
         <input name="privacidad" type="checkbox" required="" style="width:20px;height:20px;margin-top:2px;accent-color:#A53692">
         <span>He leído y acepto el <a href="/aviso-de-privacidad" style="color:var(--violeta);font-weight:600">aviso de privacidad</a>.</span>
       </label>
@@ -339,7 +340,7 @@ class Component extends DCLogic {
       // No hay fetch ni API: el <form> hace POST nativo a Bigin contra el iframe oculto.
       enviar: (e) => {
         const form = e.currentTarget;
-        const v = (n) => (form.elements[n] ? String(form.elements[n].value || '').trim() : '');
+        const v = (n) => (form.elements[n] ? String(form.elements[n].value || '').replace(/[\s\u00a0]+/g, ' ').trim() : '');
         const correo = v('Contacts.Email');
         const nombre = v('nombre_completo');
         const ok = nombre && correo && v('Contacts.Mobile') && v('Description')
