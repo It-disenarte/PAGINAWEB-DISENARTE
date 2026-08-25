@@ -111,8 +111,13 @@ function initDropdown() {
   panel.style.transition = `opacity 200ms ease, transform 200ms ${EASE}`;
   set(false);
   btn.addEventListener('click', (e) => { e.stopPropagation(); set(!open); });
-  wrap.addEventListener('mouseenter', () => { if (!isMobile()) set(true); });
-  wrap.addEventListener('mouseleave', () => { if (!isMobile()) set(false); });
+  let cerrarTimer = null;
+  const abrir = () => { clearTimeout(cerrarTimer); if (!isMobile()) set(true); };
+  const cerrarConRetraso = () => { clearTimeout(cerrarTimer); cerrarTimer = setTimeout(() => set(false), 220); };
+  wrap.addEventListener('mouseenter', abrir);
+  wrap.addEventListener('mouseleave', () => { if (!isMobile()) cerrarConRetraso(); });
+  panel.addEventListener('mouseenter', abrir);
+  panel.addEventListener('mouseleave', () => { if (!isMobile()) cerrarConRetraso(); });
   document.addEventListener('click', () => { if (open) set(false); });
   addEventListener('keydown', (e) => { if (e.key === 'Escape' && open) set(false); });
 }
@@ -1200,7 +1205,48 @@ function initTextos() {
   window.__dzRevelado = setInterval(revisar, 500);
 }
 
+// --- Pantalla de carga: llena la D hasta 100% antes de mostrar la página ---
+function initPreloader() {
+  const pre = document.querySelector('[data-preloader]');
+  if (!pre) return;
+  const logo = pre.querySelector('[data-preloader-logo]');
+  const pct = pre.querySelector('[data-preloader-pct]');
+  const video = document.querySelector('[data-hero-video]');
+  let n = 0;
+  const set = (v) => {
+    n = Math.max(n, Math.min(100, v));
+    if (logo) logo.style.clipPath = `inset(0 ${100 - n}% 0 0)`;
+    if (pct) pct.textContent = Math.round(n) + '%';
+  };
+  const listos = { doc: false, video: !video || video.readyState >= 3 };
+  const recalcular = () => {
+    const base = (listos.doc ? 55 : 0) + (listos.video ? 45 : 0);
+    set(Math.max(base, n + 2));
+  };
+  let tick = setInterval(() => { if (n < 92) set(n + (92 - n) * 0.06 + 0.4); }, 90);
+  const terminar = () => {
+    listos.doc = true;
+    if (video) listos.video = video.readyState >= 3 || true; // no bloquear más de 2.5s
+    clearInterval(tick);
+    set(100);
+    setTimeout(() => { pre.style.opacity = '0'; pre.style.visibility = 'hidden'; setTimeout(() => pre.remove(), 550); }, 220);
+  };
+  if (video && video.readyState < 3) {
+    video.addEventListener('loadeddata', () => { listos.video = true; recalcular(); }, { once: true });
+  }
+  if (document.readyState === 'complete') listos.doc = true; else window.addEventListener('load', () => { listos.doc = true; recalcular(); }, { once: true });
+  const esperaMax = setTimeout(terminar, 2600);
+  const comprobar = () => {
+    if (listos.doc && listos.video) { clearTimeout(esperaMax); terminar(); }
+  };
+  window.addEventListener('load', comprobar);
+  if (video) video.addEventListener('loadeddata', comprobar);
+  if (document.readyState === 'complete') comprobar();
+  if (reduced) { clearTimeout(esperaMax); clearInterval(tick); terminar(); }
+}
+
 export function initSite() {
+  initPreloader();
   initTextos();
   initPincel();
   initChorros();

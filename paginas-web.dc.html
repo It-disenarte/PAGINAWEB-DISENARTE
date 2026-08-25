@@ -118,7 +118,7 @@ p [data-hero-line]{animation-delay:120ms}
 <header data-navbar="" style="position:fixed;top:14px;left:clamp(16px,4vw,40px);right:clamp(16px,4vw,40px);z-index:50;background:linear-gradient(180deg,rgba(31,17,44,.96),rgba(14,7,20,.98));border:1px solid rgba(255,255,255,.08);border-radius:999px;box-shadow:0 16px 40px rgba(14,7,20,.35)">
   <nav aria-label="Navegación principal" style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:16px;padding:0 10px 0 20px;height:72px">
     <a href="/" aria-label="Diseñarte México, inicio" style="display:flex;align-items:center;text-decoration:none">
-      <img src="assets/marca-color.png" alt="Diseñarte México, agencia de publicidad en San Juan del Río" width="82" height="76" style="display:block;width:auto;height:52px;object-fit:contain">
+      <img src="assets/logo-nuevo.png" alt="Diseñarte México, agencia de publicidad en San Juan del Río" width="2162" height="2025" style="display:block;width:auto;height:56px;object-fit:contain">
     </a>
     <div data-desktop-nav="" style="display:flex;align-items:center;justify-content:center;gap:4px">
       <a href="/" style="padding:10px 16px;font:500 14px 'Creato Display',sans-serif;text-decoration:none;color:rgba(255,255,255,.72);border-radius:999px" style-hover="color:#FFFFFF">Inicio</a>
@@ -128,7 +128,7 @@ p [data-hero-line]{animation-delay:120ms}
         <button data-dropdown-btn="" aria-expanded="false" aria-haspopup="true" style="display:flex;align-items:center;gap:6px;padding:10px 16px;font:600 14px 'Creato Display',sans-serif;text-decoration:none;color:#FFFFFF;background:rgba(255,255,255,.12);border-radius:999px;background:rgba(255,255,255,.12);border:none;cursor:pointer" style-hover="color:#FFFFFF">Innovación Digital
           <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
         </button>
-        <div data-dropdown-panel="" style="position:absolute;top:100%;left:0;margin-top:8px;min-width:220px;background:var(--papel);border:1px solid rgba(14,7,20,.10);border-radius:6px 20px 20px 20px;padding:8px;display:flex;flex-direction:column">
+        <div data-dropdown-panel="" style="position:absolute;top:100%;left:0;margin-top:8px;min-width:220px;background:var(--papel);border:1px solid rgba(14,7,20,.10);border-radius:6px 20px 20px 20px;opacity:0;pointer-events:none;transform:translateY(-6px);padding:8px;display:flex;flex-direction:column">
           <a href="/paginas-web" style="padding:12px 16px;font:500 15px 'Creato Display',sans-serif;text-decoration:none;color:var(--tinta);border-radius:12px" style-hover="background:rgba(14,7,20,.05);color:#7C07A6">Páginas web</a>
           <a href="/innovacion-digital#servicios" style="padding:12px 16px;font:500 15px 'Creato Display',sans-serif;text-decoration:none;color:var(--tinta);border-radius:12px" style-hover="background:rgba(14,7,20,.05);color:#7C07A6">Otros servicios</a>
         </div>
@@ -304,9 +304,15 @@ p [data-hero-line]{animation-delay:120ms}
   <div style="max-width:1240px;margin:0 auto;padding:clamp(48px,7vw,96px) clamp(24px,4vw,48px) clamp(72px,10vw,128px)">
     <h2 data-reveal="0" style="font-family:var(--font-display);font-weight:700;font-size:clamp(28px,3.4vw,40px);margin:0 0 16px;color:var(--tinta)">Míralas funcionando</h2>
     <p data-reveal="1" style="font:400 clamp(18px,1.6vw,20px)/1.6 'Creato Display',sans-serif;color:var(--gris-texto);margin:0 0 40px;max-width:640px;text-wrap:pretty">No te vamos a describir cómo quedaría. Interactúa con tres sitios reales, en la pantalla que quieras.</p>
-    <div role="group" aria-label="Selector de vista" style="display:inline-flex;gap:0;border:1.5px solid rgba(14,7,20,.25);border-radius:999px;padding:4px;margin-bottom:40px">
-      <button onClick="{{ verEscritorio }}" aria-pressed="{{ esEscritorio }}" style="{{ btnEscritorioStyle }}">Escritorio</button>
-      <button onClick="{{ verTelefono }}" aria-pressed="{{ esTelefono }}" style="{{ btnTelefonoStyle }}">Teléfono</button>
+    <div role="group" aria-label="Elegir vista y demo" style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;justify-content:center;margin-bottom:40px">
+      <div role="group" aria-label="Selector de vista" style="display:inline-flex;gap:0;border:1.5px solid rgba(14,7,20,.25);border-radius:999px;padding:4px">
+        <button onClick="{{ verEscritorio }}" aria-pressed="{{ esEscritorio }}" style="{{ btnEscritorioStyle }}">Escritorio</button>
+        <button onClick="{{ verTelefono }}" aria-pressed="{{ esTelefono }}" style="{{ btnTelefonoStyle }}">Teléfono</button>
+      </div>
+      <div aria-hidden="true" style="width:1.5px;height:28px;background:rgba(14,7,20,.16)"></div>
+      <sc-for list="{{ demosBotones }}" as="db" hint-placeholder-count="3">
+        <button onClick="{{ db.elegir }}" aria-pressed="{{ db.activo }}" style="{{ db.style }}">{{ db.nombre }}<span style="display:block;font:400 12px 'Creato Display',sans-serif;opacity:.7">{{ db.giro }}</span></button>
+      </sc-for>
     </div>
     <div data-demos="" style="display:flex;flex-direction:column;align-items:center;gap:32px">
       <div style="{{ marcoWrapStyle }}">
@@ -319,9 +325,9 @@ p [data-hero-line]{animation-delay:120ms}
                 <iframe src="{{ demoActivo.url }}" title="{{ demoActivo.titulo }}" loading="lazy" sandbox="allow-scripts allow-same-origin" onLoad="{{ iframeCargo }}" style="width:100%;height:100%;border:none;background:#fff"></iframe>
               </sc-if>
               <sc-if value="{{ demoActivo.mostrarFallback }}" hint-placeholder-val="{{ true }}">
-                <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;background:repeating-linear-gradient(45deg,rgba(92,198,208,.05) 0 12px,transparent 12px 24px);padding:32px;text-align:center">
+                <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;padding:0 24px;box-sizing:border-box;text-align:center;background:repeating-linear-gradient(45deg,rgba(92,198,208,.05) 0 12px,transparent 12px 24px);padding:32px;text-align:center">
                   <span style="font:600 11px ui-monospace,monospace;letter-spacing:.1em;color:var(--tinta);background:var(--cian);padding:4px 10px;border-radius:999px">PENDIENTE</span>
-                  <p style="font:500 14px/1.7 ui-monospace,monospace;color:var(--gris-texto);margin:0;max-width:420px">{{ demoActivo.notaFallback }}</p>
+                  <p style="font:500 14px/1.7 ui-monospace,monospace;color:var(--gris-texto);margin:0;max-width:min(420px,88%);text-align:center">{{ demoActivo.notaFallback }}</p>
                 </div>
               </sc-if>
             </div>
@@ -334,9 +340,9 @@ p [data-hero-line]{animation-delay:120ms}
                 <iframe src="{{ demoActivo.url }}" title="{{ demoActivo.titulo }}" loading="lazy" sandbox="allow-scripts allow-same-origin" onLoad="{{ iframeCargo }}" style="position:absolute;top:64px;left:0;width:100%;height:calc(100% - 64px);border:none;background:#fff"></iframe>
               </sc-if>
               <sc-if value="{{ demoActivo.mostrarFallback }}" hint-placeholder-val="{{ true }}">
-                <div style="position:absolute;left:0;right:0;top:64px;bottom:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;background:repeating-linear-gradient(45deg,rgba(92,198,208,.05) 0 12px,transparent 12px 24px);padding:32px;text-align:center">
+                <div style="position:absolute;left:0;right:0;top:64px;bottom:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;padding:0 24px;box-sizing:border-box;text-align:center;background:repeating-linear-gradient(45deg,rgba(92,198,208,.05) 0 12px,transparent 12px 24px);padding:32px;text-align:center">
                   <span style="font:600 11px ui-monospace,monospace;letter-spacing:.1em;color:var(--tinta);background:var(--cian);padding:4px 10px;border-radius:999px">PENDIENTE</span>
-                  <p style="font:500 14px/1.7 ui-monospace,monospace;color:var(--gris-texto);margin:0;max-width:420px">{{ demoActivo.notaFallback }}</p>
+                  <p style="font:500 14px/1.7 ui-monospace,monospace;color:var(--gris-texto);margin:0;max-width:min(420px,88%);text-align:center">{{ demoActivo.notaFallback }}</p>
                 </div>
               </sc-if>
             </div>
@@ -344,11 +350,6 @@ p [data-hero-line]{animation-delay:120ms}
         </sc-if>
           </div>
         </div>
-      </div>
-      <div role="group" aria-label="Elegir demo" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center">
-        <sc-for list="{{ demosBotones }}" as="db" hint-placeholder-count="3">
-          <button onClick="{{ db.elegir }}" aria-pressed="{{ db.activo }}" style="{{ db.style }}">{{ db.nombre }}<span style="display:block;font:400 12px 'Creato Display',sans-serif;opacity:.7">{{ db.giro }}</span></button>
-        </sc-for>
       </div>
     </div>
   </div>
@@ -542,7 +543,7 @@ class Component extends DCLogic {
   _recalcEscala() {
     if (!this._marcoWrap) return;
     const w = this._marcoWrap.getBoundingClientRect().width;
-    const base = this.state.vista === 'escritorio' ? 1280 : 320;
+    const base = this.state.vista === 'escritorio' ? 1280 : 375;
     const escala = w > 0 ? Math.min(1, w / base) : 1;
     if (escala !== this.state.escala) this.setState({ escala });
   }
@@ -596,9 +597,9 @@ class Component extends DCLogic {
     const fallo = iframeTimeout[demo] && !iframeOk[demo];
     const marcoWrapStyle = vista === 'escritorio'
       ? 'display:flex;justify-content:center;width:100%;max-width:1280px;transition:opacity 300ms ease'
-      : 'display:flex;justify-content:center;width:100%;max-width:320px;transition:opacity 300ms ease';
+      : 'display:flex;justify-content:center;width:100%;max-width:375px;transition:opacity 300ms ease';
     const anchoMarco = 1280, altoMarco = 760;
-    const anchoTelefono = 320, altoTelefono = 660;
+    const anchoTelefono = 375, altoTelefono = 760;
     const anchoBase = vista === 'escritorio' ? anchoMarco : anchoTelefono;
     const altoBase = vista === 'escritorio' ? altoMarco : altoTelefono;
     const marcoScaleOuterStyle = `width:100%;height:${Math.round(altoBase * escala)}px;overflow:hidden`;
