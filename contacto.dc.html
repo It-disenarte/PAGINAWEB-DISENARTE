@@ -144,64 +144,12 @@ p [data-hero-line]{animation-delay:120ms}
 
 <section aria-label="Formulario de contacto" style="background:#fff">
   <div style="max-width:1240px;margin:0 auto;padding:0 clamp(24px,4vw,48px) clamp(72px,10vw,128px);display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:48px;align-items:start">
-    <!-- Formulario conectado a Zoho Bigin: los name= son los campos del CRM y no deben cambiarse -->
-    <!-- action: endpoint de Bigin. Si Zoho te da otra URL al copiar el formulario, sustitúyela aquí. -->
-    <form action="https://bigin.zoho.com/crm/WebToRecordForm" id="BiginWebToRecordForm7358066000000859329" name="BiginWebToRecordForm7358066000000859329" method="POST" encType="multipart/form-data" target="hidden7358066000000859329Frame" acceptCharset="UTF-8" onSubmit="{{ enviar }}" noValidate="" style="background:var(--papel);border:1px solid rgba(14,7,20,.10);border-radius:6px 28px 28px 28px;padding:clamp(24px,4vw,48px);display:flex;flex-direction:column;gap:20px">
-      <!-- Campos ocultos requeridos por Bigin. No eliminar. -->
-      <input type="hidden" name="xnQsjsdp" value="082737945c36ce06d0e131fc56b1082d15d3681c86ed1e02233622f02159b164">
-      <input type="hidden" name="zc_gad" id="zc_gad" value="">
-      <input type="hidden" name="xmIwtLD" value="58cc69c5ae55a514ee3a3048ba44c0aecfd3303276c1bae1e21e4d99274c525a77b9bca23f1cea1760f9d52f8def0e7f">
-      <input type="hidden" name="actionType" value="UG90ZW50aWFscw==">
-      <input type="hidden" name="rmsg" id="rmsg" value="true">
-      <input type="hidden" name="returnURL" value="null">
-      <input type="hidden" name="Pipeline" value="NUEVOS CLIENTES WEB Estándar">
-      <input type="hidden" name="Stage" value="Primer Contacto">
-      <sc-if value="{{ exito }}" hint-placeholder-val="{{ false }}">
-        <div role="status" style="display:flex;flex-direction:column;gap:12px;padding:24px;border:1px solid var(--cian);border-radius:6px 20px 20px 20px">
-          <strong style="font:600 18px 'Creato Display',sans-serif;color:var(--violeta)">Solicitud enviada.</strong>
-          <span style="font:400 16px/1.6 'Creato Display',sans-serif;color:var(--tinta)">Te respondemos en menos de 24 horas hábiles.</span>
-        </div>
-      </sc-if>
-      <sc-if value="{{ sinExito }}" hint-placeholder-val="{{ true }}">
-      <!-- Bigin exige apellido y nombre del negocio: se rellenan al enviar desde el nombre completo -->
-      <input type="hidden" name="Potential Name" value="">
-      <input type="hidden" name="Contacts.Last Name" value="">
-      <label style="display:flex;flex-direction:column;gap:10px;font:600 13px 'Walkway',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--violeta)"><span>Nombre completo*</span>
-        <input name="nombre_completo" type="text" placeholder="Ej. Juan Pérez" required="" maxLength="120" autoComplete="name" style="min-height:52px;background:#fff;border:1px solid rgba(14,7,20,.12);border-radius:16px;color:var(--tinta);font:400 16px 'Creato Display',sans-serif;padding:0 18px">
-      </label>
-      <label style="display:flex;flex-direction:column;gap:10px;font:600 13px 'Walkway',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--violeta)"><span>Teléfono*</span>
-        <input name="POTENTIALCF52" type="tel" inputMode="numeric" placeholder="4271004183" required="" maxLength="9" autoComplete="tel" onInput="{{ soloDigitos }}" style="min-height:52px;background:#fff;border:1px solid rgba(14,7,20,.12);border-radius:16px;color:var(--tinta);font:400 16px 'Creato Display',sans-serif;padding:0 18px">
-      </label>
-      <label style="display:flex;flex-direction:column;gap:10px;font:600 13px 'Walkway',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--violeta)"><span>Correo electrónico*</span>
-        <input name="POTENTIALCF1" type="email" placeholder="correo@ejemplo.com" required="" maxLength="100" autoComplete="email" onBlur="{{ validarCorreo }}" style="min-height:52px;background:#fff;border:1px solid rgba(14,7,20,.12);border-radius:16px;color:var(--tinta);font:400 16px 'Creato Display',sans-serif;padding:0 18px">
-        <sc-if value="{{ correoInvalido }}" hint-placeholder-val="{{ false }}"><span role="alert" style="font:500 13px 'Creato Display',sans-serif;letter-spacing:normal;text-transform:none;color:var(--violeta)">Revisa el correo: parece incompleto.</span></sc-if>
-      </label>
-      <label style="display:flex;flex-direction:column;gap:10px;font:600 13px 'Walkway',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--violeta)"><span>Empresa (opcional)</span>
-        <input name="Accounts.Account Name" type="text" placeholder="Nombre de tu negocio" maxLength="200" autoComplete="organization" style="min-height:52px;background:#fff;border:1px solid rgba(14,7,20,.12);border-radius:16px;color:var(--tinta);font:400 16px 'Creato Display',sans-serif;padding:0 18px">
-      </label>
-      <label style="display:flex;flex-direction:column;gap:10px;font:600 13px 'Walkway',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--violeta)"><span>Mensaje*</span>
-        <textarea name="Description" required="" rows="5" maxLength="32000" placeholder="Cuéntanos sobre tu proyecto..." style="background:#fff;border:1px solid rgba(14,7,20,.12);border-radius:16px;color:var(--tinta);font:400 16px/1.6 'Creato Display',sans-serif;padding:16px 18px;resize:vertical"></textarea>
-      </label>
-      <label style="display:flex;align-items:flex-start;gap:10px;font:400 14px/1.5 'Creato Display',sans-serif;color:var(--gris-texto);cursor:pointer">
-        <input name="privacidad" type="checkbox" required="" style="width:20px;height:20px;margin-top:2px;accent-color:#A53692">
-        <span>He leído y acepto el <a href="/aviso-de-privacidad" style="color:var(--violeta);font-weight:600">aviso de privacidad</a>.</span>
-      </label>
-      <sc-if value="{{ error }}" hint-placeholder-val="{{ false }}">
-        <p role="alert" style="font:500 15px/1.6 'Creato Display',sans-serif;color:var(--tinta);background:rgba(165,54,146,.10);border:1px solid var(--magenta);border-radius:6px 16px 16px 16px;padding:16px 20px;margin:0">No se pudo enviar. Escríbenos por WhatsApp al <a href="https://wa.me/524271004183" style="color:var(--violeta);font-weight:600">427 211 05 28</a> y lo resolvemos ahí mismo.</p>
-      </sc-if>
-      <sc-if value="{{ faltanCampos }}" hint-placeholder-val="{{ false }}">
-        <p role="alert" style="font:500 15px 'Creato Display',sans-serif;color:var(--violeta);margin:0">Completa los campos marcados con * y acepta el aviso de privacidad.</p>
-      </sc-if>
-      <button type="submit" disabled="{{ enviando }}" style="{{ btnEnviarStyle }}">
-        <sc-if value="{{ enviando }}" hint-placeholder-val="{{ false }}">
-          <span aria-hidden="true" style="width:16px;height:16px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;display:inline-block;animation:spin .7s linear infinite"></span>
-        </sc-if>
-        {{ btnEnviarTexto }}
-      </button>
-      </sc-if>
-    </form>
-    <!-- destino del POST de Bigin: la respuesta del CRM nunca se muestra, el aviso lo da la tarjeta de éxito -->
-    <iframe id="hidden7358066000000859329Frame" name="hidden7358066000000859329Frame" title="Destino técnico del envío del formulario" aria-hidden="true" tabIndex="-1" style="position:absolute;width:0;height:0;border:0;visibility:hidden"></iframe>
+    <!-- Formulario alojado por Bigin (iframe oficial: dentro del iframe el script de Bigin sí corre síncrono y funciona). -->
+    <!-- Si Bigin te da otra URL al regenerar el formulario, sustitúyela aquí. Color/tema: se ajustan desde el editor del formulario en Bigin. -->
+    <div style="background:var(--papel);border:1px solid rgba(14,7,20,.10);border-radius:6px 28px 28px 28px;padding:clamp(24px,4vw,32px);display:flex;flex-direction:column;gap:16px">
+      <iframe title="Formulario de contacto" src="https://us.bigin.online/org920463230/forms/newform" width="100%" height="900" scrolling="no" style="border:none;border-radius:16px;background:#fff;display:block;overflow:hidden"></iframe>
+      <p style="font:400 13px/1.5 'Creato Display',sans-serif;color:var(--gris-texto);margin:0">Al enviar este formulario aceptas nuestro <a href="/aviso-de-privacidad" style="color:var(--violeta);font-weight:600">aviso de privacidad</a>.</p>
+    </div>
     <aside aria-label="Datos de contacto" style="display:flex;flex-direction:column;gap:24px">
       <div style="display:flex;flex-direction:column;gap:16px;background:var(--papel);border:1px solid rgba(14,7,20,.10);border-radius:6px 28px 28px 28px;padding:32px">
         <span style="font:600 13px 'Walkway',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--violeta)">Directo</span>
@@ -287,79 +235,11 @@ p [data-hero-line]{animation-delay:120ms}
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { enviando: false, exito: false, error: false, faltanCampos: false, correoInvalido: false };
-
   componentDidMount() {
     import('./assets/site.js?v=3').then((m) => m.initSite());
-    this.montarBigin();
   }
-
-  // Carga el script de Zoho Bigin DESPUÉS de que el formulario existe en el DOM.
-  montarBigin() {
-    const ID = '7358066000000859329';
-    if (!window['mndFields' + ID]) {
-      window['mndFields' + ID] = ['Potential Name', 'Contacts.Last Name', 'Accounts.Account Name', 'Description'];
-      window['fldLangVal' + ID] = ['Nombre', 'Apellidos', 'Nombre de Empresa', 'Mensaje'];
-      // La validación visible la hace este componente; estos stubs solo satisfacen al script de Bigin.
-      window['checkMandatory' + ID] = () => true;
-      window['validateFields' + ID] = () => true;
-      window['validateForm' + ID] = () => true;
-      window.removeError = () => {};
-      window.setError = () => {};
-    }
-    const marco = document.getElementById('hidden' + ID + 'Frame');
-    if (marco && !marco.dataset.listo) {
-      marco.dataset.listo = '1';
-      marco.addEventListener('load', () => {
-        // El iframe solo carga tras un envío real: es el acuse de recibo de Bigin.
-        if (this.state.enviando) {
-          this.setState({ enviando: false, exito: true });
-          if (window.gtag) window.gtag('event', 'conversion', { send_to: 'AW-16751651845/z_IpCOXx7LgcEIXY57M-' });
-        }
-      });
-    }
-    if (document.getElementById('wf_script')) return;
-    const s = document.createElement('script');
-    s.id = 'wf_script';
-    s.src = 'https://bigin.zoho.com/crm/WebformScriptServlet?rid=58cc69c5ae55a514ee3a3048ba44c0aecfd3303276c1bae1e21e4d99274c525a77b9bca23f1cea1760f9d52f8def0e7fgid082737945c36ce06d0e131fc56b1082d15d3681c86ed1e02233622f02159b164';
-    s.onerror = () => this.setState({ error: true });
-    document.body.appendChild(s);
-  }
-
   renderVals() {
-    const { enviando, exito, error, faltanCampos, correoInvalido } = this.state;
-    return {
-      exito, error, faltanCampos, correoInvalido,
-      sinExito: !exito,
-      enviando,
-      btnEnviarTexto: enviando ? 'Enviando…' : 'Enviar solicitud',
-      btnEnviarStyle: `display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;background:#A53692;color:#fff;border:none;border-radius:999px;padding:16px 32px;font:600 17px/1 'Creato Display',sans-serif;cursor:${enviando ? 'not-allowed' : 'pointer'};opacity:${enviando ? 0.45 : 1};transition:background 200ms ease;align-self:flex-start`,
-      validarCorreo: (e) => this.setState({ correoInvalido: e.target.value !== '' && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e.target.value) }),
-      // El campo de teléfono en Bigin es numérico puro (máx. 9 dígitos)
-      soloDigitos: (e) => { e.target.value = e.target.value.replace(/\D/g, '').slice(0, 9); },
-
-      // No hay fetch ni API: el <form> hace POST nativo a Bigin contra el iframe oculto.
-      enviar: (e) => {
-        const form = e.currentTarget;
-        const v = (n) => (form.elements[n] ? String(form.elements[n].value || '').replace(/[\s\u00a0]+/g, ' ').trim() : '');
-        const correo = v('POTENTIALCF1');
-        const nombre = v('nombre_completo');
-        const ok = nombre && correo && v('POTENTIALCF52') && v('Description')
-          && form.elements.privacidad.checked && /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(correo);
-        if (!ok) { e.preventDefault(); this.setState({ faltanCampos: true, correoInvalido: !!correo && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(correo) }); return; }
-        if (!form.getAttribute('action')) { e.preventDefault(); this.setState({ error: true }); return; }
-        // nombre_completo y privacidad no existen en Bigin: se excluyen del POST (disabled) y se reactivan después.
-        const partes = nombre.split(/\s+/);
-        form.elements['Potential Name'].value = nombre;
-        form.elements['Contacts.Last Name'].value = partes.length > 1 ? partes.slice(1).join(' ') : nombre;
-        if (!v('Accounts.Account Name')) form.elements['Accounts.Account Name'].value = 'Sin empresa';
-        const fuera = [form.elements.nombre_completo, form.elements.privacidad];
-        fuera.forEach((el) => { el.disabled = true; });
-        setTimeout(() => fuera.forEach((el) => { el.disabled = false; }), 0);
-        this.setState({ faltanCampos: false, error: false, enviando: true });
-      },
-      abrirChat: () => window.DZChat && window.DZChat.abrir(),
-    };
+    return { abrirChat: () => window.DZChat && window.DZChat.abrir() };
   }
 }
 </script>
