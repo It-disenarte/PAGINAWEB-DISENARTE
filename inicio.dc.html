@@ -350,7 +350,7 @@ const RESENAS = [
 class Component extends DCLogic {
   state = { testimonioActivo: 0, testimonioPlay: {} };
   componentDidMount() {
-    import('./assets/site.js?v=2').then((m) => m.initSite());
+    import('./assets/site.js?v=3').then((m) => m.initSite());
     // El video de la tarjeta solo se reproduce mientras la sección está en pantalla
     const obs = new IntersectionObserver((ents) => ents.forEach((e) => {
       const v = e.target;

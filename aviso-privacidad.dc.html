@@ -261,7 +261,7 @@ p [data-hero-line]{animation-delay:120ms}
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
   componentDidMount() {
-    import('./assets/site.js?v=2').then((m) => m.initSite());
+    import('./assets/site.js?v=3').then((m) => m.initSite());
   }
   renderVals() {
     return { abrirChat: () => window.DZChat && window.DZChat.abrir() };
