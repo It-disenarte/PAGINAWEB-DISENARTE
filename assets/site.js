@@ -49,10 +49,11 @@ function initCounters() {
 function initNavbar() {
   const nav = document.querySelector('[data-navbar]');
   if (!nav) return;
-  const modo = nav.getAttribute('data-navbar'); // "noche" | "taller"
-  const solidBg = modo === 'taller' ? '#FFFFFF' : '#1A0F24';
-  const solidShadow = modo === 'taller' ? '0 2px 8px rgba(14,7,20,.10)' : '0 1px 0 rgba(255,255,255,.08)';
-  nav.style.transition = 'background-color 250ms ease, box-shadow 250ms ease';
+  // Siempre blanca al hacer scroll (para no perderse sobre ningún fondo), en
+  // píldora flotante: se despega de los bordes y se redondea por completo.
+  const solidBg = '#FFFFFF';
+  const solidShadow = '0 12px 32px rgba(14,7,20,.16)';
+  nav.style.transition = 'background-color 250ms ease, box-shadow 250ms ease, top 250ms ease, left 250ms ease, right 250ms ease, border-radius 250ms ease';
   // data-nav-hero="noche": sobre un hero oscuro los enlaces van en blanco
   // mientras la barra es transparente, y vuelven a tinta al volverse sólida.
   const heroOscuro = nav.getAttribute('data-nav-hero') === 'noche';
@@ -67,6 +68,10 @@ function initNavbar() {
     const on = window.scrollY > 24;
     nav.style.backgroundColor = on ? solidBg : 'transparent';
     nav.style.boxShadow = on ? solidShadow : 'none';
+    nav.style.top = on ? '14px' : '0';
+    nav.style.left = on ? 'clamp(16px,4vw,40px)' : '0';
+    nav.style.right = on ? 'clamp(16px,4vw,40px)' : '0';
+    nav.style.borderRadius = on ? '999px' : '0';
     if (!heroOscuro) return;
     const claro = !on;
     enlaces.forEach((el) => { el.style.color = claro ? '#FFFFFF' : '#0E0714'; });
@@ -1194,7 +1199,7 @@ function initTextos() {
   const TEXTO = 'h2, h3, h4, p, li, blockquote, figcaption, [data-reveal]';
   const nodos = [...document.querySelectorAll(TEXTO)].filter((el) =>
     !el.closest('[data-hero],[data-pal],nav,header,[data-menu],summary,[data-fab]') &&
-    !el.hasAttribute('data-t') && el.textContent.trim());
+    !el.hasAttribute('data-t') && !el.hasAttribute('data-card') && el.textContent.trim());
   nodos.forEach((el, i) => {
     const [nombre] = KEYS_TEXTO[i % KEYS_TEXTO.length];
     el.dataset.t = '1';

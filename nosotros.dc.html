@@ -9,7 +9,7 @@
 <x-dc>
 <helmet>
 <title>Nosotros | 20 años de publicidad industrial | Diseñarte MX</title>
-<meta name="description" content="Agencia de publicidad e innovación digital en San Juan del Río desde hace más de 20 años. Proveedor destacado 1er lugar de Imbera México 2023 y 2024.">
+<meta name="description" content="Más de 20 años de publicidad e innovación digital en San Juan del Río. Proveedor destacado de Imbera México 2023 y 2024.">
 <meta name="robots" content="index, follow">
 <link rel="icon" type="image/png" href="assets/favicon-dz.png">
 <link rel="apple-touch-icon" href="assets/favicon-dz.png">
@@ -34,7 +34,7 @@
 @font-face{font-family:'Walkway';src:url('assets/fonts/Walkway-Bold.ttf') format('truetype');font-weight:600 700;font-style:normal;font-display:swap}
 @font-face{font-family:'Walkway';src:url('assets/fonts/Walkway-Black.ttf') format('truetype');font-weight:800 900;font-style:normal;font-display:swap}
 :root{--tinta:#0E0714;--tinta-2:#1A0F24;--magenta:#A53692;--violeta:#7C07A6;--cian:#5CC6D0;--papel:#F2F1F3;--blanco:#FFFFFF;--gris:#96989A;--gris-texto:#55575A;--gradiente:linear-gradient(100deg,#7C07A6 0%,#A53692 45%,#5CC6D0 100%);--font-display:'Creato Display',sans-serif}
-html{overflow-x:hidden}body{margin:0;overflow-x:hidden;background:#F2F1F3;color:#0E0714;font-family:'Creato Display',sans-serif;-webkit-font-smoothing:antialiased}
+html{overflow-x:hidden}body{margin:0;overflow-x:hidden;overflow-y:visible;background:#F2F1F3;color:#0E0714;font-family:'Creato Display',sans-serif;-webkit-font-smoothing:antialiased}
 /* Chevrones: en anchos intermedios el padding lateral cede para que la lista respire */
 @media(max-width:1023px){[data-chevrones] > article > div{--chev-pr:24px;--chev-pl:44px}[data-chevrones] > article:first-child > div{--chev-pl:24px}}
 /* Cadena de chevrones: en móvil se apila en columna, sin solape ni muescas laterales */
@@ -96,8 +96,7 @@ p [data-hero-line]{animation-delay:120ms}
 </script>
 <script>
   !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '2039038839979376');
-  fbq('track', 'PageView');
+  if(!window.__dzFbqDone){window.__dzFbqDone=true;fbq('init', '2039038839979376');fbq('track', 'PageView');}
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2039038839979376&ev=PageView&noscript=1" alt=""></noscript>
 </helmet>
@@ -193,7 +192,7 @@ p [data-hero-line]{animation-delay:120ms}
             </ul>
           </div>
           <span aria-hidden="true" style="position:absolute;top:-40px;left:{{ cat.pl }};width:80px;height:80px;border-radius:999px;border:3px solid #fff;background:{{ cat.disco }};display:flex;align-items:center;justify-content:center">
-            <img src="{{ cat.img }}" alt="" width="40" height="40" loading="lazy" style="display:block;width:40px;height:40px;object-fit:contain;filter:brightness(0) invert(1)">
+            <img src="{{ cat.img }}" alt="" width="40" height="40" loading="lazy" style="display:block;width:40px;height:40px;object-fit:contain">
           </span>
         </article>
       </sc-for>
@@ -244,7 +243,7 @@ p [data-hero-line]{animation-delay:120ms}
       <a href="https://wa.me/524271004183" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">WhatsApp 427 100 41 83</a>
       <a href="tel:+524271004183" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Tel. 427 100 41 83</a>
       <a href="mailto:ventas@disenartemx.com" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">ventas@disenartemx.com</a>
-      <address style="font:400 15px/1.6 'Creato Display',sans-serif;color:var(--gris);font-style:normal;margin:8px 0 0">Av. Lomas del Pedregoso #371<br>Col. Lomas de San Juan, Sección Campestre<br>San Juan del Río, Querétaro</address>
+      <a href="https://www.google.com/maps/place/%E2%9C%85DISE%C3%91ARTE+M%C3%89XICO+%7C+Agencia+de+publicidad+y+marketing+digital/@20.377935,-99.957981,17z" target="_blank" rel="noopener" style="font:400 15px/1.6 'Creato Display',sans-serif;color:var(--gris);font-style:normal;margin:8px 0 0;text-decoration:none;display:block" style-hover="color:#7C07A6">Av. Lomas del Pedregoso #371<br>Col. Lomas de San Juan, Sección Campestre<br>San Juan del Río, Querétaro</a>
     </div>
   </div>
   <div style="max-width:1240px;margin:0 auto;padding:24px clamp(24px,4vw,48px);border-top:1px solid rgba(14,7,20,.10);display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center">
@@ -278,7 +277,7 @@ p [data-hero-line]{animation-delay:120ms}
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
   componentDidMount() {
-    import('./assets/site.js').then((m) => m.initSite());
+    import('./assets/site.js?v=2').then((m) => m.initSite());
   }
   renderVals() {
     const P = [
@@ -294,12 +293,12 @@ class Component extends DCLogic {
     ];
     // Iconos oficiales del sitio actual. Al publicar, descargarlos a assets/ y
     // cambiar ICONOS_BASE por './assets/'.
-    const ICONOS_BASE = 'https://www.disenartemx.com/images/assets/';
+    const ICONOS_BASE = 'assets/';
     const CAT = [
-      ['Diseño gráfico', ['Identidad corporativa', 'Branding', 'Material publicitario'], 'diseno.webp'],
-      ['Impresión personalizada', ['Lonas', 'Viniles', 'Etiquetas', 'Señalética industrial'], 'impresion.webp'],
-      ['Innovación digital', ['Páginas web a la medida', 'Automatizaciones', 'Paquetes de renta o compra'], 'market.webp'],
-      ['Soluciones en comunicación visual', ['Material POP', 'Stands', 'Rotulaciones', 'Exhibidores'], 'comunicacion.webp'],
+      ['Diseño gráfico', ['Identidad corporativa', 'Branding', 'Material publicitario'], 'icon-diseno.svg'],
+      ['Impresión personalizada', ['Lonas', 'Viniles', 'Etiquetas', 'Señalética industrial'], 'icon-impresion.svg'],
+      ['Innovación digital', ['Páginas web a la medida', 'Automatizaciones', 'Paquetes de renta o compra'], 'icon-market.svg'],
+      ['Soluciones en comunicación visual', ['Material POP', 'Stands', 'Rotulaciones', 'Exhibidores'], 'icon-comunicacion.svg'],
     ];
     return {
       // Escala de violeta: oscuro a la izquierda, claro a la derecha. z = solape del chevrón.

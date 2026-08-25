@@ -34,7 +34,7 @@
 @font-face{font-family:'Walkway';src:url('assets/fonts/Walkway-Bold.ttf') format('truetype');font-weight:600 700;font-style:normal;font-display:swap}
 @font-face{font-family:'Walkway';src:url('assets/fonts/Walkway-Black.ttf') format('truetype');font-weight:800 900;font-style:normal;font-display:swap}
 :root{--tinta:#0E0714;--tinta-2:#1A0F24;--magenta:#A53692;--violeta:#7C07A6;--cian:#5CC6D0;--papel:#F2F1F3;--blanco:#FFFFFF;--gris:#96989A;--gris-texto:#55575A;--gradiente:linear-gradient(100deg,#7C07A6 0%,#A53692 45%,#5CC6D0 100%);--font-display:'Creato Display',sans-serif}
-html{overflow-x:hidden}body{margin:0;overflow-x:hidden;background:#FFFFFF;color:#0E0714;font-family:'Creato Display',sans-serif;-webkit-font-smoothing:antialiased}
+html{overflow-x:hidden}body{margin:0;overflow-x:hidden;overflow-y:visible;background:#FFFFFF;color:#0E0714;font-family:'Creato Display',sans-serif;-webkit-font-smoothing:antialiased}
 a{color:inherit}
 a:hover{color:#7C07A6}
 :focus-visible{outline:2px solid #7C07A6;outline-offset:3px}
@@ -85,8 +85,7 @@ p [data-hero-line]{animation-delay:120ms}
 </script>
 <script>
   !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '2039038839979376');
-  fbq('track', 'PageView');
+  if(!window.__dzFbqDone){window.__dzFbqDone=true;fbq('init', '2039038839979376');fbq('track', 'PageView');}
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2039038839979376&ev=PageView&noscript=1" alt=""></noscript>
 </helmet>
@@ -217,7 +216,7 @@ p [data-hero-line]{animation-delay:120ms}
       </div>
       <div style="display:flex;flex-direction:column;gap:16px;background:var(--papel);border:1px solid rgba(14,7,20,.10);border-radius:6px 28px 28px 28px;padding:32px">
         <span style="font:600 13px 'Walkway',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--violeta)">Ubicación y horario</span>
-        <address style="font:400 16px/1.7 'Creato Display',sans-serif;color:var(--tinta);font-style:normal;margin:0">Av. Lomas del Pedregoso #371<br>Col. Lomas de San Juan, Sección Campestre<br>San Juan del Río, Querétaro</address>
+        <a href="https://www.google.com/maps/place/%E2%9C%85DISE%C3%91ARTE+M%C3%89XICO+%7C+Agencia+de+publicidad+y+marketing+digital/@20.377935,-99.957981,17z" target="_blank" rel="noopener" style="font:400 16px/1.7 'Creato Display',sans-serif;color:var(--tinta);font-style:normal;margin:0;text-decoration:none;display:block" style-hover="color:#7C07A6">Av. Lomas del Pedregoso #371<br>Col. Lomas de San Juan, Sección Campestre<br>San Juan del Río, Querétaro</a>
         <p style="font:400 16px/1.6 'Creato Display',sans-serif;color:var(--gris-texto);margin:0">Servicio en el estado y zonas vecinas.</p>
         <span style="font:500 13px ui-monospace,monospace;color:var(--gris-texto)">[PENDIENTE: horario de atención]</span>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3741.0560756353955!2d-99.9818815!3d20.3392576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d30b754c677737%3A0x2fb521035292e04b!2zRGlzZcOxYXJ0ZSBNw6l4aWNv!5e0!3m2!1ses-419!2smx!4v1711495000000!5m2!1ses-419!2smx" title="Ubicación de Diseñarte México en San Juan del Río, Querétaro" loading="lazy" referrerPolicy="no-referrer-when-downgrade" style="width:100%;aspect-ratio:16/10;border:none;border-radius:6px 20px 20px 20px;filter:grayscale(.3)"></iframe>
@@ -287,7 +286,7 @@ class Component extends DCLogic {
   state = { enviando: false, exito: false, error: false, faltanCampos: false, correoInvalido: false };
 
   componentDidMount() {
-    import('./assets/site.js').then((m) => m.initSite());
+    import('./assets/site.js?v=2').then((m) => m.initSite());
     this.montarBigin();
   }
 

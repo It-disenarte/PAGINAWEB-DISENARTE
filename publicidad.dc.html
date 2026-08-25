@@ -9,7 +9,7 @@
 <x-dc>
 <helmet>
 <title>Señalética industrial y rotulación en Querétaro | Diseñarte</title>
-<meta name="description" content="Señalética bajo NOM-026-STPS, etiquetado de tuberías y SGA, tableros, rotulación de flotillas y películas de seguridad. Fabricamos e instalamos. Cotiza hoy.">
+<meta name="description" content="Señalética industrial, tableros, rotulación de flotillas y etiquetado de tuberías. Fabricamos e instalamos en Querétaro. Cotiza hoy.">
 <meta name="robots" content="index, follow">
 <link rel="icon" type="image/png" href="assets/favicon-dz.png">
 <link rel="apple-touch-icon" href="assets/favicon-dz.png">
@@ -34,7 +34,7 @@
 @font-face{font-family:'Walkway';src:url('assets/fonts/Walkway-Bold.ttf') format('truetype');font-weight:600 700;font-style:normal;font-display:swap}
 @font-face{font-family:'Walkway';src:url('assets/fonts/Walkway-Black.ttf') format('truetype');font-weight:800 900;font-style:normal;font-display:swap}
 :root{--tinta:#0E0714;--tinta-2:#1A0F24;--magenta:#A53692;--violeta:#7C07A6;--cian:#5CC6D0;--papel:#F2F1F3;--blanco:#FFFFFF;--gris:#96989A;--gris-texto:#55575A;--gradiente:linear-gradient(100deg,#7C07A6 0%,#A53692 45%,#5CC6D0 100%);--font-display:'Creato Display',sans-serif}
-html{overflow-x:hidden}body{margin:0;overflow-x:hidden;background:#F2F1F3;color:#0E0714;font-family:'Creato Display',sans-serif;-webkit-font-smoothing:antialiased}
+html{overflow-x:hidden}body{margin:0;overflow-x:hidden;overflow-y:visible;background:#F2F1F3;color:#0E0714;font-family:'Creato Display',sans-serif;-webkit-font-smoothing:antialiased}
 a{color:inherit}
 a:hover{color:#7C07A6}
 :focus-visible{outline:2px solid #7C07A6;outline-offset:3px}
@@ -117,8 +117,7 @@ p [data-hero-line]{animation-delay:120ms}
 </script>
 <script>
   !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '2039038839979376');
-  fbq('track', 'PageView');
+  if(!window.__dzFbqDone){window.__dzFbqDone=true;fbq('init', '2039038839979376');fbq('track', 'PageView');}
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2039038839979376&ev=PageView&noscript=1" alt=""></noscript>
 </helmet>
@@ -329,7 +328,7 @@ p [data-hero-line]{animation-delay:120ms}
       <a href="https://wa.me/524271004183" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">WhatsApp 427 100 41 83</a>
       <a href="tel:+524271004183" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">Tel. 427 100 41 83</a>
       <a href="mailto:ventas@disenartemx.com" style="font:400 15px 'Creato Display',sans-serif;color:var(--tinta);text-decoration:none;padding:4px 0" style-hover="color:#7C07A6">ventas@disenartemx.com</a>
-      <address style="font:400 15px/1.6 'Creato Display',sans-serif;color:var(--gris);font-style:normal;margin:8px 0 0">Av. Lomas del Pedregoso #371<br>Col. Lomas de San Juan, Sección Campestre<br>San Juan del Río, Querétaro</address>
+      <a href="https://www.google.com/maps/place/%E2%9C%85DISE%C3%91ARTE+M%C3%89XICO+%7C+Agencia+de+publicidad+y+marketing+digital/@20.377935,-99.957981,17z" target="_blank" rel="noopener" style="font:400 15px/1.6 'Creato Display',sans-serif;color:var(--gris);font-style:normal;margin:8px 0 0;text-decoration:none;display:block" style-hover="color:#7C07A6">Av. Lomas del Pedregoso #371<br>Col. Lomas de San Juan, Sección Campestre<br>San Juan del Río, Querétaro</a>
     </div>
   </div>
   <div style="max-width:1240px;margin:0 auto;padding:24px clamp(24px,4vw,48px);border-top:1px solid rgba(14,7,20,.10);display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center">
@@ -423,7 +422,7 @@ class Component extends DCLogic {
   }
 
   componentDidMount() {
-    import('./assets/site.js').then((m) => m.initSite());
+    import('./assets/site.js?v=2').then((m) => m.initSite());
     // respaldo: algunos navegadores ignoran autoplay hasta que se pide play()
     setTimeout(() => document.querySelectorAll('video[loop]').forEach((v) => { v.muted = true; v.play().catch(() => {}); }), 300);
 
