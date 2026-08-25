@@ -57,6 +57,12 @@ a:hover{color:#7C07A6}
 
 /* ===== REVEALS DECLARATIVOS (CSS: sobreviven a los re-renders) ===== */
 @keyframes dzUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes dzPopIcon{0%,4%{opacity:0;transform:scale(.3) rotate(-8deg)}12%{opacity:1;transform:scale(1.15) rotate(4deg)}18%{transform:scale(1) rotate(0deg)}62%{opacity:1;transform:scale(1) rotate(0deg)}78%,100%{opacity:0;transform:scale(.5) rotate(6deg)}}
+@keyframes dzFugaz{0%{opacity:0;transform:translate(-34px,-22px) scale(.5) rotate(-38deg)}14%{opacity:1}45%,58%{opacity:1;transform:translate(18px,12px) scale(1) rotate(-38deg)}100%{opacity:0;transform:translate(46px,30px) scale(.6) rotate(-38deg)}}
+[data-pop-icon]{position:absolute;opacity:0;animation-timing-function:cubic-bezier(.22,1,.36,1);animation-iteration-count:infinite;animation-name:dzPopIcon}
+[data-pop-icon][data-fugaz]{animation-name:dzFugaz}
+@media(prefers-reduced-motion:reduce){[data-pop-icon]{animation:none;opacity:.6;transform:none!important}}
+@media(max-width:767px){[data-pop-panel]{opacity:.7}}
 @keyframes dzLine{from{opacity:0;transform:translateY(105%)}to{opacity:1;transform:none}}
 [data-hero-line]{animation:dzLine 700ms cubic-bezier(.22,1,.36,1) 120ms both}
 h1>span:nth-child(2) [data-hero-line]{animation-delay:210ms}
@@ -147,6 +153,29 @@ p [data-hero-line]{animation-delay:120ms}
 <!-- ===== HERO ===== -->
 <section data-hero="" style="position:relative;background:var(--papel);overflow:hidden">
   <div aria-hidden="true" style="position:absolute;top:0;right:0;width:45%;height:100%;background:var(--gradiente);opacity:.06;clip-path:polygon(30% 0,100% 0,100% 100%,0 100%)"></div>
+  <div aria-hidden="true" data-pop-panel="" style="position:absolute;top:0;right:0;width:42%;height:100%;overflow:hidden">
+    <sc-for list="{{ iconosPop }}" as="ip" hint-placeholder-count="14">
+      <span data-pop-icon="" data-fugaz="{{ ip.fugazAttr }}" style="{{ ip.style }}">
+        <sc-if value="{{ ip.esCorazon }}">
+          <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path fill="{{ ip.color }}" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.53L12 21.35z"></path></svg>
+        </sc-if>
+        <sc-if value="{{ ip.esBombilla }}">
+          <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill="{{ ip.color }}" d="M12 2a7 7 0 0 0-4 12.7V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.3A7 7 0 0 0 12 2z"></path><rect x="9" y="19.5" width="6" height="1.8" rx=".9" fill="{{ ip.color }}"></rect><rect x="9.6" y="21.6" width="4.8" height="1.6" rx=".8" fill="{{ ip.color }}"></rect></svg>
+        </sc-if>
+        <sc-if value="{{ ip.esEstrella }}">
+          <svg width="24" height="24" viewBox="0 0 20 20" aria-hidden="true"><path fill="{{ ip.color }}" d="M10 1l2.6 6 6.4.5-4.9 4.2 1.6 6.3L10 14.8 4.3 18l1.6-6.3L1 7.5l6.4-.5z"></path></svg>
+        </sc-if>
+        <sc-if value="{{ ip.esFugaz }}">
+          <svg width="70" height="24" viewBox="0 0 70 24" aria-hidden="true">
+            <defs><linearGradient id="{{ ip.gradId }}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{{ ip.color }}" stop-opacity="0"></stop><stop offset="1" stop-color="{{ ip.color }}" stop-opacity=".9"></stop></linearGradient></defs>
+            <line x1="0" y1="12" x2="58" y2="12" stroke="url(#{{ ip.gradId }})" stroke-width="2"></line>
+            <path fill="{{ ip.color }}" d="M62 12l3.2-2.6-1.2 2.6 1.2 2.6z"></path>
+            <circle cx="62" cy="12" r="2.6" fill="{{ ip.color }}"></circle>
+          </svg>
+        </sc-if>
+      </span>
+    </sc-for>
+  </div>
   <div style="position:relative;max-width:1240px;margin:0 auto;padding:clamp(140px,18vw,200px) clamp(24px,4vw,48px) clamp(72px,10vw,128px)">
     <h1 style="font-family:var(--font-display);font-weight:700;font-size:clamp(34px,4.5vw,56px);line-height:1.05;letter-spacing:-.02em;margin:0 0 24px;max-width:860px;color:var(--tinta)">
       <span style="display:block;overflow:hidden"><span data-hero-line="" style="display:block"><span style="color:var(--violeta)"><span data-count="20" data-prefix="+" style="font-variant-numeric:tabular-nums;font-size:2.6em;line-height:.8;display:inline-block;vertical-align:-.14em">+20</span> años</span></span></span>
@@ -161,13 +190,27 @@ p [data-hero-line]{animation-delay:120ms}
 
 <!-- ===== QUÉ HACEMOS ===== -->
 <section style="background:#fff">
-  <div style="max-width:1240px;margin:0 auto;padding:clamp(72px,10vw,128px) clamp(24px,4vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:48px;align-items:center">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(72px,10vw,128px) clamp(24px,4vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:56px;align-items:center">
     <div>
+      <p data-reveal="0" style="font:600 13px 'Walkway',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--violeta);margin:0 0 16px">Cómo trabajamos</p>
       <h2 data-reveal="0" style="font-family:var(--font-display);font-weight:700;font-size:clamp(28px,3.4vw,40px);line-height:1.15;margin:0 0 24px;color:var(--tinta)">Qué hacemos</h2>
       <p data-reveal="1" style="font:400 clamp(18px,1.6vw,20px)/1.65 'Creato Display',sans-serif;color:var(--gris-texto);margin:0 0 20px;text-wrap:pretty">Nos enfocamos en optimizar la comunicación visual de las empresas, desarrollando <strong style="font-weight:600;color:var(--tinta)">materiales gráficos</strong> y <strong style="font-weight:600;color:var(--tinta)">estrategias digitales</strong> que refuercen su identidad y presencia en el mercado.</p>
-      <p data-reveal="2" style="font:400 17px/1.65 'Creato Display',sans-serif;color:var(--gris-texto);margin:0;text-wrap:pretty">Nuestro equipo de expertos integra diseño gráfico de alta precisión, impresión especializada, marketing digital y soluciones publicitarias innovadoras que fortalecen la presencia y competitividad de las marcas en el sector industrial.</p>
+      <p data-reveal="2" style="font:400 17px/1.65 'Creato Display',sans-serif;color:var(--gris-texto);margin:0 0 28px;text-wrap:pretty">Nuestro equipo de expertos integra diseño gráfico de alta precisión, impresión especializada, marketing digital y soluciones publicitarias innovadoras que fortalecen la presencia y competitividad de las marcas en el sector industrial.</p>
+      <div data-reveal="2" style="display:flex;flex-wrap:wrap;gap:10px">
+        <span style="font:600 14px 'Creato Display',sans-serif;color:var(--violeta);background:rgba(124,7,166,.08);border:1px solid rgba(124,7,166,.18);border-radius:999px;padding:8px 16px">Diseño gráfico</span>
+        <span style="font:600 14px 'Creato Display',sans-serif;color:var(--violeta);background:rgba(124,7,166,.08);border:1px solid rgba(124,7,166,.18);border-radius:999px;padding:8px 16px">Impresión especializada</span>
+        <span style="font:600 14px 'Creato Display',sans-serif;color:var(--violeta);background:rgba(124,7,166,.08);border:1px solid rgba(124,7,166,.18);border-radius:999px;padding:8px 16px">Marketing digital</span>
+        <span style="font:600 14px 'Creato Display',sans-serif;color:var(--violeta);background:rgba(124,7,166,.08);border:1px solid rgba(124,7,166,.18);border-radius:999px;padding:8px 16px">Publicidad</span>
+      </div>
     </div>
-    <img data-reveal="1" src="assets/equipo-taller.jpg" alt="Equipo de Diseñarte México en su taller de producción en San Juan del Río" width="1374" height="1080" loading="lazy" style="width:100%;height:auto;aspect-ratio:1374/1080;object-fit:cover;border-radius:6px 28px 28px 28px;display:block">
+    <div data-reveal="1" style="position:relative">
+      <div aria-hidden="true" style="position:absolute;top:-20px;right:-20px;width:70%;height:70%;background:var(--gradiente);opacity:.14;border-radius:6px 28px 28px 28px;transform:rotate(3deg)"></div>
+      <img src="assets/equipo-taller.jpg" alt="Equipo de Diseñarte México en su taller de producción en San Juan del Río" width="1374" height="1080" loading="lazy" data-reveal="1" style="position:relative;width:100%;height:auto;aspect-ratio:1374/1080;object-fit:cover;border-radius:6px 28px 28px 28px;display:block;box-shadow:0 24px 48px rgba(14,7,20,.16)">
+      <div aria-hidden="true" style="position:absolute;left:-16px;bottom:-16px;background:#fff;border-radius:6px 20px 20px 20px;box-shadow:0 12px 28px rgba(14,7,20,.16);padding:16px 22px;display:flex;flex-direction:column;line-height:1">
+        <span style="font-family:var(--font-display);font-weight:900;font-size:28px;color:var(--violeta)">+20</span>
+        <span style="font:600 12px 'Creato Display',sans-serif;color:var(--gris-texto);letter-spacing:.02em">años de experiencia</span>
+      </div>
+    </div>
   </div>
   <div aria-hidden="true" style="height:clamp(56px,9vw,130px);position:relative">
     <div style="position:absolute;inset:0;background:var(--papel);clip-path:polygon(0 100%,100% 0,100% 100%)"></div>
@@ -283,6 +326,29 @@ class Component extends DCLogic {
     import('./assets/site.js?v=3').then((m) => m.initSite());
   }
   renderVals() {
+    if (!this._iconosPop) {
+      const rnd = (min, max) => min + Math.random() * (max - min);
+      const tipos = ['corazon', 'bombilla', 'estrella', 'fugaz'];
+      const colores = ['var(--violeta)', 'var(--magenta)', '#5C0480', '#C9A6DE'];
+      this._iconosPop = Array.from({ length: 16 }, (_, i) => ({
+        tipo: tipos[i % 4],
+        color: colores[i % 4],
+        top: rnd(4, 88),
+        left: rnd(4, 82),
+        delay: i * 0.5,
+        dur: 4.4 + (i % 3) * 0.7
+      }));
+    }
+    const iconosPop = this._iconosPop.map((s, i) => ({
+      esCorazon: s.tipo === 'corazon',
+      esBombilla: s.tipo === 'bombilla',
+      esEstrella: s.tipo === 'estrella',
+      esFugaz: s.tipo === 'fugaz',
+      fugazAttr: s.tipo === 'fugaz' ? 'true' : undefined,
+      gradId: 'dzFugazGrad' + i,
+      color: s.color,
+      style: `top:${s.top}%;left:${s.left}%;animation-delay:${s.delay}s;animation-duration:${s.dur}s`
+    }));
     const P = [
       ['Un equipo, no un intermediario.', 'Profesionales que lideran tu proyecto de principio a fin.'],
       ['Urgencias resueltas.', 'Tenemos capacidad de producción para proyectos de extrema urgencia.'],
@@ -304,6 +370,7 @@ class Component extends DCLogic {
       ['Soluciones en comunicación visual', ['Material POP', 'Stands', 'Rotulaciones', 'Exhibidores'], 'icon-comunicacion.svg'],
     ];
     return {
+      iconosPop,
       // Escala de violeta: oscuro a la izquierda, claro a la derecha. z = solape del chevrón.
       categorias: CAT.map(([titulo, items, archivo], i) => {
         const fondos = ['#5B0A72', '#7C07A6', '#9126B4', '#A32FC9'];

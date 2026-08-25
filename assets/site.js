@@ -37,10 +37,11 @@ function initCounters() {
       const tick = (t) => {
         const p = Math.min((t - t0) / 1200, 1);
         const eased = 1 - Math.pow(1 - p, 3);
-        el.textContent = prefix + Math.round(target * eased) + suffix;
+        el.textContent = prefix + (p >= 1 ? target : Math.round(target * eased)) + suffix;
         if (p < 1) requestAnimationFrame(tick);
       };
       requestAnimationFrame(tick);
+      setTimeout(() => { el.textContent = prefix + target + suffix; }, 1300);
     });
   });
 }
@@ -307,17 +308,19 @@ function initFab() {
 
 // --- Smooth scroll con offset del navbar -----------------------------------
 function initAnchors() {
-  document.querySelectorAll('a[href^="#"]').forEach((a) => {
-    a.addEventListener('click', (e) => {
-      const id = a.getAttribute('href').slice(1);
-      const target = document.getElementById(id);
-      if (!target) return;
-      e.preventDefault();
-      // offset desde el alto real de la barra, no un valor fijo
-      const alto = (document.querySelector('[data-navbar]') || {}).offsetHeight || 96;
-      const y = target.getBoundingClientRect().top + scrollY - (alto + 8);
-      window.scrollTo({ top: y, behavior: reduced ? 'auto' : 'smooth' });
-    });
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    const id = a.getAttribute('href').slice(1);
+    const target = document.getElementById(id);
+    if (!target) return;
+    e.preventDefault();
+    // offset desde el alto real de la barra, no un valor fijo
+    const alto = (document.querySelector('[data-navbar]') || {}).offsetHeight || 96;
+    // el contenedor que realmente hace scroll no siempre es window/documentElement
+    const scroller = [document.scrollingElement, document.body].find((el) => el && el.scrollHeight > el.clientHeight + 1) || document.scrollingElement;
+    const y = target.getBoundingClientRect().top + scroller.scrollTop - (alto + 8);
+    scroller.scrollTo({ top: y, behavior: reduced ? 'auto' : 'smooth' });
   });
 }
 
@@ -1153,13 +1156,6 @@ function initPincel() {
 // no es scrubbing de scroll, se reproduce completo al entrar en pantalla.
 const KEYS_TEXTO = [
   ['dzBackInDown', '0%{opacity:0;transform:translateY(-120%) scale(.7)}30%{opacity:.7}80%{opacity:.7;transform:translateY(0) scale(.7)}100%{opacity:1;transform:scale(1)}'],
-  ['dzBackInLeft', '0%{opacity:0;transform:translateX(-140%) scale(.7)}30%{opacity:.7}80%{opacity:.7;transform:translateX(0) scale(.7)}100%{opacity:1;transform:scale(1)}'],
-  ['dzBackInRight', '0%{opacity:0;transform:translateX(140%) scale(.7)}30%{opacity:.7}80%{opacity:.7;transform:translateX(0) scale(.7)}100%{opacity:1;transform:scale(1)}'],
-  ['dzBackInUp', '0%{opacity:0;transform:translateY(120%) scale(.7)}30%{opacity:.7}80%{opacity:.7;transform:translateY(0) scale(.7)}100%{opacity:1;transform:scale(1)}'],
-  ['dzFlipInX', '0%{opacity:0;transform:perspective(600px) rotateX(80deg)}40%{transform:perspective(600px) rotateX(-20deg)}60%{opacity:1;transform:perspective(600px) rotateX(10deg)}100%{transform:none}'],
-  ['dzBounceIn', '0%{opacity:0;transform:scale(.3)}40%{opacity:1;transform:scale(1.08)}65%{transform:scale(.95)}100%{transform:none}'],
-  ['dzLightSpeed', '0%{opacity:0;transform:translateX(90%) skewX(-24deg)}70%{opacity:1;transform:skewX(12deg)}85%{transform:skewX(-4deg)}100%{transform:none}'],
-  ['dzRotateInLeft', '0%{opacity:0;transform-origin:left bottom;transform:rotate(-38deg)}100%{opacity:1;transform-origin:left bottom;transform:none}'],
 ];
 
 function initTextos() {
@@ -1179,7 +1175,7 @@ function initTextos() {
   }
   const TEXTO = 'h2, h3, h4, p, li, blockquote, figcaption, [data-reveal]';
   const nodos = [...document.querySelectorAll(TEXTO)].filter((el) =>
-    !el.closest('[data-hero],[data-pal],nav,header,[data-menu],summary,[data-fab]') &&
+    !el.closest('[data-hero],[data-pal],nav,header,footer,[data-menu],summary,[data-fab]') &&
     !el.hasAttribute('data-t') && !el.hasAttribute('data-card') && el.textContent.trim());
   nodos.forEach((el, i) => {
     const [nombre] = KEYS_TEXTO[i % KEYS_TEXTO.length];

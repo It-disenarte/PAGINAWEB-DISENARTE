@@ -49,6 +49,15 @@ a:hover{color:#7C07A6}
 
 /* ===== REVEALS DECLARATIVOS (CSS: sobreviven a los re-renders) ===== */
 @keyframes dzUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes dzFlowN1{0%{opacity:0;transform:scale(.3)}3%{opacity:1;transform:scale(1.2)}8%{transform:scale(1)}78%{opacity:1;transform:scale(1)}92%{opacity:0;transform:scale(.6)}100%{opacity:0}}
+@keyframes dzFlowL1{0%,8%{opacity:0;transform:scaleX(0)}13%{opacity:.85}22%{opacity:.85;transform:scaleX(1)}78%{opacity:.85;transform:scaleX(1)}92%{opacity:0}100%{opacity:0;transform:scaleX(1)}}
+@keyframes dzFlowN2{0%,22%{opacity:0;transform:scale(.3)}27%{opacity:1;transform:scale(1.2)}32%{transform:scale(1)}78%{opacity:1;transform:scale(1)}92%{opacity:0;transform:scale(.6)}100%{opacity:0}}
+@keyframes dzFlowL2{0%,32%{opacity:0;transform:scaleX(0)}37%{opacity:.85}46%{opacity:.85;transform:scaleX(1)}78%{opacity:.85;transform:scaleX(1)}92%{opacity:0}100%{opacity:0;transform:scaleX(1)}}
+@keyframes dzFlowN3{0%,46%{opacity:0;transform:scale(.3)}51%{opacity:1;transform:scale(1.2)}56%{transform:scale(1)}78%{opacity:1;transform:scale(1)}92%{opacity:0;transform:scale(.6)}100%{opacity:0}}
+[data-flow-node]{position:absolute;width:16px;height:16px;border-radius:5px;margin:-8px 0 0 -8px;box-shadow:0 3px 8px rgba(14,7,20,.2);animation-timing-function:ease;animation-iteration-count:infinite}
+[data-flow-line]{position:absolute;height:2px;transform-origin:left center;border-radius:2px;animation-timing-function:ease;animation-iteration-count:infinite}
+@media(prefers-reduced-motion:reduce){[data-flow-node],[data-flow-line]{animation:none!important;opacity:0!important}}
+@media(max-width:900px){[data-flow-panel]{display:none!important}}
 @keyframes dzTecla{0%{opacity:0;transform:translateY(-100%)}10%{opacity:.9}70%{opacity:.9}100%{opacity:0;transform:translateY(100%)}}
 [data-tecla]{position:relative;font:600 13px/1.5 ui-monospace,'SF Mono',monospace;color:var(--violeta);opacity:0;animation-name:dzTecla;animation-timing-function:linear;animation-iteration-count:infinite;white-space:pre-line;text-align:center}
 @media(prefers-reduced-motion:reduce){[data-tecla]{animation:none;opacity:.5;transform:none}}
@@ -143,6 +152,15 @@ p [data-hero-line]{animation-delay:120ms}
 <!-- ===== HERO ===== -->
 <section data-hero="" style="position:relative;background:#fff;overflow:hidden">
   <div aria-hidden="true" style="position:absolute;top:-20%;right:-10%;width:60%;height:140%;background:var(--gradiente);opacity:.10;clip-path:polygon(35% 0,100% 0,100% 100%,0 100%)"></div>
+  <div aria-hidden="true" data-flow-panel="" style="position:absolute;right:2%;top:50%;transform:translateY(-50%);width:620px;height:540px;overflow:hidden">
+    <sc-for list="{{ flujos }}" as="f" hint-placeholder-count="4">
+      <span data-flow-node="" style="{{ f.n1 }}"></span>
+      <span data-flow-line="" style="{{ f.l1 }}"></span>
+      <span data-flow-node="" style="{{ f.n2 }}"></span>
+      <span data-flow-line="" style="{{ f.l2 }}"></span>
+      <span data-flow-node="" style="{{ f.n3 }}"></span>
+    </sc-for>
+  </div>
   <div style="position:relative;max-width:1240px;margin:0 auto;padding:clamp(140px,18vw,200px) clamp(24px,4vw,48px) clamp(72px,10vw,128px)">
     <p style="font:600 13px 'Walkway',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--violeta);margin:0 0 24px"><span style="display:block;overflow:hidden"><span data-hero-line="" style="display:block">Área de innovación tecnológica y digital</span></span></p>
     <h1 style="font-family:var(--font-display);font-weight:700;font-size:clamp(34px,4.5vw,56px);line-height:1.05;letter-spacing:-.02em;margin:0 0 24px;max-width:860px;color:var(--tinta)">
@@ -152,29 +170,6 @@ p [data-hero-line]{animation-delay:120ms}
     <div style="overflow:hidden"><p data-hero-line="" style="font:400 clamp(18px,1.6vw,20px)/1.6 'Creato Display',sans-serif;color:var(--gris-texto);margin:0 0 40px;max-width:640px;text-wrap:pretty">La misma agencia que rotula tu flotilla ahora construye lo que corre en tus pantallas: páginas web, automatizaciones y herramientas hechas para cómo opera tu empresa de verdad.</p></div>
     <div style="overflow:hidden"><div data-hero-line="">
     </div></div>
-  </div>
-</section>
-
-<!-- ===== EL SERVICIO ESTRELLA ===== -->
-<section style="background:#fff">
-  <div style="max-width:1240px;margin:0 auto;padding:0 clamp(24px,4vw,48px) clamp(72px,10vw,128px)">
-    <a data-card="" data-reveal="1" href="/paginas-web" style="position:relative;display:flex;flex-direction:column;justify-content:center;gap:24px;min-height:min(60vh,480px);background:var(--papel);border:1px solid rgba(14,7,20,.10);border-radius:6px 28px 28px 28px;padding:clamp(32px,6vw,80px);text-decoration:none;overflow:hidden" style-hover="color:inherit">
-      <span data-corner="" aria-hidden="true" style="position:absolute;top:0;left:0;width:56px;height:56px;background:var(--gradiente);border-radius:6px 0 100% 0"></span>
-      <div aria-hidden="true" style="position:absolute;right:-5%;bottom:-30%;width:50%;height:120%;background:var(--gradiente);opacity:.08;clip-path:polygon(30% 0,100% 0,100% 100%,0 100%)"></div>
-      <div aria-hidden="true" data-tecla-panel="" style="position:absolute;right:6%;top:0;width:34%;height:100%;overflow:hidden;display:flex;justify-content:space-between">
-        <sc-for list="{{ columnasCodigo }}" as="col" hint-placeholder-count="7">
-          <span data-tecla="" style="{{ col.style }}">{{ col.texto }}</span>
-        </sc-for>
-      </div>
-      <span style="font-family:var(--font-display);font-weight:900;font-size:clamp(40px,6vw,88px);line-height:.95;letter-spacing:-.03em;background:var(--gradiente);-webkit-background-clip:text;background-clip:text;color:transparent">Páginas web</span>
-      <p style="font:400 clamp(18px,1.8vw,22px)/1.6 'Creato Display',sans-serif;color:var(--tinta);margin:0;max-width:640px;text-wrap:pretty">Cómprala y es tuya, o réntala y olvídate de todo. Dos formas de tenerla, tres paquetes, cero letras chiquitas.</p>
-      <span style="display:inline-flex;align-items:center;gap:10px;font:600 17px 'Creato Display',sans-serif;color:var(--violeta)">Ver los paquetes
-        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" aria-hidden="true"><path d="M1 6h13M10 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-      </span>
-    </a>
-  </div>
-  <div aria-hidden="true" style="height:clamp(56px,9vw,130px);position:relative">
-    <div style="position:absolute;inset:0;background:var(--papel);clip-path:polygon(0 100%,100% 0,100% 100%)"></div>
   </div>
 </section>
 
@@ -205,6 +200,29 @@ p [data-hero-line]{animation-delay:120ms}
   </div>
   <div aria-hidden="true" style="height:clamp(56px,9vw,130px);position:relative">
     <div style="position:absolute;inset:0;background:#fff;clip-path:polygon(0 100%,100% 0,100% 100%)"></div>
+  </div>
+</section>
+
+<!-- ===== EL SERVICIO ESTRELLA ===== -->
+<section style="background:#fff">
+  <div style="max-width:1240px;margin:0 auto;padding:0 clamp(24px,4vw,48px) clamp(72px,10vw,128px)">
+    <a data-card="" data-reveal="1" href="/paginas-web" style="position:relative;display:flex;flex-direction:column;justify-content:center;gap:24px;min-height:min(60vh,480px);background:var(--papel);border:1px solid rgba(14,7,20,.10);border-radius:6px 28px 28px 28px;padding:clamp(32px,6vw,80px);text-decoration:none;overflow:hidden" style-hover="color:inherit">
+      <span data-corner="" aria-hidden="true" style="position:absolute;top:0;left:0;width:56px;height:56px;background:var(--gradiente);border-radius:6px 0 100% 0"></span>
+      <div aria-hidden="true" style="position:absolute;right:-5%;bottom:-30%;width:50%;height:120%;background:var(--gradiente);opacity:.08;clip-path:polygon(30% 0,100% 0,100% 100%,0 100%)"></div>
+      <div aria-hidden="true" data-tecla-panel="" style="position:absolute;right:6%;top:0;width:34%;height:100%;overflow:hidden;display:flex;justify-content:space-between">
+        <sc-for list="{{ columnasCodigo }}" as="col" hint-placeholder-count="7">
+          <span data-tecla="" style="{{ col.style }}">{{ col.texto }}</span>
+        </sc-for>
+      </div>
+      <span style="font-family:var(--font-display);font-weight:900;font-size:clamp(40px,6vw,88px);line-height:.95;letter-spacing:-.03em;background:var(--gradiente);-webkit-background-clip:text;background-clip:text;color:transparent">Páginas web</span>
+      <p style="font:400 clamp(18px,1.8vw,22px)/1.6 'Creato Display',sans-serif;color:var(--tinta);margin:0;max-width:640px;text-wrap:pretty">Cómprala y es tuya, o réntala y olvídate de todo. Dos formas de tenerla, tres paquetes, cero letras chiquitas.</p>
+      <span style="display:inline-flex;align-items:center;gap:10px;font:600 17px 'Creato Display',sans-serif;color:var(--violeta)">Ver los paquetes
+        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" aria-hidden="true"><path d="M1 6h13M10 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </span>
+    </a>
+  </div>
+  <div aria-hidden="true" style="height:clamp(56px,9vw,130px);position:relative">
+    <div style="position:absolute;inset:0;background:var(--papel);clip-path:polygon(0 100%,100% 0,100% 100%)"></div>
   </div>
 </section>
 
@@ -336,6 +354,34 @@ class Component extends DCLogic {
       };
     });
     return {
+      flujos: (() => {
+        if (!this._flujos) {
+          const W = 620, H = 540;
+          const rnd = (min, max) => min + Math.random() * (max - min);
+          const clamp = (v, min, max) => Math.max(min, Math.min(max, v));
+          const colores = ['var(--violeta)', 'var(--magenta)', '#5C0480', 'var(--violeta)'];
+          this._flujos = Array.from({ length: 4 }, (_, i) => {
+            const p1 = { x: rnd(260, W - 80), y: rnd(50, H - 200) };
+            const p2 = { x: clamp(p1.x + rnd(-40, 160), 240, W - 40), y: clamp(p1.y + rnd(60, 170), 40, H - 40) };
+            const p3 = { x: clamp(p2.x + rnd(-40, 160), 240, W - 40), y: clamp(p2.y + rnd(60, 170), 40, H - 40) };
+            const seg = (a, b) => {
+              const dx = b.x - a.x, dy = b.y - a.y;
+              return { len: Math.hypot(dx, dy), ang: Math.atan2(dy, dx) * 180 / Math.PI };
+            };
+            const s1 = seg(p1, p2), s2 = seg(p2, p3);
+            const color = colores[i % colores.length];
+            const delay = i * 2.4, dur = 8.5;
+            return {
+              n1: `left:${p1.x}px;top:${p1.y}px;background:${color};animation-name:dzFlowN1;animation-delay:${delay}s;animation-duration:${dur}s`,
+              l1: `left:${p1.x}px;top:${p1.y}px;width:${s1.len}px;transform:rotate(${s1.ang}deg);background:${color};animation-name:dzFlowL1;animation-delay:${delay}s;animation-duration:${dur}s`,
+              n2: `left:${p2.x}px;top:${p2.y}px;background:${color};animation-name:dzFlowN2;animation-delay:${delay}s;animation-duration:${dur}s`,
+              l2: `left:${p2.x}px;top:${p2.y}px;width:${s2.len}px;transform:rotate(${s2.ang}deg);background:${color};animation-name:dzFlowL2;animation-delay:${delay}s;animation-duration:${dur}s`,
+              n3: `left:${p3.x}px;top:${p3.y}px;background:${color};animation-name:dzFlowN3;animation-delay:${delay}s;animation-duration:${dur}s`,
+            };
+          });
+        }
+        return this._flujos;
+      })(),
       columnasCodigo,
       servicios: SERVICIOS_DIGITALES.map((s) => ({
         ...s,

@@ -177,10 +177,27 @@ p [data-hero-line]{animation-delay:120ms}
 </section>
 
 <!-- ===== PROBLEMA ===== -->
-<section style="background:#fff">
-  <div style="max-width:840px;margin:0 auto;padding:clamp(24px,4vw,48px) clamp(24px,4vw,48px) clamp(72px,10vw,128px);text-align:center">
-    <h2 data-reveal="0" style="font-family:var(--font-display);font-weight:700;font-size:clamp(28px,3.4vw,40px);line-height:1.15;margin:0 0 24px;color:var(--tinta);text-wrap:pretty">El 90% de las páginas de empresas de la región son un folleto que nadie abre</h2>
-    <p data-reveal="1" style="font:400 clamp(18px,1.6vw,20px)/1.65 'Creato Display',sans-serif;color:var(--gris-texto);margin:0;text-wrap:pretty">Están hechas en plantilla, tardan seis segundos en cargar, no aparecen en Google y no hay a quién llamar cuando algo se rompe. Cuestan poco y no producen nada, que es la forma más cara de gastar.</p>
+<section style="background:#fff;position:relative;overflow:hidden">
+  <div style="max-width:900px;margin:0 auto;padding:clamp(24px,4vw,48px) clamp(24px,4vw,48px) clamp(56px,8vw,96px);text-align:center">
+    <p data-reveal="0" style="font:600 13px 'Walkway',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--magenta);margin:0 0 20px">El problema</p>
+    <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin:0 0 32px;color:var(--tinta);text-wrap:pretty">
+      <span data-reveal="0" style="display:inline-block;font-weight:900;font-size:1.7em;color:var(--violeta);vertical-align:-.06em">El 90%</span> <span data-reveal="1">de las páginas de empresas de la región son un folleto que nadie abre</span>
+    </h2>
+    <div data-reveal="2" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:0 0 32px;text-align:left">
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:18px;background:var(--papel);border-radius:6px 20px 20px 20px">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex:none;margin-top:2px" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="var(--magenta)" stroke-width="2"></circle><path d="M12 7v5l3.5 2" stroke="var(--magenta)" stroke-width="2" stroke-linecap="round"></path></svg>
+        <p style="font:600 15px/1.4 'Creato Display',sans-serif;color:var(--tinta);margin:0">Tardan seis segundos en cargar</p>
+      </div>
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:18px;background:var(--papel);border-radius:6px 20px 20px 20px">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex:none;margin-top:2px" aria-hidden="true"><circle cx="10" cy="10" r="6.5" stroke="var(--magenta)" stroke-width="2"></circle><path d="M15 15l5.5 5.5" stroke="var(--magenta)" stroke-width="2" stroke-linecap="round"></path><path d="M4 20L20 4" stroke="var(--magenta)" stroke-width="2" stroke-linecap="round"></path></svg>
+        <p style="font:600 15px/1.4 'Creato Display',sans-serif;color:var(--tinta);margin:0">No aparecen en Google</p>
+      </div>
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:18px;background:var(--papel);border-radius:6px 20px 20px 20px">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex:none;margin-top:2px" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.6 5.6L3 18l3 3 6.1-6.1a4 4 0 0 0 5.6-5.6l-2.5 2.5-2-2z" stroke="var(--magenta)" stroke-width="2" stroke-linejoin="round"></path></svg>
+        <p style="font:600 15px/1.4 'Creato Display',sans-serif;color:var(--tinta);margin:0">No hay a quién llamar si algo se rompe</p>
+      </div>
+    </div>
+    <p data-reveal="3" style="font:400 17px/1.65 'Creato Display',sans-serif;color:var(--gris-texto);margin:0;text-wrap:pretty">Están hechas en plantilla y cuestan poco, pero no producen nada — que es la forma más cara de gastar.</p>
   </div>
   <div aria-hidden="true" style="height:clamp(56px,9vw,130px);position:relative">
     <div style="position:absolute;inset:0;background:var(--papel);clip-path:polygon(0 100%,100% 0,100% 100%)"></div>
@@ -456,7 +473,7 @@ p [data-hero-line]{animation-delay:120ms}
 const DEMOS = [
   { nombre: 'Demo 1', giro: '', url: 'https://hola-mundo-muestra.vercel.app/', imagenFallback: '' },
   { nombre: 'Demo 2', giro: '', url: 'https://nextlevel-muestra.vercel.app/', imagenFallback: '' },
-  { nombre: 'Demo 3', giro: '', url: '', imagenFallback: '' },
+  { nombre: 'Demo 3', giro: '', url: 'https://rockstar-muestra.vercel.app/Home.dc.html', imagenFallback: '' },
 ];
 
 // PAQUETES: edita precios y contenido aquí.
