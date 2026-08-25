@@ -148,9 +148,9 @@ p [data-hero-line]{animation-delay:120ms}
     <!-- action: endpoint de Bigin. Si Zoho te da otra URL al copiar el formulario, sustitúyela aquí. -->
     <form action="https://bigin.zoho.com/crm/WebToRecordForm" id="BiginWebToRecordForm7358066000000859329" name="BiginWebToRecordForm7358066000000859329" method="POST" encType="multipart/form-data" target="hidden7358066000000859329Frame" acceptCharset="UTF-8" onSubmit="{{ enviar }}" noValidate="" style="background:var(--papel);border:1px solid rgba(14,7,20,.10);border-radius:6px 28px 28px 28px;padding:clamp(24px,4vw,48px);display:flex;flex-direction:column;gap:20px">
       <!-- Campos ocultos requeridos por Bigin. No eliminar. -->
-      <input type="hidden" name="xnQsjsdp" value="1ae2ab32baa3c2f4d1fe89d46fb13843e62d83ced29ada3d8bc01a4e5674158a">
+      <input type="hidden" name="xnQsjsdp" value="797527f3dba20bde131e613ce8f0b7a2f14d94452d18f1832141cc4f95e84396">
       <input type="hidden" name="zc_gad" id="zc_gad" value="">
-      <input type="hidden" name="xmIwtLD" value="7415855cc5439dff9c62c41dab913b78c137f3b29a929a1492e0718fb18785c81743f6b0b4a3eb8c06470c5bb9174b96">
+      <input type="hidden" name="xmIwtLD" value="f4f34969b7c303eb3ef62b65e331adaa65a6f40753b21d4bbd79834b9a4de5d6791a7209f15197fda9f51caec82bf3af">
       <input type="hidden" name="actionType" value="UG90ZW50aWFscw==">
       <input type="hidden" name="rmsg" id="rmsg" value="true">
       <input type="hidden" name="returnURL" value="null">
@@ -322,7 +322,7 @@ class Component extends DCLogic {
     if (document.getElementById('wf_script')) return;
     const s = document.createElement('script');
     s.id = 'wf_script';
-    s.src = 'https://bigin.zoho.com/crm/WebformScriptServlet?rid=7415855cc5439dff9c62c41dab913b78c137f3b29a929a1492e0718fb18785c81743f6b0b4a3eb8c06470c5bb9174b96gid1ae2ab32baa3c2f4d1fe89d46fb13843e62d83ced29ada3d8bc01a4e5674158a';
+    s.src = 'https://bigin.zoho.com/crm/WebformScriptServlet?rid=f4f34969b7c303eb3ef62b65e331adaa65a6f40753b21d4bbd79834b9a4de5d6791a7209f15197fda9f51caec82bf3afgid797527f3dba20bde131e613ce8f0b7a2f14d94452d18f1832141cc4f95e84396';
     s.onerror = () => this.setState({ error: true });
     document.body.appendChild(s);
   }
