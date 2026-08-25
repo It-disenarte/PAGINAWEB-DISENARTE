@@ -49,34 +49,10 @@ function initCounters() {
 function initNavbar() {
   const nav = document.querySelector('[data-navbar]');
   if (!nav) return;
-  // Siempre blanca al hacer scroll (para no perderse sobre ningún fondo), en
-  // píldora flotante: se despega de los bordes y se redondea por completo.
-  const solidBg = '#FFFFFF';
-  const solidShadow = '0 12px 32px rgba(14,7,20,.16)';
-  nav.style.transition = 'background-color 250ms ease, box-shadow 250ms ease, top 250ms ease, left 250ms ease, right 250ms ease, border-radius 250ms ease';
-  // data-nav-hero="noche": sobre un hero oscuro los enlaces van en blanco
-  // mientras la barra es transparente, y vuelven a tinta al volverse sólida.
-  const heroOscuro = nav.getAttribute('data-nav-hero') === 'noche';
-  const enlaces = heroOscuro
-    ? [...nav.querySelectorAll('a, button')].filter((el) =>
-        !el.closest('[data-dropdown-panel]') &&      // el panel tiene fondo claro fijo
-        (!el.style.background || el.style.background === 'none'))
-    : [];
-  const iso = nav.querySelector('img');
-  const barras = nav.querySelectorAll('[data-menu-btn] span');
+  // Píldora flotante fija: siempre oscura, solo gana sombra/opacidad al bajar.
   const apply = () => {
     const on = window.scrollY > 24;
-    nav.style.backgroundColor = on ? solidBg : 'transparent';
-    nav.style.boxShadow = on ? solidShadow : 'none';
-    nav.style.top = on ? '14px' : '0';
-    nav.style.left = on ? 'clamp(16px,4vw,40px)' : '0';
-    nav.style.right = on ? 'clamp(16px,4vw,40px)' : '0';
-    nav.style.borderRadius = on ? '999px' : '0';
-    if (!heroOscuro) return;
-    const claro = !on;
-    enlaces.forEach((el) => { el.style.color = claro ? '#FFFFFF' : '#0E0714'; });
-    barras.forEach((s) => { s.style.background = claro ? '#FFFFFF' : '#0E0714'; });
-    if (iso) iso.src = claro ? 'assets/marca-blanco.png' : 'assets/marca-color.png';
+    nav.style.boxShadow = on ? '0 20px 44px rgba(14,7,20,.5)' : '0 16px 40px rgba(14,7,20,.35)';
   };
   let ticking = false;
   addEventListener('scroll', () => {

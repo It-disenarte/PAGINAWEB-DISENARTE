@@ -10,6 +10,7 @@
 <helmet>
 <title>Agencia de publicidad en San Juan del Río | Diseñarte México</title>
 <meta name="description" content="Señalética, rotulación y páginas web para empresas. 20 años en San Juan del Río, Querétaro. Cotiza en 24 horas.">
+<meta name="keywords" content="agencia de publicidad, señalética industrial, páginas web, San Juan del Río, Querétaro, Diseñarte México">
 <meta name="robots" content="index, follow">
 <link rel="icon" type="image/png" href="assets/favicon-dz.png">
 <link rel="apple-touch-icon" href="assets/favicon-dz.png">
@@ -45,7 +46,7 @@ a:hover{color:#7C07A6}
 [data-card] [data-corner]{opacity:0;transition:opacity 200ms ease}
 [data-card]:hover [data-corner]{opacity:1}
 @media(max-width:1023px){[data-desktop-nav]{display:none!important}}
-@media(min-width:1024px){[data-menu-btn]{display:none!important}}
+@media(min-width:1024px){[data-menu-btn]{display:none!important}[data-cta-desktop]{display:inline-flex!important}}
 @media(max-width:767px){[data-hero-copy]{max-width:100%!important}[data-hero-video]{display:none!important}[data-hero]{background-image:url(assets/hero-poster.jpg);background-size:cover;background-position:center}}
 @media(prefers-reduced-motion:reduce){[data-card]:hover{transform:none}}
 
@@ -116,31 +117,33 @@ p [data-hero-line]{animation-delay:120ms}
 
 <a href="#contenido" style="position:absolute;left:-9999px;z-index:100;background:var(--magenta);color:#fff;padding:12px 24px;border-radius:999px;font:600 15px 'Creato Display',sans-serif" style-focus="left:24px;top:12px">Ir al contenido</a>
 
-<!-- ===== NAVBAR ===== -->
-<header data-navbar="taller" data-nav-hero="noche" style="position:fixed;top:0;left:0;right:0;z-index:50;background:transparent">
-  <nav aria-label="Navegación principal" style="max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:32px;padding:0 clamp(24px,4vw,48px);height:96px">
-    <a href="/" aria-label="Diseñarte México, inicio" style="display:flex;align-items:baseline;gap:8px;text-decoration:none;color:var(--tinta)" style-hover="color:var(--tinta)">
-      <img src="assets/marca-color.png" alt="Diseñarte México, agencia de publicidad en San Juan del Río" width="82" height="76" style="display:block;width:auto;height:76px;object-fit:contain">
+<!-- ===== NAVBAR (píldora flotante) ===== -->
+<header data-navbar="" style="position:fixed;top:14px;left:clamp(16px,4vw,40px);right:clamp(16px,4vw,40px);z-index:50;background:linear-gradient(180deg,rgba(31,17,44,.96),rgba(14,7,20,.98));border:1px solid rgba(255,255,255,.08);border-radius:999px;box-shadow:0 16px 40px rgba(14,7,20,.35)">
+  <nav aria-label="Navegación principal" style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:16px;padding:0 10px 0 20px;height:72px">
+    <a href="/" aria-label="Diseñarte México, inicio" style="display:flex;align-items:center;text-decoration:none">
+      <img src="assets/marca-color.png" alt="Diseñarte México, agencia de publicidad en San Juan del Río" width="82" height="76" style="display:block;width:auto;height:52px;object-fit:contain">
     </a>
-    <div data-desktop-nav="" style="display:flex;align-items:center;gap:8px;margin-left:auto">
-      <a href="/" aria-current="page" style="padding:12px 14px;font:600 15px 'Creato Display',sans-serif;text-decoration:none;color:var(--tinta);border-bottom:2px solid var(--magenta)">Inicio</a>
-      <a href="/nosotros" style="padding:12px 14px;font:500 15px 'Creato Display',sans-serif;text-decoration:none;color:var(--tinta)" style-hover="color:#7C07A6">Nosotros</a>
-      <a href="/publicidad" style="padding:12px 14px;font:500 15px 'Creato Display',sans-serif;text-decoration:none;color:var(--tinta)" style-hover="color:#7C07A6">Publicidad</a>
+    <div data-desktop-nav="" style="display:flex;align-items:center;justify-content:center;gap:4px">
+      <a href="/" aria-current="page" style="padding:10px 16px;font:600 14px 'Creato Display',sans-serif;text-decoration:none;color:#FFFFFF;background:rgba(255,255,255,.12);border-radius:999px" style-hover="color:#FFFFFF">Inicio</a>
+      <a href="/nosotros" style="padding:10px 16px;font:500 14px 'Creato Display',sans-serif;text-decoration:none;color:rgba(255,255,255,.72);border-radius:999px" style-hover="color:#FFFFFF">Nosotros</a>
+      <a href="/publicidad" style="padding:10px 16px;font:500 14px 'Creato Display',sans-serif;text-decoration:none;color:rgba(255,255,255,.72);border-radius:999px" style-hover="color:#FFFFFF">Publicidad</a>
       <div data-dropdown="" style="position:relative">
-        <button data-dropdown-btn="" aria-expanded="false" aria-haspopup="true" style="display:flex;align-items:center;gap:6px;padding:12px 14px;font:500 15px 'Creato Display',sans-serif;background:none;border:none;color:var(--tinta);cursor:pointer" style-hover="color:#7C07A6">Innovación Digital
+        <button data-dropdown-btn="" aria-expanded="false" aria-haspopup="true" style="display:flex;align-items:center;gap:6px;padding:10px 16px;font:500 14px 'Creato Display',sans-serif;text-decoration:none;color:rgba(255,255,255,.72);border-radius:999px;background:none;border:none;cursor:pointer" style-hover="color:#FFFFFF">Innovación Digital
           <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
         </button>
-        <div data-dropdown-panel="" style="position:absolute;top:100%;left:0;min-width:220px;background:var(--papel);border:1px solid rgba(14,7,20,.10);border-radius:6px 20px 20px 20px;padding:8px;display:flex;flex-direction:column">
+        <div data-dropdown-panel="" style="position:absolute;top:100%;left:0;margin-top:8px;min-width:220px;background:var(--papel);border:1px solid rgba(14,7,20,.10);border-radius:6px 20px 20px 20px;padding:8px;display:flex;flex-direction:column">
           <a href="/paginas-web" style="padding:12px 16px;font:500 15px 'Creato Display',sans-serif;text-decoration:none;color:var(--tinta);border-radius:12px" style-hover="background:rgba(14,7,20,.05);color:#7C07A6">Páginas web</a>
-          <a href="/innovacion-digital" style="padding:12px 16px;font:500 15px 'Creato Display',sans-serif;text-decoration:none;color:var(--tinta);border-radius:12px" style-hover="background:rgba(14,7,20,.05);color:#7C07A6">Otros servicios</a>
+          <a href="/innovacion-digital#servicios" style="padding:12px 16px;font:500 15px 'Creato Display',sans-serif;text-decoration:none;color:var(--tinta);border-radius:12px" style-hover="background:rgba(14,7,20,.05);color:#7C07A6">Otros servicios</a>
         </div>
       </div>
-      <a href="/contacto" style="display:inline-flex;align-items:center;min-height:48px;background:var(--magenta);color:#fff;border-radius:999px;padding:0 28px;font:600 15px 'Creato Display',sans-serif;text-decoration:none;margin-left:12px;transition:background 200ms ease,transform 200ms ease" style-hover="background:#7C07A6;transform:translateY(-2px);color:#fff" style-active="transform:translateY(0)">Cotizar</a>
     </div>
-    <button data-menu-btn="" aria-expanded="false" aria-label="Abrir menú" style="margin-left:auto;width:48px;height:48px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:none;border:none;cursor:pointer">
-      <span aria-hidden="true" style="display:block;width:22px;height:2px;background:var(--tinta)"></span>
-      <span aria-hidden="true" style="display:block;width:22px;height:2px;background:var(--tinta)"></span>
-    </button>
+    <div style="display:flex;align-items:center;gap:8px">
+      <a href="/contacto" style="display:none;align-items:center;min-height:44px;background:var(--magenta);color:#fff;border-radius:999px;padding:0 24px;font:600 14px 'Creato Display',sans-serif;text-decoration:none;transition:background 200ms ease,transform 200ms ease" data-cta-desktop="" style-hover="background:#7C07A6;transform:translateY(-2px);color:#fff" style-active="transform:translateY(0)">Cotizar</a>
+      <button data-menu-btn="" aria-expanded="false" aria-label="Abrir menú" style="width:44px;height:44px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:none;border:none;cursor:pointer">
+        <span aria-hidden="true" style="display:block;width:20px;height:2px;background:#FFFFFF"></span>
+        <span aria-hidden="true" style="display:block;width:20px;height:2px;background:#FFFFFF"></span>
+      </button>
+    </div>
   </nav>
 </header>
 
@@ -190,7 +193,13 @@ p [data-hero-line]{animation-delay:120ms}
         <sc-for list="{{ resenas }}" as="r" hint-placeholder-count="10">
           <a href="{{ r.url }}" target="_blank" rel="noopener" style="scroll-snap-align:start;flex:0 0 300px;display:flex;flex-direction:column;gap:16px;padding:28px;background:var(--blanco);border:1px solid rgba(14,7,20,.10);border-radius:6px 28px 28px 28px;text-decoration:none;transition:transform 200ms ease,box-shadow 200ms ease" style-hover="transform:translateY(-4px);box-shadow:0 12px 24px rgba(14,7,20,.12)">
             <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
-              <span aria-hidden="true" style="display:flex;gap:2px"><svg width="16" height="16" viewBox="0 0 20 20" fill="#FBBC04" aria-hidden="true"><path d="M10 1l2.6 6 6.4.5-4.9 4.2 1.6 6.3L10 14.8 4.3 18l1.6-6.3L1 7.5l6.4-.5z"></path></svg><svg width="16" height="16" viewBox="0 0 20 20" fill="#FBBC04" aria-hidden="true"><path d="M10 1l2.6 6 6.4.5-4.9 4.2 1.6 6.3L10 14.8 4.3 18l1.6-6.3L1 7.5l6.4-.5z"></path></svg><svg width="16" height="16" viewBox="0 0 20 20" fill="#FBBC04" aria-hidden="true"><path d="M10 1l2.6 6 6.4.5-4.9 4.2 1.6 6.3L10 14.8 4.3 18l1.6-6.3L1 7.5l6.4-.5z"></path></svg><svg width="16" height="16" viewBox="0 0 20 20" fill="#FBBC04" aria-hidden="true"><path d="M10 1l2.6 6 6.4.5-4.9 4.2 1.6 6.3L10 14.8 4.3 18l1.6-6.3L1 7.5l6.4-.5z"></path></svg><svg width="16" height="16" viewBox="0 0 20 20" fill="#FBBC04" aria-hidden="true"><path d="M10 1l2.6 6 6.4.5-4.9 4.2 1.6 6.3L10 14.8 4.3 18l1.6-6.3L1 7.5l6.4-.5z"></path></svg></span>
+              <span aria-hidden="true" style="display:flex;gap:2px">
+                <span style="position:relative;width:16px;height:16px"><svg data-estrella="" style="position:absolute;inset:0;animation-delay:0ms" width="16" height="16" viewBox="0 0 20 20" fill="#FBBC04" aria-hidden="true"><path d="M10 1l2.6 6 6.4.5-4.9 4.2 1.6 6.3L10 14.8 4.3 18l1.6-6.3L1 7.5l6.4-.5z"></path></svg><span data-estrella-punto="" style="position:absolute;inset:0;animation-delay:0ms;display:flex;align-items:center;justify-content:center"><span style="width:5px;height:5px;border-radius:999px;background:#FBBC04"></span></span></span>
+                <span style="position:relative;width:16px;height:16px"><svg data-estrella="" style="position:absolute;inset:0;animation-delay:120ms" width="16" height="16" viewBox="0 0 20 20" fill="#FBBC04" aria-hidden="true"><path d="M10 1l2.6 6 6.4.5-4.9 4.2 1.6 6.3L10 14.8 4.3 18l1.6-6.3L1 7.5l6.4-.5z"></path></svg><span data-estrella-punto="" style="position:absolute;inset:0;animation-delay:120ms;display:flex;align-items:center;justify-content:center"><span style="width:5px;height:5px;border-radius:999px;background:#FBBC04"></span></span></span>
+                <span style="position:relative;width:16px;height:16px"><svg data-estrella="" style="position:absolute;inset:0;animation-delay:240ms" width="16" height="16" viewBox="0 0 20 20" fill="#FBBC04" aria-hidden="true"><path d="M10 1l2.6 6 6.4.5-4.9 4.2 1.6 6.3L10 14.8 4.3 18l1.6-6.3L1 7.5l6.4-.5z"></path></svg><span data-estrella-punto="" style="position:absolute;inset:0;animation-delay:240ms;display:flex;align-items:center;justify-content:center"><span style="width:5px;height:5px;border-radius:999px;background:#FBBC04"></span></span></span>
+                <span style="position:relative;width:16px;height:16px"><svg data-estrella="" style="position:absolute;inset:0;animation-delay:360ms" width="16" height="16" viewBox="0 0 20 20" fill="#FBBC04" aria-hidden="true"><path d="M10 1l2.6 6 6.4.5-4.9 4.2 1.6 6.3L10 14.8 4.3 18l1.6-6.3L1 7.5l6.4-.5z"></path></svg><span data-estrella-punto="" style="position:absolute;inset:0;animation-delay:360ms;display:flex;align-items:center;justify-content:center"><span style="width:5px;height:5px;border-radius:999px;background:#FBBC04"></span></span></span>
+                <span style="position:relative;width:16px;height:16px"><svg data-estrella="" style="position:absolute;inset:0;animation-delay:480ms" width="16" height="16" viewBox="0 0 20 20" fill="#FBBC04" aria-hidden="true"><path d="M10 1l2.6 6 6.4.5-4.9 4.2 1.6 6.3L10 14.8 4.3 18l1.6-6.3L1 7.5l6.4-.5z"></path></svg><span data-estrella-punto="" style="position:absolute;inset:0;animation-delay:480ms;display:flex;align-items:center;justify-content:center"><span style="width:5px;height:5px;border-radius:999px;background:#FBBC04"></span></span></span>
+              </span>
               <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4c-.3 1.5-1.2 2.7-2.5 3.6v3h4.1c2.4-2.2 3.5-5.5 3.5-8.8z"></path><path fill="#34A853" d="M12 24c3.2 0 5.9-1.1 7.9-2.9l-4.1-3c-1.1.8-2.5 1.2-3.8 1.2-3 0-5.5-2-6.4-4.7H1.4v3C3.3 21.4 7.3 24 12 24z"></path><path fill="#FBBC05" d="M5.6 14.6c-.2-.6-.3-1.3-.3-2s.1-1.4.3-2v-3H1.4C.5 9.2 0 10.5 0 12s.5 2.8 1.4 4.4l4.2-1.8z"></path><path fill="#EA4335" d="M12 4.7c1.6 0 3.1.6 4.2 1.7l3.7-3.7C17.9 1 15.2 0 12 0 7.3 0 3.3 2.6 1.4 6.4l4.2 3C6.5 6.7 9 4.7 12 4.7z"></path></svg>
             </div>
             <p style="font:400 17px/1.65 'Creato Display',sans-serif;color:var(--gris-texto);margin:0">{{ r.texto }}</p>
@@ -229,10 +238,10 @@ p [data-hero-line]{animation-delay:120ms}
           </sc-if>
         </article>
       </sc-for>
-      <button onClick="{{ testimonioAnterior }}" aria-label="Testimonio anterior" style="position:absolute;left:0;top:50%;margin-top:-24px;width:44px;height:44px;border-radius:50%;background:#fff;border:1.5px solid rgba(14,7,20,.16);color:var(--tinta);cursor:pointer;z-index:5;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(14,7,20,.12)">
+      <button onClick="{{ testimonioAnterior }}" aria-label="Testimonio anterior" style="position:absolute;left:calc(50% - 190px);top:50%;margin-top:-24px;width:44px;height:44px;border-radius:50%;background:#fff;border:1.5px solid rgba(14,7,20,.16);color:var(--tinta);cursor:pointer;z-index:5;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(14,7,20,.12)">
         <svg width="14" height="12" viewBox="0 0 16 12" fill="none" aria-hidden="true"><path d="M15 6H2M6 1L1 6l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </button>
-      <button onClick="{{ testimonioSiguiente }}" aria-label="Testimonio siguiente" style="position:absolute;right:0;top:50%;margin-top:-24px;width:44px;height:44px;border-radius:50%;background:#fff;border:1.5px solid rgba(14,7,20,.16);color:var(--tinta);cursor:pointer;z-index:5;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(14,7,20,.12)">
+      <button onClick="{{ testimonioSiguiente }}" aria-label="Testimonio siguiente" style="position:absolute;right:calc(50% - 190px);top:50%;margin-top:-24px;width:44px;height:44px;border-radius:50%;background:#fff;border:1.5px solid rgba(14,7,20,.16);color:var(--tinta);cursor:pointer;z-index:5;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(14,7,20,.12)">
         <svg width="14" height="12" viewBox="0 0 16 12" fill="none" aria-hidden="true"><path d="M1 6h13M10 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </button>
     </div>
@@ -361,6 +370,17 @@ class Component extends DCLogic {
     if (anterior) anterior.pause();
     this.setState({ testimonioActivo: (n + total) % total });
   }
+  componentDidMount() {
+    // Si el usuario sale de la sección con un testimonio sonando, se pausa.
+    this._obsTest = new IntersectionObserver((ents) => ents.forEach((e) => {
+      if (!e.isIntersecting) Object.values(this._videos || {}).forEach((v) => v.pause());
+    }), { threshold: 0 });
+    setTimeout(() => {
+      const seccion = document.querySelector('[aria-label="Testimonios en video"]');
+      if (seccion) this._obsTest.observe(seccion);
+    }, 300);
+  }
+  componentWillUnmount() { if (this._obsTest) this._obsTest.disconnect(); }
   renderVals() {
     const { testimonioActivo, testimonioPlay } = this.state;
     this._videos = this._videos || {};
@@ -384,6 +404,7 @@ class Component extends DCLogic {
         setVideo: (el) => { if (el) this._videos[i] = el; },
         alternar: (e) => {
           e.stopPropagation();
+          if (!activa) { this._irTestimonio(i); return; }   // tarjeta lateral: solo la trae al frente
           const v = e.currentTarget;
           if (v.paused) { v.play().catch(() => {}); } else v.pause();
         },
