@@ -526,7 +526,7 @@ class Component extends DCLogic {
     escala: 1,
   };
   componentDidMount() {
-    import('./assets/site.js?v=3').then((m) => m.initSite());
+    import('./assets/site.js?v=4').then((m) => m.initSite());
     const mq = matchMedia('(max-width: 767px)');
     const rm = matchMedia('(prefers-reduced-motion: reduce)');
     this.setState({ esMovil: mq.matches, reducido: rm.matches });
