@@ -358,6 +358,14 @@ class Component extends DCLogic {
     }), { threshold: 0.25 });
     setTimeout(() => document.querySelectorAll('[data-video-vista]').forEach((v) => obs.observe(v)), 300);
     this._obsVideo = obs;
+    // Si el usuario sale de la sección con un testimonio sonando, se pausa.
+    this._obsTest = new IntersectionObserver((ents) => ents.forEach((e) => {
+      if (!e.isIntersecting) Object.values(this._videos || {}).forEach((v) => v.pause());
+    }), { threshold: 0 });
+    setTimeout(() => {
+      const seccion = document.querySelector('[aria-label="Testimonios en video"]');
+      if (seccion) this._obsTest.observe(seccion);
+    }, 300);
   }
   componentWillUnmount() { if (this._obsVideo) this._obsVideo.disconnect(); clearInterval(this._autoplayResenas); }
   _iniciarAutoplayResenas() {
@@ -376,16 +384,6 @@ class Component extends DCLogic {
     const anterior = this._videos && this._videos[activo];
     if (anterior) anterior.pause();
     this.setState({ testimonioActivo: (n + total) % total });
-  }
-  componentDidMount() {
-    // Si el usuario sale de la sección con un testimonio sonando, se pausa.
-    this._obsTest = new IntersectionObserver((ents) => ents.forEach((e) => {
-      if (!e.isIntersecting) Object.values(this._videos || {}).forEach((v) => v.pause());
-    }), { threshold: 0 });
-    setTimeout(() => {
-      const seccion = document.querySelector('[aria-label="Testimonios en video"]');
-      if (seccion) this._obsTest.observe(seccion);
-    }, 300);
   }
   componentWillUnmount() { if (this._obsTest) this._obsTest.disconnect(); }
   renderVals() {
