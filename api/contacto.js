@@ -16,18 +16,45 @@ module.exports = async (req, res) => {
   const servicio = (body.servicio || '').toString().trim();
   const mensaje = (body.mensaje || '').toString().trim();
   const honeypot = (body.website || '').toString().trim();
+  const privacidad = body.privacidad === true;
+  const recaptchaToken = (body.recaptchaToken || '').toString().trim();
 
   if (honeypot) return res.status(200).json({ ok: true });
   if (!nombre || !apellidos || !empresa || !mensaje) {
     return res.status(400).json({ ok: false, error: 'campos_faltantes' });
   }
+  if (!privacidad) {
+    return res.status(400).json({ ok: false, error: 'privacidad_no_aceptada' });
+  }
   if (correo && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo)) {
     return res.status(400).json({ ok: false, error: 'correo_invalido' });
+  }
+  if (!recaptchaToken) {
+    return res.status(400).json({ ok: false, error: 'recaptcha_faltante' });
   }
 
   if (!process.env.ZOHO_USER || !process.env.ZOHO_APP_PASSWORD) {
     console.error('Faltan variables de entorno ZOHO_USER / ZOHO_APP_PASSWORD');
     return res.status(500).json({ ok: false, error: 'config' });
+  }
+  if (!process.env.RECAPTCHA_SECRET_KEY) {
+    console.error('Falta variable de entorno RECAPTCHA_SECRET_KEY');
+    return res.status(500).json({ ok: false, error: 'config' });
+  }
+
+  try {
+    const verifyResp = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: `secret=${encodeURIComponent(process.env.RECAPTCHA_SECRET_KEY)}&response=${encodeURIComponent(recaptchaToken)}`,
+    });
+    const verifyJson = await verifyResp.json();
+    if (!verifyJson.success) {
+      return res.status(400).json({ ok: false, error: 'recaptcha_invalido' });
+    }
+  } catch (err) {
+    console.error('Error verificando reCAPTCHA:', err);
+    return res.status(500).json({ ok: false, error: 'recaptcha_error' });
   }
 
   try {
@@ -50,6 +77,9 @@ module.exports = async (req, res) => {
       '',
       'Mensaje:',
       mensaje,
+      '',
+      '---',
+      'El usuario aceptó el aviso de privacidad al enviar este formulario.',
     ].filter(Boolean).join('\n');
 
     await transporter.sendMail({
