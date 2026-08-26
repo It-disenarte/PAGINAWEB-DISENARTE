@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, follow">
+<title>Mensaje recibido | Diseñarte México</title>
+<meta name="description" content="Recibimos tu solicitud de cotización.">
+<link rel="icon" type="image/png" href="/assets/favicon-dz.png">
+<meta name="theme-color" content="#0E0714">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H2JJVE75F3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H2JJVE75F3');
+  gtag('config', 'AW-16751651845');
+</script>
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init','2039038839979376');
+  fbq('track','PageView');
+</script>
+
+<style>
+@font-face{font-family:'Creato Display';src:url('/assets/fonts/CreatoDisplay-Regular.otf') format('opentype');font-weight:400;font-display:swap}
+@font-face{font-family:'Creato Display';src:url('/assets/fonts/CreatoDisplay-Bold.otf') format('opentype');font-weight:700;font-display:swap}
+@font-face{font-family:'Creato Display';src:url('/assets/fonts/CreatoDisplay-Black.otf') format('opentype');font-weight:900;font-display:swap}
+@font-face{font-family:'Walkway';src:url('/assets/fonts/Walkway-Bold.ttf') format('truetype');font-weight:700;font-display:swap}
+
+:root{
+  --tinta:#0E0714; --magenta:#A53692; --violeta:#7C07A6;
+  --cian:#5CC6D0; --papel:#F2F1F3; --gris:#96989A; --gris-texto:#55575A;
+  --gradiente:linear-gradient(100deg,#7C07A6 0%,#A53692 45%,#5CC6D0 100%);
+}
+*{box-sizing:border-box}
+body{
+  margin:0; min-height:100vh; background:var(--papel); color:var(--tinta);
+  font-family:'Creato Display',sans-serif; -webkit-font-smoothing:antialiased;
+  display:grid; place-items:center; padding:32px 20px;
+}
+.tarjeta{max-width:620px;width:100%}
+
+.eyebrow{
+  font:700 12px 'Walkway',sans-serif; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--violeta); margin:0 0 20px;
+}
+
+/* Marca de acuse: el trazo se dibuja solo, una vez.
+   Es el mismo gesto de "revisado" que se usa al aprobar un arte. */
+.acuse{width:64px;height:64px;margin:0 0 28px;display:block}
+.acuse path{
+  fill:none;stroke:var(--violeta);stroke-width:6;stroke-linecap:round;stroke-linejoin:round;
+  stroke-dasharray:80;stroke-dashoffset:80;
+  animation:trazo 620ms cubic-bezier(.65,0,.35,1) 180ms forwards;
+}
+@keyframes trazo{to{stroke-dashoffset:0}}
+
+h1{
+  font-size:clamp(34px,6vw,54px); font-weight:900; line-height:1.02;
+  letter-spacing:-.025em; margin:0 0 20px;
+}
+h1 em{font-style:normal;position:relative;white-space:nowrap}
+h1 em::after{
+  content:"";position:absolute;left:0;right:0;bottom:-4px;height:4px;border-radius:2px;
+  background:var(--gradiente);transform-origin:left center;
+  animation:subrayar 620ms cubic-bezier(.22,1,.36,1) 620ms both;
+}
+@keyframes subrayar{from{transform:scaleX(0)}to{transform:none}}
+
+p{font-size:17px;line-height:1.6;color:var(--gris-texto);margin:0 0 14px;max-width:52ch}
+
+.plazo{
+  display:inline-block;margin:22px 0 34px;padding:14px 20px;
+  border:1.5px dashed var(--gris);border-radius:4px;
+  font-size:15px;color:var(--tinta);
+}
+.plazo b{font-weight:700}
+
+.acciones{display:flex;flex-wrap:wrap;gap:12px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:15px 28px;border-radius:999px;text-decoration:none;
+  font-weight:700;font-size:15px;transition:transform 180ms cubic-bezier(.22,1,.36,1);
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primario{background:var(--tinta);color:#fff}
+.btn-secundario{border:1.5px solid var(--tinta);color:var(--tinta)}
+.pie{margin-top:44px;font-size:13px;color:var(--gris)}
+.pie a{color:var(--gris)}
+@media(prefers-reduced-motion:reduce){
+  .acuse path{animation:none;stroke-dashoffset:0}
+  h1 em::after{animation:none}
+  .btn:hover{transform:none}
+}
+</style>
+</head>
+<body>
+
+<main class="tarjeta">
+  <svg class="acuse" viewBox="0 0 64 64" aria-hidden="true">
+    <path d="M12 34 L26 47 L52 17"/>
+  </svg>
+
+  <p class="eyebrow">Acuse de recibo</p>
+
+  <h1>Tu solicitud <em>ya está</em> con nosotros.</h1>
+
+  <p>Un asesor la va a revisar y te contacta con la cotización o con las preguntas que hagan falta para armarla bien.</p>
+
+  <div class="plazo">Respondemos en <b>menos de 24 horas hábiles</b>.</div>
+
+  <div class="acciones">
+    <a class="btn btn-primario"
+       href="https://wa.me/524271004183?text=Hola%2C%20acabo%20de%20enviar%20mi%20solicitud%20por%20la%20p%C3%A1gina%20y%20es%20urgente"
+       data-track="whatsapp" data-ubicacion="gracias">¿Es urgente? Escríbenos</a>
+    <a class="btn btn-secundario" href="/">Volver al inicio</a>
+  </div>
+
+  <p class="pie">
+    Diseñarte México · San Juan del Río, Qro. ·
+    <a href="tel:+524271004183" data-track="telefono" data-ubicacion="gracias">427 100 41 83</a>
+  </p>
+</main>
+
+<script>
+/* ===== CONVERSIÓN =====
+   Solo se dispara en la ventana principal, nunca dentro del iframe.
+   ⚠️ Sustituir REEMPLAZAR_ETIQUETA_FORMULARIO por la etiqueta real
+      de la acción de conversión "Formulario enviado" de Google Ads. */
+(function () {
+  if (window.top !== window.self) return;
+
+  var AW_ID = 'AW-16751651845';
+  var AW_LABEL_FORMULARIO = 'REEMPLAZAR_ETIQUETA_FORMULARIO';
+
+  var origen = {};
+  try { origen = JSON.parse(sessionStorage.getItem('dz_origen') || '{}'); } catch (e) {}
+
+  gtag('event', 'generate_lead', {
+    metodo: 'formulario_web',
+    campana: origen.utm_campaign || '(directo)',
+    fuente: origen.utm_source || '(directo)',
+    landing: origen.landing || '/'
+  });
+
+  fbq('track', 'Lead', { content_name: 'formulario_contacto' });
+
+  if (AW_LABEL_FORMULARIO.indexOf('REEMPLAZAR') !== 0) {
+    gtag('event', 'conversion', { send_to: AW_ID + '/' + AW_LABEL_FORMULARIO });
+  }
+})();
+</script>
+<script src="/assets/dz-track.js" defer></script>
+</body>
+</html>

@@ -1175,8 +1175,8 @@ function initTextos() {
   }
   const TEXTO = 'h2, h3, h4, p, li, blockquote, figcaption, [data-reveal]';
   const nodos = [...document.querySelectorAll(TEXTO)].filter((el) =>
-    !el.closest('[data-hero],[data-pal],nav,header,footer,[data-menu],summary,[data-fab]') &&
-    !el.hasAttribute('data-t') && !el.hasAttribute('data-card') && el.textContent.trim());
+    !el.closest('[data-hero],[data-pal],nav,header,footer,[data-menu],summary,[data-fab],[data-no-anim]') &&
+    !el.hasAttribute('data-t') && !el.hasAttribute('data-card') && !el.hasAttribute('data-no-anim') && el.textContent.trim());
   nodos.forEach((el, i) => {
     const [nombre] = KEYS_TEXTO[i % KEYS_TEXTO.length];
     el.dataset.t = '1';
@@ -1243,7 +1243,6 @@ function initPreloader() {
 
 export function initSite() {
   initPreloader();
-  initTextos();
   initPincel();
   initChorros();
   initOrbes();

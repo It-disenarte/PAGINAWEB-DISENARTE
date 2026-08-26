@@ -1,17 +1,108 @@
 {
+  "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
-    { "source": "/", "destination": "/inicio.dc.html" },
-    { "source": "/nosotros", "destination": "/nosotros.dc.html" },
-    { "source": "/publicidad", "destination": "/publicidad.dc.html" },
-    { "source": "/innovacion-digital", "destination": "/innovacion-digital.dc.html" },
-    { "source": "/paginas-web", "destination": "/paginas-web.dc.html" },
-    { "source": "/contacto", "destination": "/contacto.dc.html" },
-    { "source": "/aviso-de-privacidad", "destination": "/aviso-privacidad.dc.html" },
-    { "source": "/(.*)", "destination": "/404.dc.html" }
+    {
+      "source": "/",
+      "destination": "/inicio.dc.html"
+    },
+    {
+      "source": "/nosotros",
+      "destination": "/nosotros.dc.html"
+    },
+    {
+      "source": "/publicidad",
+      "destination": "/publicidad.dc.html"
+    },
+    {
+      "source": "/innovacion-digital",
+      "destination": "/innovacion-digital.dc.html"
+    },
+    {
+      "source": "/paginas-web",
+      "destination": "/paginas-web.dc.html"
+    },
+    {
+      "source": "/contacto",
+      "destination": "/contacto.dc.html"
+    },
+    {
+      "source": "/aviso-de-privacidad",
+      "destination": "/aviso-privacidad.dc.html"
+    },
+    {
+      "source": "/gracias",
+      "destination": "/gracias.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/inicio.dc.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/nosotros.dc.html",
+      "destination": "/nosotros",
+      "permanent": true
+    },
+    {
+      "source": "/publicidad.dc.html",
+      "destination": "/publicidad",
+      "permanent": true
+    },
+    {
+      "source": "/innovacion-digital.dc.html",
+      "destination": "/innovacion-digital",
+      "permanent": true
+    },
+    {
+      "source": "/paginas-web.dc.html",
+      "destination": "/paginas-web",
+      "permanent": true
+    },
+    {
+      "source": "/contacto.dc.html",
+      "destination": "/contacto",
+      "permanent": true
+    },
+    {
+      "source": "/aviso-privacidad.dc.html",
+      "destination": "/aviso-de-privacidad",
+      "permanent": true
+    },
+    {
+      "source": "/gracias.html",
+      "destination": "/gracias",
+      "permanent": true
+    }
   ],
   "headers": [
-    { "source": "/assets/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }] },
-    { "source": "/(.*)", "headers": [{ "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" }, { "key": "X-Robots-Tag", "value": "index, follow" }] }
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
   ]
 }
-
