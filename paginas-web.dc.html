@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Páginas web para empresas: compra o renta | Diseñarte MX</title>
-<meta name="description" content="Páginas web en San Juan del Río: cómprala y es tuya, o réntala con hosting, soporte y cambios incluidos.">
-<meta name="keywords" content="páginas web para empresas, renta de página web, diseño web Querétaro, San Juan del Río">
+<title>Páginas Web para Empresas y PyMEs | Venta y Renta</title>
+<meta name="description" content="Diseñamos páginas web que venden, en dos modelos: cómprala y es tuya, o réntala sin inversión inicial. Ve nuestras demos en vivo.">
+<meta name="keywords" content="páginas web para empresas, diseño de páginas web san juan del río, desarrollo web corporativo, página web autoadministrable, renta de página web para negocio">
 <meta name="robots" content="index, follow">
 <link rel="icon" type="image/png" href="assets/favicon-dz.png">
 <link rel="apple-touch-icon" href="assets/favicon-dz.png">
 <meta name="theme-color" content="#0E0714">
 <link rel="canonical" href="https://www.disenartemx.com/paginas-web">
-<meta property="og:title" content="Páginas web para empresas: compra o renta | Diseñarte MX">
-<meta property="og:description" content="Cómprala y es tuya o réntala desde una mensualidad fija con hosting, soporte y cambios incluidos.">
+<meta property="og:title" content="Páginas Web para Empresas y PyMEs | Venta y Renta">
+<meta property="og:description" content="Diseñamos páginas web que venden, en dos modelos: cómprala y es tuya, o réntala sin inversión inicial. Ve nuestras demos en vivo.">
 <meta property="og:image" content="https://www.disenartemx.com/assets/marca-color.png">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.disenartemx.com/paginas-web">
@@ -76,9 +76,37 @@ a:hover{color:#7C07A6}
 [data-card]:hover{transform:translateY(-6px)}
 [data-card] [data-corner]{opacity:0;transition:opacity 200ms ease}
 [data-card]:hover [data-corner]{opacity:1}
+[data-esquemas]{transition:transform 250ms cubic-bezier(.22,1,.36,1),opacity 250ms ease,box-shadow 250ms ease}
+[data-esquemas-group]:hover [data-esquemas]:not(:hover){opacity:.55;transform:scale(.97)}
+[data-esquemas]:hover{transform:scale(1.05);z-index:2;box-shadow:0 24px 56px rgba(14,7,20,.22)}
+@media(prefers-reduced-motion:reduce){[data-esquemas]{transition:none}[data-esquemas-group]:hover [data-esquemas]:not(:hover){opacity:1;transform:none}[data-esquemas]:hover{transform:none}}
+@keyframes fadeInTopLeft{0%{opacity:0;transform:translate3d(-100%,-100%,0)}100%{opacity:1;transform:translate3d(0,0,0)}}
+[data-fade-tl]{opacity:0}
+[data-fade-tl].dz-fade-tl-play{animation:fadeInTopLeft 800ms ease both}
+@keyframes fadeInTopRight{0%{opacity:0;transform:translate3d(100%,-100%,0)}100%{opacity:1;transform:translate3d(0,0,0)}}
+[data-fade-tr]{opacity:0}
+[data-fade-tr].dz-fade-tr-play{animation:fadeInTopRight 800ms ease both}
+@keyframes fadeInUpBig{0%{opacity:0;transform:translate3d(0,2000px,0)}100%{opacity:1;transform:none}}
+[data-fade-upbig]{opacity:0}
+[data-fade-upbig].dz-fade-upbig-play{animation:fadeInUpBig 1000ms ease both}
+@media(prefers-reduced-motion:reduce){[data-fade-tl],[data-fade-tr],[data-fade-upbig]{opacity:1;animation:none}}
+[data-btn-ripple]{position:relative;overflow:visible;z-index:1}
+[data-btn-ripple]::after{content:'';display:block;position:absolute;inset:0;border-radius:999px;background:#fff;z-index:-1;transition:transform 400ms ease,opacity 400ms ease}
+[data-btn-ripple]:hover{transform:translateY(-3px);box-shadow:0 10px 20px rgba(14,7,20,.2)}
+[data-btn-ripple]:active{transform:translateY(-1px);box-shadow:0 5px 10px rgba(14,7,20,.2)}
+[data-btn-ripple]:hover::after{transform:scaleX(1.4) scaleY(1.6);opacity:0}
+@media(prefers-reduced-motion:reduce){[data-btn-ripple]:hover,[data-btn-ripple]:active{transform:none}[data-btn-ripple]:hover::after{transform:none;opacity:1}}
 details summary{cursor:pointer;list-style:none}
 details summary::-webkit-details-marker{display:none}
 @keyframes autoscroll{0%,12%{transform:translateY(0)}88%,100%{transform:translateY(calc(-100% + 420px))}}
+@keyframes dzFloatCard{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+[data-float-card]{animation:dzFloatCard 4.5s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){[data-float-card]{animation:none}}
+@keyframes dzScaleCenter{0%{transform:scale(.75)}50%{transform:scale(1)}100%{transform:scale(.75)}}
+@supports (animation-timeline:view()){
+  [data-scale-center]{animation:dzScaleCenter linear both;animation-timeline:view();animation-range:cover 0% cover 100%}
+}
+@media(prefers-reduced-motion:reduce){[data-scale-center]{animation:none;transform:none}}
 @media(max-width:1023px){[data-desktop-nav]{display:none!important}}
 @media(min-width:1024px){[data-menu-btn]{display:none!important}[data-cta-desktop]{display:inline-flex!important}}
 @media(prefers-reduced-motion:reduce){[data-card]:hover{transform:none}}
@@ -165,14 +193,15 @@ p [data-hero-line]{animation-delay:120ms}
   </div>
   <div style="position:relative;max-width:1240px;margin:0 auto;padding:clamp(140px,18vw,200px) clamp(24px,4vw,48px) clamp(72px,10vw,128px)">
     <p style="font:600 13px 'Walkway',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--violeta);margin:0 0 24px"><span style="display:block;overflow:hidden"><span data-hero-line="" style="display:block">Innovación digital · Páginas web</span></span></p>
-    <h1 style="font-family:var(--font-display);font-weight:700;font-size:clamp(34px,4.5vw,56px);line-height:1.05;letter-spacing:-.02em;margin:0 0 24px;max-width:860px;color:var(--tinta)">
-      <span style="display:block;overflow:hidden"><span data-hero-line="" style="display:block">Páginas web para empresas:</span></span>
-      <span style="display:block;overflow:hidden"><span data-hero-line="" style="display:block;background:var(--gradiente);-webkit-background-clip:text;background-clip:text;color:transparent">cómprala o réntala</span></span>
+    <h1 style="font-family:var(--font-display);font-weight:700;font-size:clamp(32px,4.2vw,62px);line-height:1.2;letter-spacing:-.02em;margin:0 0 24px;color:var(--tinta)">
+      <span style="display:block;overflow:hidden;padding-bottom:.15em;margin-bottom:-.15em"><span data-hero-line="" style="display:block;font-size:1.15em">Páginas web para empresas:</span></span>
+      <span style="display:block;overflow:hidden;padding-bottom:.15em;margin-bottom:-.15em"><span data-hero-line="" style="display:block;white-space:nowrap;background:var(--gradiente);-webkit-background-clip:text;background-clip:text;color:transparent">Diseñadas para hacer crecer tu negocio</span></span>
     </h1>
-    <div style="overflow:hidden"><p data-hero-line="" style="font:400 clamp(18px,1.6vw,20px)/1.6 'Creato Display',sans-serif;color:var(--tinta);margin:0 0 40px;max-width:640px;text-wrap:pretty">Estás viendo un ejemplo ahora mismo. Esta página la hicimos nosotros, y la tuya la hacemos igual de bien.</p></div>
+    <div style="overflow:hidden"><p data-hero-line="" style="font:600 clamp(17px,1.5vw,22px)/1.6 'Creato Display',sans-serif;color:var(--violeta);margin:0 0 12px;white-space:nowrap;text-wrap:pretty">Elige el esquema que mejor se adapte a tu empresa: compra o renta tu página web</p></div>
+    <div style="overflow:hidden"><p data-hero-line="" style="font:600 italic clamp(15px,1.3vw,17px)/1.6 'Creato Display',sans-serif;color:var(--tinta);margin:0 0 40px;max-width:640px;text-wrap:pretty;padding-left:16px;border-left:3px solid var(--magenta)">"Estás viendo un ejemplo ahora mismo. Esta página la hicimos nosotros, y la tuya la hacemos igual de bien."</p></div>
     <div style="overflow:hidden"><div data-hero-line="" style="display:flex;flex-wrap:wrap;gap:16px">
-      <a href="#paquetes" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;background:var(--magenta);color:#fff;border-radius:999px;padding:16px 32px;font:600 17px/1 'Creato Display',sans-serif;text-decoration:none;transition:background 200ms ease,transform 200ms ease" style-hover="background:#7C07A6;transform:translateY(-2px);color:#fff" style-active="transform:translateY(0)">Ver paquetes</a>
-      <a href="#demos" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;border:1.5px solid currentColor;color:var(--tinta);border-radius:999px;padding:16px 32px;font:600 17px/1 'Creato Display',sans-serif;text-decoration:none;transition:background 200ms ease" style-hover="background:rgba(14,7,20,.10);color:var(--tinta)">Ver ejemplos en vivo</a>
+      <a href="#paquetes" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;background:var(--magenta);color:#fff;border-radius:999px;padding:16px 32px;font:600 17px/1 'Creato Display',sans-serif;text-decoration:none;transition:background 200ms ease,transform 200ms ease" style-hover="background:#7C07A6;transform:translateY(-2px);color:#fff" style-active="transform:translateY(0)">Nuestros planes</a>
+      <a href="#demos" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;border:1.5px solid currentColor;color:var(--tinta);border-radius:999px;padding:16px 32px;font:600 17px/1 'Creato Display',sans-serif;text-decoration:none;transition:background 200ms ease" style-hover="background:rgba(14,7,20,.10);color:var(--tinta)">Ver demos en vivo</a>
     </div></div>
   </div>
 </section>
@@ -182,23 +211,22 @@ p [data-hero-line]{animation-delay:120ms}
   <div style="max-width:900px;margin:0 auto;padding:clamp(24px,4vw,48px) clamp(24px,4vw,48px) clamp(56px,8vw,96px);text-align:center">
     <p data-reveal="0" style="font:600 13px 'Walkway',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--magenta);margin:0 0 20px">El problema</p>
     <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin:0 0 32px;color:var(--tinta);text-wrap:pretty">
-      <span data-reveal="0" style="display:inline-block;font-weight:900;font-size:1.7em;color:var(--violeta);vertical-align:-.06em">El 90%</span> <span data-reveal="1">de las páginas de empresas de la región son un folleto que nadie abre</span>
+      ¿Tu página es un elemento que <span style="color:var(--violeta)">convierte y atrae</span>, o solo es un <span style="text-decoration:line-through;text-decoration-color:var(--gris);color:var(--gris-texto)">folleto que nadie lee</span>?
     </h2>
-    <div data-reveal="2" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:0 0 32px;text-align:left">
-      <div style="display:flex;gap:12px;align-items:flex-start;padding:18px;background:var(--papel);border-radius:6px 20px 20px 20px">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex:none;margin-top:2px" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="var(--magenta)" stroke-width="2"></circle><path d="M12 7v5l3.5 2" stroke="var(--magenta)" stroke-width="2" stroke-linecap="round"></path></svg>
-        <p style="font:600 15px/1.4 'Creato Display',sans-serif;color:var(--tinta);margin:0">Tardan seis segundos en cargar</p>
+    <div data-reveal="2" data-scale-center="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:0 0 32px;text-align:left">
+      <div data-float-card="" style="display:flex;gap:12px;align-items:flex-start;padding:18px;background:#F6E9F5;border-radius:6px 20px 20px 20px;box-shadow:0 12px 28px rgba(14,7,20,.14);animation-delay:0s">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex:none;margin-top:2px" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="var(--violeta)" stroke-width="2"></circle><path d="M12 7v5l3.5 2" stroke="var(--violeta)" stroke-width="2" stroke-linecap="round"></path></svg>
+        <p style="font:600 15px/1.4 'Creato Display',sans-serif;color:var(--violeta);margin:0">Tardan seis segundos en cargar</p>
       </div>
-      <div style="display:flex;gap:12px;align-items:flex-start;padding:18px;background:var(--papel);border-radius:6px 20px 20px 20px">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex:none;margin-top:2px" aria-hidden="true"><circle cx="10" cy="10" r="6.5" stroke="var(--magenta)" stroke-width="2"></circle><path d="M15 15l5.5 5.5" stroke="var(--magenta)" stroke-width="2" stroke-linecap="round"></path><path d="M4 20L20 4" stroke="var(--magenta)" stroke-width="2" stroke-linecap="round"></path></svg>
-        <p style="font:600 15px/1.4 'Creato Display',sans-serif;color:var(--tinta);margin:0">No aparecen en Google</p>
+      <div data-float-card="" style="display:flex;gap:12px;align-items:flex-start;padding:18px;background:#F6E9F5;border-radius:6px 20px 20px 20px;box-shadow:0 12px 28px rgba(14,7,20,.14);animation-delay:.7s">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex:none;margin-top:2px" aria-hidden="true"><circle cx="10" cy="10" r="6.5" stroke="var(--violeta)" stroke-width="2"></circle><path d="M15 15l5.5 5.5" stroke="var(--violeta)" stroke-width="2" stroke-linecap="round"></path><path d="M4 20L20 4" stroke="var(--violeta)" stroke-width="2" stroke-linecap="round"></path></svg>
+        <p style="font:600 15px/1.4 'Creato Display',sans-serif;color:var(--violeta);margin:0">No aparecen en Google</p>
       </div>
-      <div style="display:flex;gap:12px;align-items:flex-start;padding:18px;background:var(--papel);border-radius:6px 20px 20px 20px">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex:none;margin-top:2px" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.6 5.6L3 18l3 3 6.1-6.1a4 4 0 0 0 5.6-5.6l-2.5 2.5-2-2z" stroke="var(--magenta)" stroke-width="2" stroke-linejoin="round"></path></svg>
-        <p style="font:600 15px/1.4 'Creato Display',sans-serif;color:var(--tinta);margin:0">No hay a quién llamar si algo se rompe</p>
+      <div data-float-card="" style="display:flex;gap:12px;align-items:flex-start;padding:18px;background:#F6E9F5;border-radius:6px 20px 20px 20px;box-shadow:0 12px 28px rgba(14,7,20,.14);animation-delay:1.4s">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style="flex:none;margin-top:2px" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.6 5.6L3 18l3 3 6.1-6.1a4 4 0 0 0 5.6-5.6l-2.5 2.5-2-2z" stroke="var(--violeta)" stroke-width="2" stroke-linejoin="round"></path></svg>
+        <p style="font:600 15px/1.4 'Creato Display',sans-serif;color:var(--violeta);margin:0">No hay a quién llamar si algo se rompe</p>
       </div>
     </div>
-    <p data-reveal="3" style="font:400 17px/1.65 'Creato Display',sans-serif;color:var(--gris-texto);margin:0;text-wrap:pretty">Están hechas en plantilla y cuestan poco, pero no producen nada — que es la forma más cara de gastar.</p>
   </div>
   <div aria-hidden="true" style="height:clamp(56px,9vw,130px);position:relative">
     <div style="position:absolute;inset:0;background:var(--papel);clip-path:polygon(0 100%,100% 0,100% 100%)"></div>
@@ -210,84 +238,87 @@ p [data-hero-line]{animation-delay:120ms}
 <section id="paquetes" style="background:#fff;overflow:hidden">
   <div style="max-width:1240px;margin:0 auto;padding:clamp(48px,7vw,96px) clamp(24px,4vw,48px) clamp(72px,10vw,128px)">
     <p data-reveal="0" style="font-family:var(--font-display);font-weight:900;font-size:clamp(24px,2.8vw,34px);line-height:1.25;margin:0 auto 40px;max-width:640px;color:var(--tinta);text-wrap:pretty;text-align:center">Que <span style="color:var(--violeta)">cada peso</span> termine en una <span style="color:var(--violeta)">venta</span>.</p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-bottom:48px">
-      <div data-reveal="2" style="position:relative;display:flex;flex-direction:column;gap:12px;padding:28px 24px 24px;background:#fff;border-radius:6px 20px 20px 20px;box-shadow:0 12px 32px rgba(14,7,20,.10);border-top:4px solid var(--violeta)">
-        <span aria-hidden="true" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:rgba(124,7,166,.10);color:var(--violeta);font:900 18px 'Creato Display',sans-serif">1</span>
-        <span style="font-family:var(--font-display);font-weight:900;font-size:19px;color:var(--tinta)">Sé el dueño</span>
+    <div data-esquemas-group="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-bottom:48px">
+      <div data-esquemas="" data-fade-tl="" data-reveal="2" style="position:relative;display:flex;flex-direction:column;gap:12px;padding:28px 24px 24px;background:#fff;border-radius:6px 20px 20px 20px;box-shadow:0 14px 36px rgba(14,7,20,.14);border-top:4px solid var(--violeta)">
+        <div style="display:flex;align-items:center;gap:12px">
+          <span aria-hidden="true" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:rgba(124,7,166,.10);color:var(--violeta);font:900 18px 'Creato Display',sans-serif;flex-shrink:0">1</span>
+          <span style="font-family:var(--font-display);font-weight:900;font-size:19px;color:var(--tinta)">Sé el dueño</span>
+        </div>
         <p style="font:400 15px/1.6 'Creato Display',sans-serif;color:var(--gris-texto);margin:0">Pago único, la página es 100% tuya para siempre. Para hacerlo fácil, lo divides en 2 pagos. Al liquidar, recibes tu sitio, tus accesos y el control total de tu página web, que estará lista máximo en 5 días.</p>
       </div>
-      <div data-reveal="3" style="position:relative;display:flex;flex-direction:column;gap:12px;padding:28px 24px 24px;background:#fff;border-radius:6px 20px 20px 20px;box-shadow:0 12px 32px rgba(14,7,20,.10);border-top:4px solid var(--magenta)">
-        <span aria-hidden="true" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:rgba(214,0,120,.10);color:var(--magenta);font:900 18px 'Creato Display',sans-serif">2</span>
-        <span style="font-family:var(--font-display);font-weight:900;font-size:19px;color:var(--tinta)">Réntala</span>
+      <div data-esquemas="" data-fade-tr="" data-reveal="3" style="position:relative;display:flex;flex-direction:column;gap:12px;padding:28px 24px 24px;background:#fff;border-radius:6px 20px 20px 20px;box-shadow:0 14px 36px rgba(14,7,20,.14);border-top:4px solid var(--magenta)">
+        <div style="display:flex;align-items:center;gap:12px">
+          <span aria-hidden="true" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:rgba(214,0,120,.10);color:var(--magenta);font:900 18px 'Creato Display',sans-serif;flex-shrink:0">2</span>
+          <span style="font-family:var(--font-display);font-weight:900;font-size:19px;color:var(--tinta)">Réntala</span>
+        </div>
         <p style="font:400 15px/1.6 'Creato Display',sans-serif;color:var(--gris-texto);margin:0">Empiezas con una activación (pago inicial) y una mensualidad accesible. Incluye hosting, dominio y mantenimiento cada mes. Puedes volverte dueño cuando quieras, acreditando una evaluación de mensualidades pagas vs costo del servicio.</p>
       </div>
     </div>
-    <div role="region" aria-label="Carrusel de paquetes de renta" tabindex="0" onKeyDown="{{ carruselTeclado }}" onPointerDown="{{ dragStart }}" onPointerMove="{{ dragMove }}" onPointerUp="{{ dragEnd }}" onPointerCancel="{{ dragEnd }}" style="{{ pistaStyle }}">
-      <sc-for list="{{ paquetes }}" as="pq" hint-placeholder-count="3">
-        <article aria-hidden="{{ pq.oculta }}" style="{{ pq.slotStyle }}">
+    <div style="position:relative">
+      <div role="region" aria-label="Carrusel de paquetes de renta" data-fade-upbig="" tabindex="0" onKeyDown="{{ carruselTeclado }}" onPointerDown="{{ dragStart }}" onPointerMove="{{ dragMove }}" onPointerUp="{{ dragEnd }}" onPointerCancel="{{ dragEnd }}" style="{{ pistaStyle }}">
+        <sc-for list="{{ paquetes }}" as="pq" hint-placeholder-count="3">
+          <article aria-hidden="{{ pq.oculta }}" style="{{ pq.slotStyle }}">
           <div style="{{ pq.cardStyle }}">
             <sc-if value="{{ pq.destacado }}" hint-placeholder-val="{{ false }}">
               <span style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);white-space:nowrap;font:600 12px 'Creato Display',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--magenta);padding:6px 16px;border-radius:999px">El más elegido</span>
             </sc-if>
-            <h3 style="font-family:var(--font-display);font-weight:700;font-size:24px;margin:0;color:#fff">{{ pq.nivel }} {{ pq.nombre }}</h3>
-            <p style="font:600 15px/1.4 'Creato Display',sans-serif;color:#fff;margin:0">{{ pq.sitio }} <em style="font-style:italic;font-weight:400;color:rgba(255,255,255,.72)">· {{ pq.para }}</em></p>
-            <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px">
+            <h3 style="font-family:var(--font-display);font-weight:900;font-size:30px;line-height:1.1;margin:0;color:#fff">{{ pq.nombre }}</h3>
+            <p style="font:700 14px 'Walkway',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.85);margin:0">{{ pq.nivel }}</p>
+            <p style="font:400 15px/1.4 'Creato Display',sans-serif;color:rgba(255,255,255,.9);margin:0 0 16px">{{ pq.sitio }}<br><em style="font-style:italic">{{ pq.para }}</em></p>
+            <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px">
               <sc-for list="{{ pq.puntos }}" as="pt" hint-placeholder-count="6">
-                <li style="font:400 14px/1.4 'Creato Display',sans-serif;color:#fff;padding-left:20px;position:relative"><svg aria-hidden="true" width="13" height="10" viewBox="0 0 14 11" fill="none" style="position:absolute;left:0;top:3px"><path d="M1 5.5l4 4L13 1" stroke="var(--cian)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>{{ pt }}</li>
+                <li style="font:500 16px/1.4 'Creato Display',sans-serif;color:#fff;padding-left:26px;position:relative"><svg aria-hidden="true" width="15" height="12" viewBox="0 0 14 11" fill="none" style="position:absolute;left:0;top:4px"><path d="M1 5.5l4 4L13 1" stroke="var(--cian)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>{{ pt }}</li>
               </sc-for>
             </ul>
-            <div style="margin-top:auto;padding-top:12px;border-top:1px solid rgba(255,255,255,.25);display:flex;flex-direction:column;gap:2px">
-              <span style="font:600 12px 'Walkway',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--cian)">Pago modo renta</span>
-              <p style="font-family:var(--font-display);font-weight:900;font-size:32px;line-height:1;font-variant-numeric:tabular-nums;margin:0;color:#fff">{{ pq.rentaMes }}<span style="font:400 14px 'Creato Display',sans-serif;color:rgba(255,255,255,.72)"> /mes x 1 año</span></p>
-              <span style="font:400 12px 'Creato Display',sans-serif;color:rgba(255,255,255,.72)">Activación inicial: {{ pq.rentaActivacion }}</span>
+            <div style="margin-top:auto;padding-top:16px;border-top:1px solid rgba(255,255,255,.25);display:flex;flex-direction:column;gap:4px">
+              <span style="font:700 15px 'Walkway',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--cian)">Pago modo renta</span>
+              <p style="font-family:var(--font-display);font-weight:900;font-size:38px;line-height:1;font-variant-numeric:tabular-nums;margin:0;color:#fff">{{ pq.rentaMes }}<span style="font:500 15px 'Creato Display',sans-serif;color:rgba(255,255,255,.8)"> /mes x 1 año</span></p>
+              <span style="font:400 13px 'Creato Display',sans-serif;color:rgba(255,255,255,.8)">Activación inicial: {{ pq.rentaActivacion }}</span>
             </div>
-            <div style="padding-top:10px;display:flex;flex-direction:column;gap:2px">
-              <span style="font:600 12px 'Walkway',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--cian)">Pago modo dueño</span>
-              <p style="font-family:var(--font-display);font-weight:900;font-size:26px;line-height:1;font-variant-numeric:tabular-nums;margin:0;color:#fff">{{ pq.duenoPrecio }} <span style="font:400 13px 'Creato Display',sans-serif;color:rgba(255,255,255,.72)">{{ pq.duenoNota }}</span></p>
-              <span style="font:400 12px 'Creato Display',sans-serif;color:rgba(255,255,255,.72)">Stack de propiedad digital · sé el dueño total</span>
+            <div style="padding-top:14px;display:flex;flex-direction:column;gap:4px">
+              <span style="font:700 15px 'Walkway',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--cian)">Pago modo dueño</span>
+              <p style="font-family:var(--font-display);font-weight:900;font-size:30px;line-height:1;font-variant-numeric:tabular-nums;margin:0;color:#fff">{{ pq.duenoPrecio }} <span style="font:500 14px 'Creato Display',sans-serif;color:rgba(255,255,255,.8)">{{ pq.duenoNota }}</span></p>
+              <span style="font:400 13px 'Creato Display',sans-serif;color:rgba(255,255,255,.8)">Stack de propiedad digital · sé el dueño total</span>
             </div>
-            <a href="{{ pq.whatsapp }}" target="_blank" rel="noopener" tabindex="{{ pq.tab }}" data-track="whatsapp" data-ubicacion="paginas-web" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;background:#fff;color:var(--violeta);border-radius:999px;padding:14px 28px;font:600 16px/1 'Creato Display',sans-serif;text-decoration:none;transition:opacity 200ms ease" style-hover="opacity:.88">Elegir {{ pq.nombre }}</a>
+            <a href="{{ pq.whatsapp }}" target="_blank" rel="noopener" tabindex="{{ pq.tab }}" data-track="whatsapp" data-ubicacion="paginas-web" data-btn-ripple="" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;background:#fff;color:var(--violeta);border-radius:999px;padding:14px 28px;font:600 16px/1 'Creato Display',sans-serif;text-decoration:none;transition:opacity 200ms ease" style-hover="opacity:.88">Elegir {{ pq.nombre }}</a>
           </div>
         </article>
-      </sc-for>
-    </div>
-    <div style="display:flex;align-items:center;justify-content:center;gap:24px;margin-top:32px">
-      <button onClick="{{ anterior }}" aria-label="Paquete anterior" style="width:48px;height:48px;border-radius:50%;background:transparent;border:1.5px solid rgba(14,7,20,.25);color:var(--tinta);cursor:pointer;display:inline-flex;align-items:center;justify-content:center" style-hover="background:rgba(14,7,20,.10)">
+        </sc-for>
+      </div>
+      <button onClick="{{ anterior }}" aria-label="Paquete anterior" style="position:absolute;top:50%;left:-8px;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;background:#fff;border:1.5px solid rgba(14,7,20,.25);color:var(--tinta);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(14,7,20,.16);z-index:5" style-hover="background:rgba(14,7,20,.10)">
         <svg width="16" height="12" viewBox="0 0 16 12" fill="none" aria-hidden="true"><path d="M15 6H2M6 1L1 6l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </button>
+      <button onClick="{{ siguiente }}" aria-label="Paquete siguiente" style="position:absolute;top:50%;right:-8px;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;background:#fff;border:1.5px solid rgba(14,7,20,.25);color:var(--tinta);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(14,7,20,.16);z-index:5" style-hover="background:rgba(14,7,20,.10)">
+        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" aria-hidden="true"><path d="M1 6h13M10 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </button>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:24px;margin-top:32px">
       <div style="display:flex;gap:10px">
         <sc-for list="{{ puntos3 }}" as="p3" hint-placeholder-count="3">
           <button onClick="{{ p3.ir }}" aria-label="{{ p3.label }}" style="{{ p3.style }}"></button>
         </sc-for>
       </div>
-      <button onClick="{{ siguiente }}" aria-label="Paquete siguiente" style="width:48px;height:48px;border-radius:50%;background:transparent;border:1.5px solid rgba(14,7,20,.25);color:var(--tinta);cursor:pointer;display:inline-flex;align-items:center;justify-content:center" style-hover="background:rgba(14,7,20,.10)">
-        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" aria-hidden="true"><path d="M1 6h13M10 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-      </button>
     </div>
     <details style="margin-top:48px;background:var(--papel);border:1px solid rgba(14,7,20,.10);border-radius:6px 20px 20px 20px;padding:0 24px">
       <summary style="font:600 17px 'Creato Display',sans-serif;color:var(--tinta);padding:20px 0;display:flex;justify-content:space-between;align-items:center;min-height:48px">Ver tabla comparativa completa<span aria-hidden="true" style="color:var(--magenta);font-size:20px">+</span></summary>
       <div style="overflow-x:auto;padding-bottom:24px">
-        <table style="border-collapse:collapse;width:100%;min-width:640px;font:400 15px/1.5 'Creato Display',sans-serif;color:var(--tinta)">
-          <caption style="text-align:left;font:400 13px 'Creato Display',sans-serif;color:var(--gris-texto);padding-bottom:12px">Comparativa de los tres paquetes: Hola Mundo, Next Level y Rockstar Digital</caption>
-          <thead>
-            <tr>
-              <th scope="col" style="position:sticky;left:0;background:var(--papel);text-align:left;padding:12px 16px;border-bottom:1px solid rgba(14,7,20,.16)"></th>
-              <th scope="col" style="text-align:left;padding:12px 16px;border-bottom:1px solid rgba(14,7,20,.16);font-family:var(--font-display);font-size:17px">Hola Mundo</th>
-              <th scope="col" style="text-align:left;padding:12px 16px;border-bottom:1px solid rgba(14,7,20,.16);font-family:var(--font-display);font-size:17px;color:var(--violeta)">Next Level ★</th>
-              <th scope="col" style="text-align:left;padding:12px 16px;border-bottom:1px solid rgba(14,7,20,.16);font-family:var(--font-display);font-size:17px">Rockstar Digital</th>
-            </tr>
-          </thead>
-          <tbody>
-            <sc-for list="{{ filasTabla }}" as="fila" hint-placeholder-count="11">
-              <tr>
-                <th scope="row" style="position:sticky;left:0;background:var(--papel);text-align:left;padding:12px 16px;border-bottom:1px solid rgba(14,7,20,.10);font-weight:600;white-space:nowrap">{{ fila.label }}</th>
-                <td style="padding:12px 16px;border-bottom:1px solid rgba(14,7,20,.10);color:var(--gris-texto)">{{ fila.a }}</td>
-                <td style="padding:12px 16px;border-bottom:1px solid rgba(14,7,20,.10)">{{ fila.b }}</td>
-                <td style="padding:12px 16px;border-bottom:1px solid rgba(14,7,20,.10);color:var(--gris-texto)">{{ fila.c }}</td>
-              </tr>
-            </sc-for>
-          </tbody>
-        </table>
+        <p style="font:400 13px 'Creato Display',sans-serif;color:var(--gris-texto);padding-bottom:12px;margin:0">Comparativa de los tres paquetes: Hola Mundo, Next Level y Rockstar Digital</p>
+        <div role="table" style="display:grid;grid-template-columns:200px repeat(3,1fr);min-width:640px;font:400 15px/1.5 'Creato Display',sans-serif;color:var(--tinta)">
+          <div role="row" style="display:contents">
+            <div role="columnheader" style="position:sticky;left:0;background:var(--papel);text-align:left;padding:12px 16px;border-bottom:1px solid rgba(14,7,20,.16)"></div>
+            <div role="columnheader" style="text-align:left;padding:12px 16px;border-bottom:1px solid rgba(14,7,20,.16);font-family:var(--font-display);font-size:17px">Hola Mundo</div>
+            <div role="columnheader" style="text-align:left;padding:12px 16px;border-bottom:1px solid rgba(14,7,20,.16);font-family:var(--font-display);font-size:17px;color:var(--violeta)">Next Level ★</div>
+            <div role="columnheader" style="text-align:left;padding:12px 16px;border-bottom:1px solid rgba(14,7,20,.16);font-family:var(--font-display);font-size:17px">Rockstar Digital</div>
+          </div>
+          <sc-for list="{{ filasTabla }}" as="fila" hint-placeholder-count="11">
+            <div role="row" style="display:contents">
+              <div role="rowheader" style="position:sticky;left:0;background:var(--papel);text-align:left;padding:12px 16px;border-bottom:1px solid rgba(14,7,20,.10);font-weight:600;white-space:nowrap">{{ fila.label }}</div>
+              <div role="cell" style="padding:12px 16px;border-bottom:1px solid rgba(14,7,20,.10);color:var(--gris-texto)">{{ fila.a }}</div>
+              <div role="cell" style="padding:12px 16px;border-bottom:1px solid rgba(14,7,20,.10)">{{ fila.b }}</div>
+              <div role="cell" style="padding:12px 16px;border-bottom:1px solid rgba(14,7,20,.10);color:var(--gris-texto)">{{ fila.c }}</div>
+            </div>
+          </sc-for>
+        </div>
       </div>
     </details>
     <div data-reveal="0" style="margin-top:32px;padding:28px 32px;background:var(--papel);border-radius:6px 20px 20px 20px;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between">
@@ -381,7 +412,8 @@ p [data-hero-line]{animation-delay:120ms}
 <!-- ===== QUÉ INCLUYE SIEMPRE ===== -->
 <section style="background:#fff">
   <div style="max-width:1240px;margin:0 auto;padding:clamp(48px,7vw,96px) clamp(24px,4vw,48px) clamp(72px,10vw,128px)">
-    <h2 data-reveal="0" style="font-family:var(--font-display);font-weight:700;font-size:clamp(28px,3.4vw,40px);margin:0 0 48px;color:var(--tinta)">Qué incluye siempre, en cualquier esquema</h2>
+    <h2 data-reveal="0" style="font-family:var(--font-display);font-weight:700;font-size:clamp(28px,3.4vw,40px);margin:0 0 12px;color:var(--tinta)">Todo lo que tu página necesita, incluido siempre</h2>
+    <p data-reveal="0" style="font:400 18px/1.6 'Creato Display',sans-serif;color:var(--gris-texto);margin:0 0 48px">Sin importar si compras o rentas tu página web, siempre recibirás:</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px">
       <sc-for list="{{ incluye }}" as="inc" hint-placeholder-count="7">
         <div data-reveal="{{ $index }}" style="display:flex;align-items:center;gap:14px;border:1px solid rgba(14,7,20,.10);border-radius:6px 20px 20px 20px;padding:20px 24px;min-height:48px">
@@ -403,7 +435,7 @@ p [data-hero-line]{animation-delay:120ms}
   <div aria-hidden="true" style="position:absolute;right:-10%;top:-20%;width:55%;height:140%;background:var(--gradiente);opacity:.10;clip-path:polygon(35% 0,100% 0,100% 100%,0 100%)"></div>
   <div style="position:relative;max-width:840px;margin:0 auto;padding:clamp(72px,10vw,128px) clamp(24px,4vw,48px);text-align:center">
     <h2 data-reveal="0" style="font-family:var(--font-display);font-weight:700;font-size:clamp(28px,3.4vw,40px);margin:0 0 16px;color:var(--tinta)">¿Empezamos por la tuya?</h2>
-    <p data-reveal="1" style="font:400 clamp(18px,1.6vw,20px)/1.6 'Creato Display',sans-serif;color:var(--gris-texto);margin:0 0 40px;text-wrap:pretty">Cuéntanos a qué te dedicas y te decimos cuál de los dos esquemas te conviene — aunque sea el más barato.</p>
+    <p data-reveal="1" style="font:400 clamp(18px,1.6vw,20px)/1.6 'Creato Display',sans-serif;color:var(--gris-texto);margin:0 0 40px;text-wrap:pretty">Cuéntanos a qué te dedicas y te decimos cuál de los dos esquemas te conviene. No importa el esquema que elijas: tu página siempre estará preparada para verse bien, funcionar correctamente y ayudarte a generar oportunidades de negocio.</p>
     <a data-reveal="2" href="/contacto?interes=pagina-web" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;background:var(--magenta);color:#fff;border-radius:999px;padding:16px 32px;font:600 17px/1 'Creato Display',sans-serif;text-decoration:none;transition:background 200ms ease,transform 200ms ease" style-hover="background:#7C07A6;transform:translateY(-2px);color:#fff" style-active="transform:translateY(0)">Cotizar mi página web</a>
   </div>
 </section>
@@ -545,6 +577,33 @@ class Component extends DCLogic {
         }
       }, { threshold: 0.1 }).observe(sec);
     }
+    const fadeTl = document.querySelector('[data-fade-tl]');
+    if (fadeTl) {
+      new IntersectionObserver((entries, io) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          fadeTl.classList.add('dz-fade-tl-play');
+          io.disconnect();
+        }
+      }, { threshold: 0.3 }).observe(fadeTl);
+    }
+    const fadeTr = document.querySelector('[data-fade-tr]');
+    if (fadeTr) {
+      new IntersectionObserver((entries, io) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          fadeTr.classList.add('dz-fade-tr-play');
+          io.disconnect();
+        }
+      }, { threshold: 0.3 }).observe(fadeTr);
+    }
+    const fadeUpBig = document.querySelector('[data-fade-upbig]');
+    if (fadeUpBig) {
+      new IntersectionObserver((entries, io) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          fadeUpBig.classList.add('dz-fade-upbig-play');
+          io.disconnect();
+        }
+      }, { threshold: 0.2 }).observe(fadeUpBig);
+    }
   }
   _armarTimeout(idx) {
     if (!DEMOS[idx].url) return;
@@ -589,8 +648,13 @@ class Component extends DCLogic {
       const off = rel === 0 ? 0 : (rel === 1 || rel === -2) ? 1 : -1; // -1 izq, 0 centro, 1 der
       const esCentro = off === 0;
       let slotStyle, cardStyle;
-      // Fondo morado degradado en las tres tarjetas; la destacada lleva aro blanco y sombra.
-      const cardBase = 'position:relative;display:flex;flex-direction:column;gap:10px;background:linear-gradient(160deg,#5B0A72 0%,#7C07A6 55%,#A53692 100%);border-radius:6px 28px 28px 28px;padding:36px 28px;height:100%;box-sizing:border-box;overflow:visible;';
+      // Fondo morado degradado, un tono distinto por paquete; la destacada lleva aro blanco y sombra.
+      const GRADIENTES = [
+        'linear-gradient(160deg,#2E0A4F 0%,#4C1D7A 55%,#7A4FB0 100%)',
+        'linear-gradient(160deg,#5B0A72 0%,#7C07A6 55%,#A53692 100%)',
+        'linear-gradient(160deg,#1B0B3D 0%,#3D1E82 55%,#6E4FD1 100%)',
+      ];
+      const cardBase = 'position:relative;display:flex;flex-direction:column;gap:10px;background:' + GRADIENTES[i % GRADIENTES.length] + ';border-radius:6px 28px 28px 28px;padding:36px 28px;height:100%;box-sizing:border-box;overflow:visible;';
       const bordeGrad = 'border:2px solid #fff;box-shadow:0 16px 40px rgba(91,10,114,.35);';
       const bordeSimple = 'border:1px solid rgba(255,255,255,.18);';
       if (apilado || esMovil) {
@@ -600,8 +664,8 @@ class Component extends DCLogic {
         const t = esCentro
           ? 'translate(-50%,-50%) translateZ(0) scale(1)'
           : `translate(-50%,-50%) translateX(${off * 340}px) translateZ(-180px) rotateY(${off * -32}deg) scale(.86)`;
-        slotStyle = `position:absolute;top:50%;left:50%;width:min(400px,86vw);height:760px;transform:${t};opacity:${esCentro ? 1 : 0.55};z-index:${esCentro ? 2 : 1};transition:transform 550ms ${EASE},opacity 550ms ${EASE};transform-style:preserve-3d`;
-        cardStyle = cardBase + (esCentro ? bordeGrad : bordeSimple);
+        slotStyle = `position:absolute;top:50%;left:50%;width:min(420px,86vw);height:800px;transform:${t};opacity:${esCentro ? 1 : 0.55};z-index:${esCentro ? 2 : 1};transition:transform 550ms ${EASE},opacity 550ms ${EASE};transform-style:preserve-3d`;
+        cardStyle = cardBase + (esCentro ? bordeGrad : bordeSimple) + 'padding:44px 32px;';
       }
       const whatsapp = 'https://wa.me/524271004183?text=' + encodeURIComponent(`Hola, vengo de su página web y quiero cotizar el plan ${pq.nombre.replace(/[“”]/g, '')}`);
       return { ...pq, slotStyle, cardStyle, whatsapp, oculta: !(apilado || esMovil) && !esCentro, tab: (apilado || esMovil || esCentro) ? 0 : -1 };
