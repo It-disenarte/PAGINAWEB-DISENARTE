@@ -8,17 +8,17 @@
      Google Ads AW-16751651845
      Meta Pixel 2039038839979376
 
-   ⚠️ PENDIENTE: sustituir AW_LABEL_WHATSAPP y AW_LABEL_TELEFONO
-      por las etiquetas reales de las acciones de conversión que
-      se creen en Google Ads. Mientras digan REEMPLAZAR, el evento
-      se manda a GA4 y a Meta, pero NO a Google Ads.
+   Etiquetas de conversión activas (creadas el 26-ago-2026):
+      Clic WhatsApp  -> 4ZORCN2At-gcEIXY57M-
+      Clic Teléfono  -> tg2FCOCAt-gcEIXY57M-
+      Formulario     -> iFHhCOKqtugcEIXY57M-  (vive en gracias.html)
    ============================================================ */
 (function () {
   'use strict';
 
   var AW_ID = 'AW-16751651845';
-  var AW_LABEL_WHATSAPP = 'REEMPLAZAR_ETIQUETA_WHATSAPP';
-  var AW_LABEL_TELEFONO = 'REEMPLAZAR_ETIQUETA_TELEFONO';
+  var AW_LABEL_WHATSAPP = '4ZORCN2At-gcEIXY57M-';
+  var AW_LABEL_TELEFONO = 'tg2FCOCAt-gcEIXY57M-';
 
   /* ---------- utilidades ---------- */
   function ga(nombre, params) {

@@ -18,6 +18,8 @@ module.exports = async (req, res) => {
   const honeypot = (body.website || '').toString().trim();
   const privacidad = body.privacidad === true;
   const recaptchaToken = (body.recaptchaToken || '').toString().trim();
+  const origen = (body.origen && typeof body.origen === 'object') ? body.origen : {};
+  const lim = (v) => (v == null ? '' : String(v).slice(0, 200));
 
   if (honeypot) return res.status(200).json({ ok: true });
   if (!nombre || !apellidos || !empresa || !mensaje) {
@@ -77,6 +79,13 @@ module.exports = async (req, res) => {
       '',
       'Mensaje:',
       mensaje,
+      '',
+      '--- Origen del lead ---',
+      `Campaña: ${lim(origen.utm_campaign) || '(directo)'}`,
+      `Fuente: ${lim(origen.utm_source) || '(directo)'}`,
+      `Medio: ${lim(origen.utm_medium) || '(directo)'}`,
+      origen.gclid ? `Google Ads (gclid): ${lim(origen.gclid)}` : null,
+      `Página de entrada: ${lim(origen.landing) || '/'}`,
       '',
       '---',
       'El usuario aceptó el aviso de privacidad al enviar este formulario.',

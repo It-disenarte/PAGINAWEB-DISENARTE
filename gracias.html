@@ -127,13 +127,12 @@ p{font-size:17px;line-height:1.6;color:var(--gris-texto);margin:0 0 14px;max-wid
 <script>
 /* ===== CONVERSIÓN =====
    Solo se dispara en la ventana principal, nunca dentro del iframe.
-   ⚠️ Sustituir REEMPLAZAR_ETIQUETA_FORMULARIO por la etiqueta real
-      de la acción de conversión "Formulario enviado" de Google Ads. */
+   Etiqueta activa de la acción "Formulario enviado" de Google Ads. */
 (function () {
   if (window.top !== window.self) return;
 
   var AW_ID = 'AW-16751651845';
-  var AW_LABEL_FORMULARIO = 'REEMPLAZAR_ETIQUETA_FORMULARIO';
+  var AW_LABEL_FORMULARIO = 'iFHhCOKqtugcEIXY57M-';
 
   var origen = {};
   try { origen = JSON.parse(sessionStorage.getItem('dz_origen') || '{}'); } catch (e) {}

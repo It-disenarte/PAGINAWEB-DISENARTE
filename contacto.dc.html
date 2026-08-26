@@ -342,6 +342,10 @@ class Component extends DCLogic {
         website: form.website.value,
         privacidad: form.privacidad.checked,
         recaptchaToken: recaptchaToken,
+        origen: (function () {
+          try { return JSON.parse(sessionStorage.getItem('dz_origen') || '{}'); }
+          catch (e) { return {}; }
+        })(),
       };
       errBox.textContent = 'No pudimos enviar tu mensaje. Intenta de nuevo o escríbenos por WhatsApp.';
       btn.disabled = true;
