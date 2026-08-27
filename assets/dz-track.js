@@ -30,7 +30,13 @@
   function adsConversion(label) {
     if (!label || label.indexOf('REEMPLAZAR') === 0) return;
     if (typeof window.gtag === 'function') {
-      window.gtag('event', 'conversion', { send_to: AW_ID + '/' + label });
+      /* transport_type 'beacon' usa navigator.sendBeacon: la petición sobrevive
+         a que el navegador abandone la página. Sin esto, el clic en WhatsApp o
+         en tel: puede cancelar el envío antes de que llegue a Google. */
+      window.gtag('event', 'conversion', {
+        send_to: AW_ID + '/' + label,
+        transport_type: 'beacon'
+      });
     }
   }
   function pagina() {
