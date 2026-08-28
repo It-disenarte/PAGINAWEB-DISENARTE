@@ -95,7 +95,7 @@ module.exports = async (req, res) => {
       from: 'Diseñarte México <administracion@disenartemx.com>',
       to: ['ventas@disenartemx.com', 'direccion@disenartemx.com'],
       replyTo: correo || undefined,
-      subject: `Nuevo contacto web: ${nombre} ${apellidos}`,
+      subject: `🟣 Nuevo contacto web: ${nombre} ${apellidos}`,
       text: lineas,
     });
 

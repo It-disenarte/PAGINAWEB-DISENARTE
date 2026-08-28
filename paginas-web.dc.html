@@ -407,9 +407,15 @@ p [data-hero-line]{animation-delay:120ms}
           <x-import component-from-global-scope="ChromeWindow" from="./browser-window.jsx" width="{{ anchoMarco }}" height="{{ altoMarco }}" url="{{ demoActivo.urlMostrada }}" hint-size="960px,560px">
             <div style="position:relative;width:100%;height:100%;background:#fff">
               <sc-if value="{{ demoActivo.cargarIframe }}" hint-placeholder-val="{{ false }}">
-                <iframe src="{{ demoActivo.url }}" title="{{ demoActivo.titulo }}" loading="lazy" sandbox="allow-scripts allow-same-origin" onLoad="{{ iframeCargo }}" style="width:100%;height:100%;border:none;background:#fff"></iframe>
+                <iframe src="{{ demoActivo.url }}" title="{{ demoActivo.titulo }}" loading="lazy" sandbox="allow-scripts allow-same-origin" onLoad="{{ demoActivo.alCargar }}" style="width:100%;height:100%;border:none;background:#fff"></iframe>
               </sc-if>
-              <sc-if value="{{ demoActivo.mostrarFallback }}" hint-placeholder-val="{{ true }}">
+              <sc-if value="{{ demoActivo.mostrarBotonAbrir }}" hint-placeholder-val="{{ false }}">
+                <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;padding:32px;box-sizing:border-box;text-align:center;background:repeating-linear-gradient(45deg,rgba(92,198,208,.05) 0 12px,transparent 12px 24px)">
+                  <p style="font:500 15px/1.6 'Creato Display',sans-serif;color:var(--gris-texto);margin:0;max-width:min(420px,88%)">Lo sentimos, no fue posible cargar el demo en tu dispositivo.<br>Para visualizarlo da clic aquí.</p>
+                  <a href="{{ demoActivo.url }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;background:var(--violeta);color:#fff;border-radius:999px;padding:14px 28px;font:600 15px/1 'Creato Display',sans-serif;text-decoration:none;transition:opacity 200ms ease" style-hover="opacity:.88">Ver demo en una pestaña nueva</a>
+                </div>
+              </sc-if>
+              <sc-if value="{{ demoActivo.mostrarPendiente }}" hint-placeholder-val="{{ true }}">
                 <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;padding:0 24px;box-sizing:border-box;text-align:center;background:repeating-linear-gradient(45deg,rgba(92,198,208,.05) 0 12px,transparent 12px 24px);padding:32px;text-align:center">
                   <span style="font:600 11px ui-monospace,monospace;letter-spacing:.1em;color:var(--tinta);background:var(--cian);padding:4px 10px;border-radius:999px">PENDIENTE</span>
                   <p style="font:500 14px/1.7 ui-monospace,monospace;color:var(--gris-texto);margin:0;max-width:min(420px,88%);text-align:center">{{ demoActivo.notaFallback }}</p>
@@ -422,9 +428,15 @@ p [data-hero-line]{animation-delay:120ms}
           <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" width="{{ anchoTelefono }}" height="{{ altoTelefono }}" hint-size="320px,660px">
             <div style="position:relative;width:100%;height:100%;background:#fff;padding-top:64px;box-sizing:border-box">
               <sc-if value="{{ demoActivo.cargarIframe }}" hint-placeholder-val="{{ false }}">
-                <iframe src="{{ demoActivo.url }}" title="{{ demoActivo.titulo }}" loading="lazy" sandbox="allow-scripts allow-same-origin" onLoad="{{ iframeCargo }}" style="position:absolute;top:64px;left:0;width:100%;height:calc(100% - 64px);border:none;background:#fff"></iframe>
+                <iframe src="{{ demoActivo.url }}" title="{{ demoActivo.titulo }}" loading="lazy" sandbox="allow-scripts allow-same-origin" onLoad="{{ demoActivo.alCargar }}" style="position:absolute;top:64px;left:0;width:100%;height:calc(100% - 64px);border:none;background:#fff"></iframe>
               </sc-if>
-              <sc-if value="{{ demoActivo.mostrarFallback }}" hint-placeholder-val="{{ true }}">
+              <sc-if value="{{ demoActivo.mostrarBotonAbrir }}" hint-placeholder-val="{{ false }}">
+                <div style="position:absolute;left:0;right:0;top:64px;bottom:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;padding:32px;box-sizing:border-box;text-align:center;background:repeating-linear-gradient(45deg,rgba(92,198,208,.05) 0 12px,transparent 12px 24px)">
+                  <p style="font:500 15px/1.6 'Creato Display',sans-serif;color:var(--gris-texto);margin:0;max-width:min(420px,88%)">Lo sentimos, no fue posible cargar el demo en tu dispositivo.<br>Para visualizarlo da clic aquí.</p>
+                  <a href="{{ demoActivo.url }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;background:var(--violeta);color:#fff;border-radius:999px;padding:14px 28px;font:600 15px/1 'Creato Display',sans-serif;text-decoration:none;transition:opacity 200ms ease" style-hover="opacity:.88">Ver demo en una pestaña nueva</a>
+                </div>
+              </sc-if>
+              <sc-if value="{{ demoActivo.mostrarPendiente }}" hint-placeholder-val="{{ true }}">
                 <div style="position:absolute;left:0;right:0;top:64px;bottom:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;padding:0 24px;box-sizing:border-box;text-align:center;background:repeating-linear-gradient(45deg,rgba(92,198,208,.05) 0 12px,transparent 12px 24px);padding:32px;text-align:center">
                   <span style="font:600 11px ui-monospace,monospace;letter-spacing:.1em;color:var(--tinta);background:var(--cian);padding:4px 10px;border-radius:999px">PENDIENTE</span>
                   <p style="font:500 14px/1.7 ui-monospace,monospace;color:var(--gris-texto);margin:0;max-width:min(420px,88%);text-align:center">{{ demoActivo.notaFallback }}</p>
@@ -549,13 +561,13 @@ const DEMOS = [
 const PAQUETES = [
   { nombre: '“Hola Mundo”', nivel: 'Plan Inicial', sitio: 'Sitio de una página', para: 'Ideal para comenzar', destacado: false,
     puntos: ['Sitio de 1 página (3-4 secciones)', 'Dominio + hosting 1 año', '1 correo corporativo', 'Botón de WhatsApp', 'Entrega en 3 días', 'Mantenimiento: 1 actualización/mes'],
-    rentaMes: '$750', rentaActivacion: '$2,900 sin IVA', duenoPrecio: '$11,900', duenoNota: '+ sin IVA a 2 pagos' },
+    rentaMes: '$870', rentaActivacion: '$3,364', duenoPrecio: '$13,804', duenoNota: 'a 2 pagos' },
   { nombre: '“Next Level”', nivel: 'Plan Medio', sitio: 'Sitio corporativo', para: 'Para negocios en crecimiento', destacado: true,
     puntos: ['Hasta 4 páginas', 'Dominio + hosting 1 año', 'Hasta 3 correos corporativos', 'WhatsApp + formulario de contacto', 'SEO básico (apareces en Google)', 'Entrega en 4 días', 'Mantenimiento: 2 actualizaciones/mes'],
-    rentaMes: '$950', rentaActivacion: '$6,500 sin IVA', duenoPrecio: '$17,900', duenoNota: '+ sin IVA a 2 pagos' },
+    rentaMes: '$1,102', rentaActivacion: '$7,540', duenoPrecio: '$20,764', duenoNota: 'a 2 pagos' },
   { nombre: '“Rockstar Digital”', nivel: 'Plan Completo', sitio: 'Sitio avanzado', para: 'Para destacar y vender más', destacado: false,
     puntos: ['Hasta 6 páginas', 'Dominio + hosting 1 año', 'Hasta 10 correos corporativos', 'WhatsApp + llamada directa + formularios', 'SEO avanzado', 'Entrega en 5 días', 'Mantenimiento: 5 actualizaciones/mes'],
-    rentaMes: '$1,200', rentaActivacion: '$9,500 sin IVA', duenoPrecio: '$23,900', duenoNota: 'sin IVA a 2 pagos' },
+    rentaMes: '$1,392', rentaActivacion: '$11,020', duenoPrecio: '$27,724', duenoNota: 'a 2 pagos' },
 ];
 
 const FILAS_TABLA = [
@@ -567,9 +579,9 @@ const FILAS_TABLA = [
   { label: 'SEO', a: '—', b: 'Básico (apareces en Google)', c: 'Avanzado' },
   { label: 'Entrega', a: '3 días', b: '4 días', c: '5 días' },
   { label: 'Mantenimiento', a: '1 actualización/mes x año', b: '2 actualizaciones/mes x año', c: '5 actualizaciones/mes x año' },
-  { label: 'Modo renta', a: '$750/mes x 1 año', b: '$950/mes x 1 año', c: '$1,200/mes x 1 año' },
-  { label: 'Activación (renta)', a: '$2,900 sin IVA', b: '$6,500 sin IVA', c: '$9,500 sin IVA' },
-  { label: 'Modo dueño', a: '$11,900 + IVA a 2 pagos', b: '$17,900 + IVA a 2 pagos', c: '$23,900 + IVA a 2 pagos' },
+  { label: 'Modo renta', a: '$870/mes x 1 año', b: '$1,102/mes x 1 año', c: '$1,392/mes x 1 año' },
+  { label: 'Activación (renta)', a: '$3,364', b: '$7,540', c: '$11,020' },
+  { label: 'Modo dueño', a: '$13,804 a 2 pagos', b: '$20,764 a 2 pagos', c: '$27,724 a 2 pagos' },
 ];
 
 // PROCESO DE TRABAJO: las 4 fases, en orden.
@@ -741,7 +753,7 @@ class Component extends DCLogic {
     const marcoScaleOuterStyle = `width:100%;height:${Math.round(altoBase * escala)}px;overflow:hidden`;
     const marcoScaleInnerStyle = `width:${anchoBase}px;height:${altoBase}px;transform:scale(${escala});transform-origin:top left`;
     const notaFallback = tieneUrl
-      ? (fallo ? `El demo "${d.nombre}" no permitió cargarse (X-Frame-Options). Sube imagenFallback en el arreglo DEMOS para mostrar la captura con auto-scroll.` : '')
+      ? (fallo ? `Lo sentimos, no fue posible cargar el demo en tu dispositivo.` : '')
       : 'URL del demo por definir. Edita el arreglo DEMOS al inicio del código con { nombre, giro, url, imagenFallback }.';
     const btnBase = "min-height:44px;border-radius:999px;padding:10px 24px;font:600 15px 'Creato Display',sans-serif;cursor:pointer;border:none;transition:opacity 200ms ease;";
     return {
@@ -772,10 +784,11 @@ class Component extends DCLogic {
         titulo: `Demo de página web: ${d.nombre} — ${d.giro}`,
         urlMostrada: d.url ? d.url.replace(/^https?:\/\//, '').replace(/\/$/, '') : 'ejemplo.com',
         cargarIframe: demosVisibles && tieneUrl && !fallo,
-        mostrarFallback: !tieneUrl || fallo,
+        mostrarPendiente: !tieneUrl,
+        mostrarBotonAbrir: tieneUrl && fallo,
         notaFallback,
+        alCargar: () => this.setState((s) => ({ iframeOk: { ...s.iframeOk, [demo]: true } })),
       },
-      iframeCargo: () => this.setState((s) => ({ iframeOk: { ...s.iframeOk, [demo]: true } })),
       demosBotones: DEMOS.map((dd, i) => ({
         ...dd,
         activo: i === demo,
